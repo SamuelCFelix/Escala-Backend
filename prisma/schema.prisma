@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model UsuarioHost {
+model Perfil {
   id                  String         @id @default(uuid())
   nome                String 
   cpf                 String         @unique
@@ -19,7 +19,19 @@ model UsuarioHost {
   email               String         @unique
   senha               String
   termos              Boolean
+  usuarioHost         UsuarioHost[]
+  createAt            DateTime       @default(now())
+  updateAt            DateTime?
+
+  @@map("perfil")
+}
+
+model UsuarioHost {
+  id                  String         @id @default(uuid())
+  nome                String
   autorizacao         String
+  perfilId            String
+  perfil              Perfil         @relation(fields: [perfilId], references: [id], onDelete: Cascade)
   createAt            DateTime       @default(now())
   updateAt            DateTime?
 
