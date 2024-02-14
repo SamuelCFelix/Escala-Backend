@@ -15,14 +15,15 @@ module.exports = {
         senha
       );
 
-      logger.info("Create successfully");
-
       return res.status(201).json(response);
     } catch (error) {
       if (!error.path) {
+        // Defina a propriedade path do erro
         error.path = "/controllers/perfil/createPerfilController";
+        logger.error("Erro ao criar perfil:", error);
       }
-      throw error;
+      // Retorne uma resposta de erro em qualquer caso
+      res.status(500).json({ error: "Erro interno do servidor" });
     }
   },
 };

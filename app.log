@@ -1,1 +1,119 @@
 10/02/24Y 19:10:33.768 [[32minfo[39m]: Create successfully
+12/02/24Y 11:21:10.440 [[31merror[39m]: Erro ao criar perfil: 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:13:50
+
+  10 async execute(nome, cpf, dataNascimento, numeroTelefone, email, senha) {
+  11   try {
+  12     const response = await client.$transaction(async (client) => {
+→ 13       const createPerfil = await client.perfil.create(
+Unique constraint failed on the fields: (`cpf`)
+12/02/24Y 11:21:10.457 [[31merror[39m]: Erro ao criar perfil: 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:13:50
+
+  10 async execute(nome, cpf, dataNascimento, numeroTelefone, email, senha) {
+  11   try {
+  12     const response = await client.$transaction(async (client) => {
+→ 13       const createPerfil = await client.perfil.create(
+Unique constraint failed on the fields: (`cpf`)
+12/02/24Y 11:21:22.118 [[31merror[39m]: Erro ao criar perfil: 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:13:50
+
+  10 async execute(nome, cpf, dataNascimento, numeroTelefone, email, senha) {
+  11   try {
+  12     const response = await client.$transaction(async (client) => {
+→ 13       const createPerfil = await client.perfil.create(
+Unique constraint failed on the fields: (`cpf`)
+12/02/24Y 11:21:22.130 [[31merror[39m]: Erro ao criar perfil: 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:13:50
+
+  10 async execute(nome, cpf, dataNascimento, numeroTelefone, email, senha) {
+  11   try {
+  12     const response = await client.$transaction(async (client) => {
+→ 13       const createPerfil = await client.perfil.create(
+Unique constraint failed on the fields: (`cpf`)
+12/02/24Y 11:36:05.196 [[31merror[39m]: Erro ao criar perfil: 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:13:50
+
+  10 async execute(nome, cpf, dataNascimento, numeroTelefone, email, senha) {
+  11   try {
+  12     const response = await client.$transaction(async (client) => {
+→ 13       const createPerfil = await client.perfil.create(
+Unique constraint failed on the fields: (`email`)
+12/02/24Y 11:36:05.203 [[31merror[39m]: Erro ao criar perfil: 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:13:50
+
+  10 async execute(nome, cpf, dataNascimento, numeroTelefone, email, senha) {
+  11   try {
+  12     const response = await client.$transaction(async (client) => {
+→ 13       const createPerfil = await client.perfil.create(
+Unique constraint failed on the fields: (`email`)
+12/02/24Y 12:44:48.127 [[31merror[39m]: Erro ao criar perfil: 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:21:50
+
+  18 async execute(nome, cpf, dataNascimento, numeroTelefone, email, senha) {
+  19   try {
+  20     const response = await client.$transaction(async (client) => {
+→ 21       const createPerfil = await client.perfil.create({
+             data: {
+               nome: "SAMUKA FÉLIZ",
+               cpf: {},
+                    ~~
+               dataNascimento: "21/31/2321",
+               numeroTelefone: "(12) 32131-2312",
+               email: "samuelfnatal@adpaz-zs.com.br",
+               senha: {},
+               termos: true
+             }
+           })
+
+Argument `cpf`: Invalid value provided. Expected String, provided Object.
+12/02/24Y 12:44:53.221 [[31merror[39m]: Erro ao criar perfil: 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:21:50
+
+  18 async execute(nome, cpf, dataNascimento, numeroTelefone, email, senha) {
+  19   try {
+  20     const response = await client.$transaction(async (client) => {
+→ 21       const createPerfil = await client.perfil.create({
+             data: {
+               nome: "SAMUKA FÉLIZ",
+               cpf: {},
+                    ~~
+               dataNascimento: "21/31/2321",
+               numeroTelefone: "(12) 32131-2312",
+               email: "samuelfnatal@adpaz-zs.com.br",
+               senha: {},
+               termos: true
+             }
+           })
+
+Argument `cpf`: Invalid value provided. Expected String, provided Object.
+12/02/24Y 15:47:29.874 [[31merror[39m]: Erro ao fazer login data and hash must be strings
+12/02/24Y 15:47:29.884 [[31merror[39m]: Erro ao fazer login: data and hash must be strings
+12/02/24Y 15:47:35.178 [[31merror[39m]: Erro ao fazer login data and hash must be strings
+12/02/24Y 15:47:35.201 [[31merror[39m]: Erro ao fazer login: data and hash must be strings
+12/02/24Y 15:47:49.290 [[31merror[39m]: Erro ao fazer login data and hash must be strings
+12/02/24Y 15:47:49.304 [[31merror[39m]: Erro ao fazer login: data and hash must be strings
+12/02/24Y 15:48:06.212 [[31merror[39m]: Erro ao fazer login data and hash must be strings
+12/02/24Y 15:48:06.223 [[31merror[39m]: Erro ao fazer login: data and hash must be strings
+12/02/24Y 15:48:52.463 [[31merror[39m]: Erro ao fazer login data and hash must be strings
+12/02/24Y 15:48:52.483 [[31merror[39m]: Erro ao fazer login: data and hash must be strings
+12/02/24Y 15:58:47.366 [[31merror[39m]: Erro ao fazer login res is not defined
+12/02/24Y 15:58:47.384 [[31merror[39m]: Erro ao fazer login: res is not defined
+12/02/24Y 15:58:49.488 [[31merror[39m]: Erro ao fazer login res is not defined
+12/02/24Y 15:58:49.499 [[31merror[39m]: Erro ao fazer login: res is not defined
+12/02/24Y 15:58:51.019 [[31merror[39m]: Erro ao fazer login res is not defined
+12/02/24Y 15:58:51.032 [[31merror[39m]: Erro ao fazer login: res is not defined
+12/02/24Y 15:59:13.559 [[31merror[39m]: Erro ao fazer login res is not defined
+12/02/24Y 15:59:13.577 [[31merror[39m]: Erro ao fazer login: res is not defined
+12/02/24Y 16:00:24.969 [[31merror[39m]: Erro ao fazer login res is not defined
+12/02/24Y 16:00:24.985 [[31merror[39m]: Erro ao fazer login: res is not defined
+12/02/24Y 16:00:27.482 [[31merror[39m]: Erro ao fazer login res is not defined
+12/02/24Y 16:00:27.498 [[31merror[39m]: Erro ao fazer login: res is not defined
