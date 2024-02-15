@@ -6,7 +6,6 @@ const loginAuthController = require("./controllers/login/loginAuthController");
 
 const routes = Router();
 
-routes.post("/token", authTokenController.handle);
 routes.post("/createPerfil", createPerfilController.handle);
 routes.post("/loginAuth", loginAuthController.handle);
 

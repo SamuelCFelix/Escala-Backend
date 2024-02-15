@@ -27,7 +27,7 @@ module.exports = {
         const createPerfil = await client.perfil.create({
           data: {
             nome,
-            cpf: await hashInfo(cpf),
+            cpf,
             dataNascimento,
             numeroTelefone,
             email,
