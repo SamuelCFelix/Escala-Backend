@@ -6,7 +6,7 @@ const logger = createLogger({
     format.colorize(),
     format.timestamp({ format: "DD/MM/YYY HH:mm:ss.SSS" }),
     format.printf(({ timestamp, level, message }) => {
-      return `${timestamp} [${level}]: ${message}`;
+      return `${timestamp} [${level.toUpperCase()}]: ${message}`;
     })
   ),
   transports: [
@@ -14,5 +14,10 @@ const logger = createLogger({
     new transports.File({ filename: "app.log" }),
   ],
 });
+
+// Adicionando funções para logging mais específico
+logger.info = (message) => logger.log("info", message);
+logger.error = (message) => logger.log("error", message);
+logger.debug = (message) => logger.log("debug", message);
 
 module.exports = logger;

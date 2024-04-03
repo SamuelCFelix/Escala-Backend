@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const logger = require("../custom/logger");
 require("dotenv").config();
 
 // Chave secreta para assinar os tokens JWT
