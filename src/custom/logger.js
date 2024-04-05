@@ -17,7 +17,7 @@ const logger = createLogger({
 
 // Adicionando funções para logging mais específico
 logger.info = (message) => logger.log("info", message);
-logger.error = (message) => logger.log("error", message);
+logger.error = (message, error) => logger.log("error", message, error);
 logger.debug = (message) => logger.log("debug", message);
 
 module.exports = logger;

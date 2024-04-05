@@ -22,8 +22,13 @@ module.exports = {
             email,
           },
           select: {
-            senha: true,
             id: true,
+            nome: true,
+            email: true,
+            dataNascimento: true,
+            termos: true,
+            primeiroAcesso: true,
+            senha: true,
           },
         });
 
@@ -33,8 +38,45 @@ module.exports = {
             loginEmailExist.senha
           );
           if (comparePassword) {
-            const token = generateJWT(loginEmailExist.id);
-            return token;
+            let logsReturn;
+            const token = await generateJWT(loginEmailExist.id);
+
+            if (loginEmailExist?.primeiroAcesso === true) {
+              return (logsReturn = {
+                usuarioPerfilId: loginEmailExist.id,
+                token: token,
+                nome: loginEmailExist.nome,
+                email: loginEmailExist.email,
+                dataNascimento: loginEmailExist.dataNascimento,
+                termos: loginEmailExist.termos,
+                primeiroAcesso: loginEmailExist.primeiroAcesso,
+              });
+            } else {
+              const usuarioHost = await client.usuarioHost.findFirst({
+                where: {
+                  perfilId: loginEmailExist.id,
+                },
+                select: {
+                  id: true,
+                  Equipe: {
+                    select: {
+                      id: true,
+                      nome: true,
+                    },
+                  },
+                },
+              });
+              return (logsReturn = {
+                usuarioHostId: usuarioHost.id,
+                token: token,
+                nome: loginEmailExist.nome,
+                email: loginEmailExist.email,
+                dataNascimento: loginEmailExist.dataNascimento,
+                termos: loginEmailExist.termos,
+                primeiroAcesso: loginEmailExist.primeiroAcesso,
+                equipe: usuarioHost.Equipe,
+              });
+            }
           } else {
             return "Credenciais inválidas";
           }

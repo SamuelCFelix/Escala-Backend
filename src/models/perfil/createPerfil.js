@@ -12,8 +12,7 @@ async function hashInfo(info) {
     const hashedInfo = await bcrypt.hash(info, saltRounds);
     return hashedInfo;
   } catch (error) {
-    // Tratamento de erro
-    console.error("Erro ao hashear informação:", error);
+    logger.error("Erro ao hashear informação:", error);
     throw error;
   }
 }
@@ -21,7 +20,7 @@ async function hashInfo(info) {
 const client = new PrismaClient();
 
 module.exports = {
-  async execute(nome, cpf, dataNascimento, numeroTelefone, email, senha) {
+  async execute(nome, cpf, dataNascimento, email, senha, termos) {
     try {
       const response = await client.$transaction(async (client) => {
         const createPerfil = await client.perfil.create({
@@ -29,20 +28,18 @@ module.exports = {
             nome,
             cpf,
             dataNascimento,
-            numeroTelefone,
             email,
             senha: await hashInfo(senha),
-            termos: true,
+            termos,
+            primeiroAcesso: true,
           },
         });
         return createPerfil;
       });
       return response;
     } catch (error) {
-      if (error instanceof PrismaClientValidationError) {
-        error.path = "/models/perfil/createPerfil";
-      }
-      logger.error("Erro ao criar perfil:", error);
+      error.path = "/models/perfil/createPerfil";
+      logger.error("Erro ao criar perfil", error);
       throw error;
     } finally {
       await client.$disconnect();
