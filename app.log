@@ -241,3 +241,15 @@ C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\esc
 Argument `servindo`: Invalid value provided. Expected String, provided Int.
 05/04/24Y 00:40:35.646 [[34MDEBUG[39M]: Iniciando criação de equipe
 05/04/24Y 00:40:35.691 [[34MDEBUG[39M]: Processo finalizado
+19/04/24Y 00:08:02.104 [[31MERROR[39M]: Erro ao criar Usuário Default Perfil já possui um usuário Default cadastrado!
+19/04/24Y 00:08:59.370 [[31MERROR[39M]: Erro ao criar Usuário Default Perfil já possui um usuário Default cadastrado!
+19/04/24Y 00:09:11.990 [[31MERROR[39M]: Erro ao criar Usuário Default Perfil já possui um usuário Default cadastrado!
+19/04/24Y 00:09:40.727 [[31MERROR[39M]: Erro ao criar Usuário Default Perfil já possui um usuário Default cadastrado!
+19/04/24Y 00:09:53.269 [[31MERROR[39M]: Erro ao criar Usuário Default Perfil já possui um usuário Default cadastrado!
+19/04/24Y 00:09:55.097 [[31MERROR[39M]: Erro ao criar Usuário Default Perfil já possui um usuário Default cadastrado!
+19/04/24Y 00:09:56.683 [[31MERROR[39M]: Erro ao criar Usuário Default Perfil já possui um usuário Default cadastrado!
+19/04/24Y 00:13:35.437 [[31MERROR[39M]: Erro ao criar Usuário Default: Perfil já possui um usuário Default cadastrado!
+19/04/24Y 00:14:55.063 [[31MERROR[39M]: Erro ao criar Usuário Default: Perfil já possui um usuário Default cadastrado!
+19/04/24Y 00:17:00.138 [[31MERROR[39M]: Erro ao criar Usuário Default: Perfil já possui um Usuário Default cadastrado!
+19/04/24Y 00:17:25.216 [[31MERROR[39M]: Erro ao criar Usuário Default: Perfil já possui um Usuário Default cadastrado!
+19/04/24Y 00:18:35.856 [[31MERROR[39M]: Erro ao criar Usuário Default: Perfil já possui um Usuário Default cadastrado!

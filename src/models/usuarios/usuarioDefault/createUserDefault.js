@@ -3,10 +3,19 @@ const logger = require("../../../custom/logger");
 const client = new PrismaClient();
 
 module.exports = {
-  async execute(senha, usuarioPerfilId) {
+  async execute(usuarioPerfilId) {
     try {
       const response = await client.$transaction(async (client) => {
-        if (senha === process.env.PASSWORD_ACESS_USER_HOST) {
+        const perfil = await client.perfil.findFirst({
+          where: {
+            id: usuarioPerfilId,
+          },
+          select: {
+            primeiroAcesso: true,
+          },
+        });
+
+        if (perfil.primeiroAcesso === true) {
           const updatePerfil = await client.perfil.update({
             where: {
               id: usuarioPerfilId,
@@ -17,21 +26,20 @@ module.exports = {
             },
           });
 
-          const createUsuarioHost = await client.usuarioHost.create({
+          const createUsuarioDefault = await client.usuarioDefault.create({
             data: {
               nome: updatePerfil.nome,
-              autorizacao: "adm001",
               perfilId: usuarioPerfilId,
             },
           });
 
-          await client.escalaUsuarioHost.create({
+          await client.escalaUsuarioDefault.create({
             data: {
-              usuarioHostId: createUsuarioHost.id,
+              usuarioDefaultId: createUsuarioDefault.id,
             },
           });
 
-          const perfilHostUser = await client.perfil.findFirst({
+          const perfilDefaultUser = await client.perfil.findFirst({
             where: {
               id: usuarioPerfilId,
             },
@@ -46,22 +54,25 @@ module.exports = {
           });
 
           return {
-            usuarioHostId: createUsuarioHost.id,
-            nome: perfilHostUser.nome,
-            email: perfilHostUser.email,
-            dataNascimento: perfilHostUser.dataNascimento,
-            termos: perfilHostUser.termos,
-            primeiroAcesso: perfilHostUser.primeiroAcesso,
-            equipe: createUsuarioHost.Equipe,
+            usuarioDefaultId: createUsuarioDefault.id,
+            nome: perfilDefaultUser.nome,
+            email: perfilDefaultUser.email,
+            dataNascimento: perfilDefaultUser.dataNascimento,
+            termos: perfilDefaultUser.termos,
+            primeiroAcesso: perfilDefaultUser.primeiroAcesso,
+            equipeId: createUsuarioDefault.equipeId,
           };
         } else {
-          return "Senha autorizacao incorreta";
+          throw {
+            status: 400,
+            message: "Perfil já possui um Usuário Default cadastrado!",
+          };
         }
       });
       return response;
     } catch (error) {
-      error.path = "/models/usuarios/usuarioHost/createUserHost";
-      logger.error("Erro ao criar Usuário Host:", error);
+      error.path = "/models/usuarios/usuarioDefault/createUserDefault";
+      logger.error("Erro ao criar Usuário Default:", error);
       throw error;
     } finally {
       await client.$disconnect();
