@@ -253,3 +253,120 @@ Argument `servindo`: Invalid value provided. Expected String, provided Int.
 19/04/24Y 00:17:00.138 [[31MERROR[39M]: Erro ao criar Usuário Default: Perfil já possui um Usuário Default cadastrado!
 19/04/24Y 00:17:25.216 [[31MERROR[39M]: Erro ao criar Usuário Default: Perfil já possui um Usuário Default cadastrado!
 19/04/24Y 00:18:35.856 [[31MERROR[39M]: Erro ao criar Usuário Default: Perfil já possui um Usuário Default cadastrado!
+20/04/24Y 00:35:32.958 [[31MERROR[39M]: Erro ao criar Usuário Default: Perfil já possui um Usuário Default cadastrado!
+20/04/24Y 01:01:12.391 [[31MERROR[39M]: Erro ao fazer login Cannot read properties of null (reading 'id')
+20/04/24Y 01:01:12.398 [[31MERROR[39M]: Erro ao fazer login: Cannot read properties of null (reading 'id')
+20/04/24Y 01:01:31.714 [[31MERROR[39M]: Erro ao fazer login Cannot read properties of null (reading 'id')
+20/04/24Y 01:01:31.723 [[31MERROR[39M]: Erro ao fazer login: Cannot read properties of null (reading 'id')
+20/04/24Y 01:10:58.373 [[31MERROR[39M]: Erro ao fazer login Cannot read properties of null (reading 'id')
+20/04/24Y 01:10:58.384 [[31MERROR[39M]: Erro ao fazer login: Cannot read properties of null (reading 'id')
+20/04/24Y 01:11:20.318 [[31MERROR[39M]: Erro ao fazer login Cannot read properties of null (reading 'id')
+20/04/24Y 01:11:20.330 [[31MERROR[39M]: Erro ao fazer login: Cannot read properties of null (reading 'id')
+20/04/24Y 01:11:40.286 [[31MERROR[39M]: Erro ao fazer login Cannot read properties of undefined (reading 'id')
+20/04/24Y 01:11:40.296 [[31MERROR[39M]: Erro ao fazer login: Cannot read properties of undefined (reading 'id')
+20/04/24Y 01:11:49.408 [[31MERROR[39M]: Erro ao fazer login Cannot read properties of undefined (reading 'id')
+20/04/24Y 01:11:49.416 [[31MERROR[39M]: Erro ao fazer login: Cannot read properties of undefined (reading 'id')
+20/04/24Y 01:12:36.733 [[31MERROR[39M]: Erro ao fazer login Cannot read properties of undefined (reading 'id')
+20/04/24Y 01:12:36.746 [[31MERROR[39M]: Erro ao fazer login: Cannot read properties of undefined (reading 'id')
+20/04/24Y 01:12:54.510 [[31MERROR[39M]: Erro ao fazer login Cannot read properties of null (reading 'id')
+20/04/24Y 01:12:54.520 [[31MERROR[39M]: Erro ao fazer login: Cannot read properties of null (reading 'id')
+20/04/24Y 01:13:00.885 [[31MERROR[39M]: Erro ao fazer login Cannot read properties of null (reading 'id')
+20/04/24Y 01:13:00.891 [[31MERROR[39M]: Erro ao fazer login: Cannot read properties of null (reading 'id')
+20/04/24Y 01:13:04.405 [[31MERROR[39M]: Erro ao fazer login Cannot read properties of null (reading 'id')
+20/04/24Y 01:13:04.416 [[31MERROR[39M]: Erro ao fazer login: Cannot read properties of null (reading 'id')
+20/04/24Y 01:13:37.449 [[31MERROR[39M]: Erro ao fazer login Cannot read properties of null (reading 'id')
+20/04/24Y 01:13:37.466 [[31MERROR[39M]: Erro ao fazer login: Cannot read properties of null (reading 'id')
+20/04/24Y 01:13:44.771 [[31MERROR[39M]: Erro ao fazer login Cannot read properties of null (reading 'id')
+20/04/24Y 01:13:44.779 [[31MERROR[39M]: Erro ao fazer login: Cannot read properties of null (reading 'id')
+20/04/24Y 01:32:32.561 [[34MDEBUG[39M]: Iniciando criação de equipe
+20/04/24Y 01:32:32.605 [[34MDEBUG[39M]: Processo finalizado
+20/04/24Y 01:51:17.096 [[31MERROR[39M]: Erro ao criar equipe 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany({
+            include: {
+              tags: false,
+              createAt: false,
+              ~~~~~~~~
+              updatedAt: false,
+          ?   usuarioHost?: true,
+          ?   Tags?: true,
+          ?   Programacao?: true,
+          ?   UsuarioDefault?: true
+            }
+          })
+
+Invalid scalar field `createAt` for include statement on model Equipe. Available options are marked with ?.
+Note that include statements only accept relation fields.
+20/04/24Y 02:14:01.180 [[31MERROR[39M]: Erro ao criar equipe 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany({
+            include: {
+            ~~~~~~~
+              usuarioHost: {
+                select: {
+                  nome: true
+                }
+              },
+              Programacao: {
+                select: {
+                  createAt: true
+                }
+              },
+              UsuarioDefault: {
+                select: {
+                  createAt: true
+                }
+              }
+            },
+            select: {
+            ~~~~~~
+              usuarioHostId: false
+            }
+          })
+
+Please either use `include` or `select`, but not both at the same time.
+20/04/24Y 02:16:14.510 [[31MERROR[39M]: Erro ao criar equipe 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany({
+            select: {
+            ~~~~~~
+              id: true,
+              nome: true,
+              descricao: true
+            },
+            include: {
+            ~~~~~~~
+              usuarioHost: {
+                select: {
+                  nome: true
+                }
+              },
+              Programacao: {
+                select: {
+                  createAt: true
+                }
+              },
+              UsuarioDefault: {
+                select: {
+                  createAt: true
+                }
+              }
+            }
+          })
+
+Please either use `include` or `select`, but not both at the same time.

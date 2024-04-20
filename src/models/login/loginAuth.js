@@ -29,6 +29,16 @@ module.exports = {
             termos: true,
             primeiroAcesso: true,
             senha: true,
+            UsuarioHost: {
+              select: {
+                id: true,
+              },
+            },
+            UsuarioDefault: {
+              select: {
+                id: true,
+              },
+            },
           },
         });
 
@@ -51,7 +61,7 @@ module.exports = {
                 termos: loginEmailExist.termos,
                 primeiroAcesso: loginEmailExist.primeiroAcesso,
               });
-            } else {
+            } else if (loginEmailExist.UsuarioHost.length > 0) {
               const usuarioHost = await client.usuarioHost.findFirst({
                 where: {
                   perfilId: loginEmailExist.id,
@@ -75,6 +85,26 @@ module.exports = {
                 termos: loginEmailExist.termos,
                 primeiroAcesso: loginEmailExist.primeiroAcesso,
                 equipe: usuarioHost.Equipe,
+              });
+            } else if (loginEmailExist.UsuarioDefault.length > 0) {
+              const usuarioDefault = await client.usuarioDefault.findFirst({
+                where: {
+                  perfilId: loginEmailExist.id,
+                },
+                select: {
+                  id: true,
+                  equipeId: true,
+                },
+              });
+              return (logsReturn = {
+                usuarioDefaultId: usuarioDefault.id,
+                token: token,
+                nome: loginEmailExist.nome,
+                email: loginEmailExist.email,
+                dataNascimento: loginEmailExist.dataNascimento,
+                termos: loginEmailExist.termos,
+                primeiroAcesso: loginEmailExist.primeiroAcesso,
+                equipeId: usuarioDefault.equipeId,
               });
             }
           } else {

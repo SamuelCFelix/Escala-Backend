@@ -6,6 +6,7 @@ const loginAuthController = require("./controllers/login/loginAuthController");
 const createUserHostController = require("./controllers/usuarios/usuarioHost/createUserHostController");
 const createEquipeController = require("./controllers/equipe/createEquipeController");
 const createUserDefaultController = require("./controllers/usuarios/usuarioDefault/createUserDefaultController");
+const findManyEquipesController = require("./controllers/equipe/findManyEquipesController");
 
 const routes = Router();
 
@@ -25,5 +26,6 @@ routes.post(
 
 //Equipes
 routes.post("/criarEquipe", createEquipeController.handle);
+routes.get("/buscarEquipes", findManyEquipesController.handle);
 
 module.exports = routes;
