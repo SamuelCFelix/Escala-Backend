@@ -48,11 +48,10 @@ module.exports = {
             loginEmailExist.senha
           );
           if (comparePassword) {
-            let logsReturn;
             const token = await generateJWT(loginEmailExist.id);
 
             if (loginEmailExist?.primeiroAcesso === true) {
-              return (logsReturn = {
+              return {
                 usuarioPerfilId: loginEmailExist.id,
                 token: token,
                 nome: loginEmailExist.nome,
@@ -60,7 +59,7 @@ module.exports = {
                 dataNascimento: loginEmailExist.dataNascimento,
                 termos: loginEmailExist.termos,
                 primeiroAcesso: loginEmailExist.primeiroAcesso,
-              });
+              };
             } else if (loginEmailExist.UsuarioHost.length > 0) {
               const usuarioHost = await client.usuarioHost.findFirst({
                 where: {
@@ -76,16 +75,30 @@ module.exports = {
                   },
                 },
               });
-              return (logsReturn = {
-                usuarioHostId: usuarioHost.id,
-                token: token,
-                nome: loginEmailExist.nome,
-                email: loginEmailExist.email,
-                dataNascimento: loginEmailExist.dataNascimento,
-                termos: loginEmailExist.termos,
-                primeiroAcesso: loginEmailExist.primeiroAcesso,
-                equipe: usuarioHost.Equipe,
-              });
+
+              if (!usuarioHost.Equipe.length > 0) {
+                return {
+                  usuarioHostId: usuarioHost.id,
+                  token: token,
+                  nome: loginEmailExist.nome,
+                  email: loginEmailExist.email,
+                  dataNascimento: loginEmailExist.dataNascimento,
+                  termos: loginEmailExist.termos,
+                  primeiroAcesso: loginEmailExist.primeiroAcesso,
+                  equipe: ["sem equipe"],
+                };
+              } else {
+                return {
+                  usuarioHostId: usuarioHost.id,
+                  token: token,
+                  nome: loginEmailExist.nome,
+                  email: loginEmailExist.email,
+                  dataNascimento: loginEmailExist.dataNascimento,
+                  termos: loginEmailExist.termos,
+                  primeiroAcesso: loginEmailExist.primeiroAcesso,
+                  equipe: usuarioHost.Equipe,
+                };
+              }
             } else if (loginEmailExist.UsuarioDefault.length > 0) {
               const usuarioDefault = await client.usuarioDefault.findFirst({
                 where: {
@@ -96,7 +109,40 @@ module.exports = {
                   equipeId: true,
                 },
               });
-              return (logsReturn = {
+
+              if (!usuarioDefault.equipeId) {
+                const verificarEquipe = await client.rlSolicitacao.findFirst({
+                  where: {
+                    usuarioDefaultId: usuarioDefault.id,
+                  },
+                });
+
+                if (verificarEquipe) {
+                  return {
+                    usuarioDefaultId: usuarioDefault.id,
+                    token: token,
+                    nome: loginEmailExist.nome,
+                    email: loginEmailExist.email,
+                    dataNascimento: loginEmailExist.dataNascimento,
+                    termos: loginEmailExist.termos,
+                    primeiroAcesso: loginEmailExist.primeiroAcesso,
+                    equipeId: "solicitacao enviada",
+                  };
+                } else {
+                  return {
+                    usuarioDefaultId: usuarioDefault.id,
+                    token: token,
+                    nome: loginEmailExist.nome,
+                    email: loginEmailExist.email,
+                    dataNascimento: loginEmailExist.dataNascimento,
+                    termos: loginEmailExist.termos,
+                    primeiroAcesso: loginEmailExist.primeiroAcesso,
+                    equipeId: "sem equipe",
+                  };
+                }
+              }
+
+              return {
                 usuarioDefaultId: usuarioDefault.id,
                 token: token,
                 nome: loginEmailExist.nome,
@@ -105,7 +151,7 @@ module.exports = {
                 termos: loginEmailExist.termos,
                 primeiroAcesso: loginEmailExist.primeiroAcesso,
                 equipeId: usuarioDefault.equipeId,
-              });
+              };
             }
           } else {
             return "Credenciais inválidas";

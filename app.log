@@ -370,3 +370,50 @@ C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\esc
           })
 
 Please either use `include` or `select`, but not both at the same time.
+20/04/24Y 23:34:58.940 [[31MERROR[39M]: Erro ao enviar solitação para uma equipe 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\requestEquipe.js:22:39
+
+  19     equipeId,
+  20   },
+  21 });
+→ 22 await client.usuarioDefault.update(
+Foreign key constraint failed on the field: `(not available)`
+21/04/24Y 01:42:26.256 [[31MERROR[39M]: Erro ao criar perfil 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:26:50
+
+  23 async execute(nome, cpf, dataNascimento, email, senha, termos) {
+  24   try {
+  25     const response = await client.$transaction(async (client) => {
+→ 26       const createPerfil = await client.perfil.create(
+Unique constraint failed on the fields: (`email`)
+21/04/24Y 01:42:26.266 [[31MERROR[39M]: Erro ao criar perfil controller: 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:26:50
+
+  23 async execute(nome, cpf, dataNascimento, email, senha, termos) {
+  24   try {
+  25     const response = await client.$transaction(async (client) => {
+→ 26       const createPerfil = await client.perfil.create(
+Unique constraint failed on the fields: (`email`)
+21/04/24Y 01:42:34.899 [[31MERROR[39M]: Erro ao criar perfil 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:26:50
+
+  23 async execute(nome, cpf, dataNascimento, email, senha, termos) {
+  24   try {
+  25     const response = await client.$transaction(async (client) => {
+→ 26       const createPerfil = await client.perfil.create(
+Unique constraint failed on the fields: (`email`)
+21/04/24Y 01:42:34.910 [[31MERROR[39M]: Erro ao criar perfil controller: 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:26:50
+
+  23 async execute(nome, cpf, dataNascimento, email, senha, termos) {
+  24   try {
+  25     const response = await client.$transaction(async (client) => {
+→ 26       const createPerfil = await client.perfil.create(
+Unique constraint failed on the fields: (`email`)
+21/04/24Y 02:14:29.671 [[34MDEBUG[39M]: Iniciando criação de equipe
+21/04/24Y 02:14:29.707 [[34MDEBUG[39M]: Processo finalizado

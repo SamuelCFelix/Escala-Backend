@@ -52,7 +52,7 @@ module.exports = {
             dataNascimento: perfilHostUser.dataNascimento,
             termos: perfilHostUser.termos,
             primeiroAcesso: perfilHostUser.primeiroAcesso,
-            equipe: createUsuarioHost.Equipe,
+            equipe: ["sem equipe"],
           };
         } else {
           return "Senha autorizacao incorreta";

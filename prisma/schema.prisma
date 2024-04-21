@@ -52,6 +52,7 @@ model UsuarioDefault {
   perfil               Perfil                 @relation(fields: [perfilId], references: [id], onDelete: Cascade)
   RlTagsUsuarioDefault RlTagsUsuarioDefault[]
   EscalaUsuarioDefault EscalaUsuarioDefault[]
+  RlSolicitacao        RlSolicitacao[]
   createAt             DateTime               @default(now())
   updateAt             DateTime?
 
@@ -93,6 +94,7 @@ model Equipe {
   Tags           Tags[]
   Programacao    Programacao[]
   UsuarioDefault UsuarioDefault[]
+  RlSolicitacao  RlSolicitacao[]
   createAt       DateTime         @default(now())
   updateAt       DateTime?
 
@@ -162,4 +164,16 @@ model RlTagsUsuarioDefault {
   updateAt         DateTime?
 
   @@map("rlTagsUsuarioDefault")
+}
+
+model RlSolicitacao {
+  id               String         @id @default(uuid())
+  usuarioDefaultId String
+  usuarioDefault   UsuarioDefault @relation(fields: [usuarioDefaultId], references: [id], onDelete: Cascade)
+  equipeId         String
+  equipe           Equipe         @relation(fields: [equipeId], references: [id], onDelete: Cascade)
+  createAt         DateTime       @default(now())
+  updateAt         DateTime?
+
+  @@map("rlSolicitacao")
 }
