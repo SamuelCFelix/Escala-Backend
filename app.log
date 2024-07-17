@@ -417,3 +417,95 @@ C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\esc
 Unique constraint failed on the fields: (`email`)
 21/04/24Y 02:14:29.671 [[34MDEBUG[39M]: Iniciando criação de equipe
 21/04/24Y 02:14:29.707 [[34MDEBUG[39M]: Processo finalizado
+16/07/24Y 21:08:53.237 [[34MDEBUG[39M]: Iniciando criação de equipe
+16/07/24Y 21:08:53.291 [[34MDEBUG[39M]: Processo finalizado
+17/07/24Y 00:17:22.773 [[31MERROR[39M]: Erro ao buscar informações iniciais da Home 
+Invalid `client.usuarioHost.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\home\findConfigHome.js:13:56
+
+  10 }); */
+  11 
+  12 if (isHost) {
+→ 13   const infoUsuario = await client.usuarioHost.findFirst(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+17/07/24Y 01:15:57.587 [[31MERROR[39M]: Erro ao buscar informações iniciais da Home 
+Invalid `client.usuarioHost.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\home\findConfigHome.js:13:56
+
+  10 }); */
+  11 
+  12 if (isHost) {
+→ 13   const infoUsuario = await client.usuarioHost.findFirst(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+17/07/24Y 01:16:19.675 [[31MERROR[39M]: Erro ao buscar informações iniciais da Home 
+Invalid `client.usuarioHost.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\home\findConfigHome.js:13:56
+
+  10 }); */
+  11 
+  12 if (isHost) {
+→ 13   const infoUsuario = await client.usuarioHost.findFirst(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+17/07/24Y 01:24:34.272 [[31MERROR[39M]: Erro ao buscar informações iniciais da Home 
+Invalid `client.usuarioHost.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\home\findConfigHome.js:13:56
+
+  10 }); */
+  11 
+  12 if (isHost) {
+→ 13   const infoUsuario = await client.usuarioHost.findFirst(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+17/07/24Y 01:26:36.452 [[31MERROR[39M]: Erro ao buscar informações iniciais da Home 
+Invalid `client.usuarioHost.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\home\findConfigHome.js:13:56
+
+  10 }); */
+  11 console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAH ABABA");
+  12 if (isHost) {
+→ 13   const infoUsuario = await client.usuarioHost.findFirst(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+17/07/24Y 01:29:15.024 [[31MERROR[39M]: Erro ao buscar informações iniciais da Home 
+Invalid `client.usuarioHost.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\home\findConfigHome.js:12:56
+
+   9 /* const equipes = await client.equipe.findMany({
+  10 }); */
+  11 if (isHost) {
+→ 12   const infoUsuario = await client.usuarioHost.findFirst(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+17/07/24Y 01:30:34.836 [[31MERROR[39M]: Erro ao buscar informações iniciais da Home 
+Invalid `client.usuarioHost.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\home\findConfigHome.js:12:56
+
+   9 /* const equipes = await client.equipe.findMany({
+  10 }); */
+  11 if (isHost) {
+→ 12   const infoUsuario = await client.usuarioHost.findFirst(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+17/07/24Y 01:33:49.396 [[31MERROR[39M]: Erro ao buscar informações iniciais da Home 
+Invalid `client.usuarioHost.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\home\findConfigHome.js:12:56
+
+   9 /* const equipes = await client.equipe.findMany({
+  10 }); */
+  11 if (isHost) {
+→ 12   const infoUsuario = await client.usuarioHost.findFirst(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+17/07/24Y 01:38:02.077 [[31MERROR[39M]: Erro ao buscar informações iniciais da Home 
+Invalid `client.usuarioHost.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\home\findConfigHome.js:12:56
+
+   9 /* const equipes = await client.equipe.findMany({
+  10 }); */
+  11 if (isHost) {
+→ 12   const infoUsuario = await client.usuarioHost.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+17/07/24Y 01:38:10.544 [[31MERROR[39M]: Erro ao buscar informações iniciais da Home 
+Invalid `client.usuarioHost.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\home\findConfigHome.js:12:56
+
+   9 /* const equipes = await client.equipe.findMany({
+  10 }); */
+  11 if (isHost) {
+→ 12   const infoUsuario = await client.usuarioHost.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.

@@ -8,6 +8,7 @@ const createEquipeController = require("./controllers/equipe/createEquipeControl
 const createUserDefaultController = require("./controllers/usuarios/usuarioDefault/createUserDefaultController");
 const findManyEquipesController = require("./controllers/equipe/findManyEquipesController");
 const requestEquipeController = require("./controllers/equipe/requestEquipeController");
+const findConfigHomeController = require("./controllers/home/findConfigHomeController");
 
 const routes = Router();
 
@@ -29,5 +30,12 @@ routes.post(
 routes.post("/criarEquipe", createEquipeController.handle);
 routes.get("/buscarEquipes", findManyEquipesController.handle);
 routes.post("/solicitacaoEquipe", requestEquipeController.handle);
+
+//Home
+routes.post(
+  "/informacoesHome",
+  tokenAuthentication.handle,
+  findConfigHomeController.handle
+);
 
 module.exports = routes;
