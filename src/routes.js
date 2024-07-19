@@ -9,6 +9,9 @@ const createUserDefaultController = require("./controllers/usuarios/usuarioDefau
 const findManyEquipesController = require("./controllers/equipe/findManyEquipesController");
 const requestEquipeController = require("./controllers/equipe/requestEquipeController");
 const findConfigHomeController = require("./controllers/home/findConfigHomeController");
+const findManyRequestEquipeController = require("./controllers/equipe/findManyRequestEquipeController");
+const acceptMembroEquipeController = require("./controllers/equipe/acceptMembroEquipeController");
+const recuseMembroEquipeController = require("./controllers/equipe/recuseMembroEquipeController");
 
 const routes = Router();
 
@@ -36,6 +39,23 @@ routes.post(
   "/informacoesHome",
   tokenAuthentication.handle,
   findConfigHomeController.handle
+);
+routes.post(
+  "/tabelaSolicitacoes",
+  tokenAuthentication.handle,
+  findManyRequestEquipeController.handle
+);
+
+routes.put(
+  "/aceitarMembroEquipe",
+  tokenAuthentication.handle,
+  acceptMembroEquipeController.handle
+);
+
+routes.delete(
+  "/recusarMembroEquipe",
+  tokenAuthentication.handle,
+  recuseMembroEquipeController.handle
 );
 
 module.exports = routes;

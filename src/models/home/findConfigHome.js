@@ -5,32 +5,51 @@ const client = new PrismaClient();
 module.exports = {
   async execute(usuarioId, isHost) {
     try {
-      /* const equipes = await client.equipe.findMany({
-        }); */
+      let infoUsuario;
+
       if (isHost) {
-        const infoUsuario = await client.usuarioHost.findFirst({
+        infoUsuario = await client.usuarioHost.findFirst({
           where: {
             id: usuarioId,
           },
           select: {
+            id: true,
             nome: true,
+            Equipe: {
+              select: {
+                id: true,
+              },
+            },
             autorizacao: true,
           },
         });
 
-        return infoUsuario;
+        if (infoUsuario) {
+          infoUsuario.usuarioHostId = infoUsuario.id;
+          infoUsuario.equipeId = infoUsuario.Equipe[0]?.id;
+          delete infoUsuario.id;
+          delete infoUsuario.Equipe;
+        }
       } else {
-        const infoUsuario = await client.usuarioDefault.findFirst({
+        infoUsuario = await client.usuarioDefault.findFirst({
           where: {
             id: usuarioId,
           },
           select: {
+            id: true,
             nome: true,
+            equipeId: true,
             autorizacao: true,
           },
         });
-        return infoUsuario;
+
+        if (infoUsuario) {
+          infoUsuario.usuarioDefaultId = infoUsuario.id;
+          delete infoUsuario.id;
+        }
       }
+
+      return infoUsuario;
     } catch (error) {
       error.path = "/models/home/findConfigHome";
       logger.error("Erro ao buscar informações iniciais da Home", error);

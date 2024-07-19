@@ -509,3 +509,472 @@ C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\esc
   11 if (isHost) {
 → 12   const infoUsuario = await client.usuarioHost.findMany(
 Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+18/07/24Y 17:16:43.238 [[31MERROR[39M]: Erro ao buscaar solicitações da equipe model Cannot read properties of undefined (reading 'preprocessor')
+18/07/24Y 17:54:32.971 [[31MERROR[39M]: Erro ao buscar informações iniciais da Home 
+Invalid `client.usuarioHost.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\home\findConfigHome.js:11:54
+
+   8 /* const equipes = await client.equipe.findMany({
+   9   }); */
+  10 if (isHost) {
+→ 11   const infoUsuario = await client.usuarioHost.findFirst({
+         where: {
+           id: "a6764cb7-c679-4a6d-abf1-210b0295e7ea"
+         },
+         select: {
+           id: true,
+           nome: true,
+           equipeId: true,
+           ~~~~~~~~
+           autorizacao: true,
+       ?   perfilId?: true,
+       ?   createAt?: true,
+       ?   updateAt?: true,
+       ?   perfil?: true,
+       ?   Equipe?: true,
+       ?   RlTagsUsuarioHost?: true,
+       ?   EscalaUsuarioHost?: true,
+       ?   _count?: true
+         }
+       })
+
+Unknown field `equipeId` for select statement on model `UsuarioHost`. Available options are marked with ?.
+18/07/24Y 17:54:33.014 [[31MERROR[39M]: Erro ao buscar informações iniciais da Home 
+Invalid `client.usuarioHost.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\home\findConfigHome.js:11:54
+
+   8 /* const equipes = await client.equipe.findMany({
+   9   }); */
+  10 if (isHost) {
+→ 11   const infoUsuario = await client.usuarioHost.findFirst({
+         where: {
+           id: "a6764cb7-c679-4a6d-abf1-210b0295e7ea"
+         },
+         select: {
+           id: true,
+           nome: true,
+           equipeId: true,
+           ~~~~~~~~
+           autorizacao: true,
+       ?   perfilId?: true,
+       ?   createAt?: true,
+       ?   updateAt?: true,
+       ?   perfil?: true,
+       ?   Equipe?: true,
+       ?   RlTagsUsuarioHost?: true,
+       ?   EscalaUsuarioHost?: true,
+       ?   _count?: true
+         }
+       })
+
+Unknown field `equipeId` for select statement on model `UsuarioHost`. Available options are marked with ?.
+18/07/24Y 17:54:42.304 [[31MERROR[39M]: Erro ao buscar informações iniciais da Home 
+Invalid `client.usuarioHost.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\home\findConfigHome.js:11:54
+
+   8 /* const equipes = await client.equipe.findMany({
+   9   }); */
+  10 if (isHost) {
+→ 11   const infoUsuario = await client.usuarioHost.findFirst({
+         where: {
+           id: "a6764cb7-c679-4a6d-abf1-210b0295e7ea"
+         },
+         select: {
+           id: true,
+           nome: true,
+           equipeId: true,
+           ~~~~~~~~
+           autorizacao: true,
+       ?   perfilId?: true,
+       ?   createAt?: true,
+       ?   updateAt?: true,
+       ?   perfil?: true,
+       ?   Equipe?: true,
+       ?   RlTagsUsuarioHost?: true,
+       ?   EscalaUsuarioHost?: true,
+       ?   _count?: true
+         }
+       })
+
+Unknown field `equipeId` for select statement on model `UsuarioHost`. Available options are marked with ?.
+18/07/24Y 17:54:42.353 [[31MERROR[39M]: Erro ao buscar informações iniciais da Home 
+Invalid `client.usuarioHost.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\home\findConfigHome.js:11:54
+
+   8 /* const equipes = await client.equipe.findMany({
+   9   }); */
+  10 if (isHost) {
+→ 11   const infoUsuario = await client.usuarioHost.findFirst({
+         where: {
+           id: "a6764cb7-c679-4a6d-abf1-210b0295e7ea"
+         },
+         select: {
+           id: true,
+           nome: true,
+           equipeId: true,
+           ~~~~~~~~
+           autorizacao: true,
+       ?   perfilId?: true,
+       ?   createAt?: true,
+       ?   updateAt?: true,
+       ?   perfil?: true,
+       ?   Equipe?: true,
+       ?   RlTagsUsuarioHost?: true,
+       ?   EscalaUsuarioHost?: true,
+       ?   _count?: true
+         }
+       })
+
+Unknown field `equipeId` for select statement on model `UsuarioHost`. Available options are marked with ?.
+18/07/24Y 18:22:17.877 [[31MERROR[39M]: Erro ao buscar solicitações da equipe model 
+Invalid `client.rlSolicitacao.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyRequestEquipe.js:11:63
+
+   8 async execute(equipeId) {
+   9   try {
+  10     const response = await client.$transaction(async (client) => {
+→ 11       const solicitacoesEquipe = await client.rlSolicitacao.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+19/07/24Y 13:10:38.382 [[31MERROR[39M]: Erro ao aceitar membro na equipe model 
+Invalid `client.rlSolicitacao.delete()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\acceptMembroEquipe.js:18:42
+
+  15   },
+  16 });
+  17 
+→ 18 await client.rlSolicitacao.delete({
+       where: {
+         usuarioDefaultId: "f67cedf9-ed39-4800-a5ae-36f40fc23049",
+         equipeId: "8b1e8ed9-b7f1-42c3-a6ff-4408f59cdea8",
+     ?   id?: String,
+     ?   AND?: RlSolicitacaoWhereInput | RlSolicitacaoWhereInput[],
+     ?   OR?: RlSolicitacaoWhereInput[],
+     ?   NOT?: RlSolicitacaoWhereInput | RlSolicitacaoWhereInput[],
+     ?   createAt?: DateTimeFilter | DateTime,
+     ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+     ?   usuarioDefault?: UsuarioDefaultRelationFilter | UsuarioDefaultWhereInput,
+     ?   equipe?: EquipeRelationFilter | EquipeWhereInput
+       }
+     })
+
+Argument `where` of type RlSolicitacaoWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+19/07/24Y 13:14:10.389 [[31MERROR[39M]: Erro ao aceitar membro na equipe model Cannot read properties of undefined (reading 'id')
+19/07/24Y 13:21:15.538 [[31MERROR[39M]: Erro ao aceitar membro na equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\acceptMembroEquipe.js:9:65
+
+  6 async execute(usuarioId, equipeId) {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const aceitarMembroEquipe = await client.usuarioDefault.update({
+            where: {
+              id: undefined,
+          ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+          ?   OR?: UsuarioDefaultWhereInput[],
+          ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+          ?   nome?: StringFilter | String,
+          ?   autorizacao?: StringNullableFilter | String | Null,
+          ?   equipeId?: StringNullableFilter | String | Null,
+          ?   perfilId?: StringFilter | String,
+          ?   createAt?: DateTimeFilter | DateTime,
+          ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+          ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+          ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+          ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+          ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+          ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+            },
+            data: {
+              equipeId: undefined
+            }
+          })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+19/07/24Y 13:24:30.621 [[31MERROR[39M]: Erro ao aceitar membro na equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\acceptMembroEquipe.js:10:65
+
+   7 try {
+   8   console.log(usuarioId, equipeId);
+   9   const response = await client.$transaction(async (client) => {
+→ 10     const aceitarMembroEquipe = await client.usuarioDefault.update({
+           where: {
+             id: undefined,
+         ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+         ?   OR?: UsuarioDefaultWhereInput[],
+         ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+         ?   nome?: StringFilter | String,
+         ?   autorizacao?: StringNullableFilter | String | Null,
+         ?   equipeId?: StringNullableFilter | String | Null,
+         ?   perfilId?: StringFilter | String,
+         ?   createAt?: DateTimeFilter | DateTime,
+         ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+         ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+         ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+         ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+         ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+         ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+           },
+           data: {
+             equipeId: undefined
+           }
+         })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+19/07/24Y 13:25:32.460 [[31MERROR[39M]: Erro ao aceitar membro na equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\acceptMembroEquipe.js:10:65
+
+   7 try {
+   8   console.log(usuarioId, equipeId);
+   9   const response = await client.$transaction(async (client) => {
+→ 10     const aceitarMembroEquipe = await client.usuarioDefault.update({
+           where: {
+             id: undefined,
+         ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+         ?   OR?: UsuarioDefaultWhereInput[],
+         ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+         ?   nome?: StringFilter | String,
+         ?   autorizacao?: StringNullableFilter | String | Null,
+         ?   equipeId?: StringNullableFilter | String | Null,
+         ?   perfilId?: StringFilter | String,
+         ?   createAt?: DateTimeFilter | DateTime,
+         ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+         ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+         ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+         ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+         ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+         ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+           },
+           data: {
+             equipeId: undefined
+           }
+         })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+19/07/24Y 13:26:48.428 [[31MERROR[39M]: Erro ao aceitar membro na equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\acceptMembroEquipe.js:10:65
+
+   7 try {
+   8   console.log(usuarioId, equipeId);
+   9   const response = await client.$transaction(async (client) => {
+→ 10     const aceitarMembroEquipe = await client.usuarioDefault.update({
+           where: {
+             id: undefined,
+         ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+         ?   OR?: UsuarioDefaultWhereInput[],
+         ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+         ?   nome?: StringFilter | String,
+         ?   autorizacao?: StringNullableFilter | String | Null,
+         ?   equipeId?: StringNullableFilter | String | Null,
+         ?   perfilId?: StringFilter | String,
+         ?   createAt?: DateTimeFilter | DateTime,
+         ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+         ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+         ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+         ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+         ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+         ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+           },
+           data: {
+             equipeId: undefined
+           }
+         })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+19/07/24Y 13:29:43.336 [[31MERROR[39M]: Erro ao buscar solicitações da equipe model 
+Invalid `client.rlSolicitacao.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyRequestEquipe.js:10:61
+
+   7 module.exports = {
+   8   async execute(equipeId) {
+   9     try {
+→ 10       const solicitacoesEquipe = await client.rlSolicitacao.findMany({
+             where: {
+           +   equipeId: {
+           +     equals: String | StringFieldRefInput,
+           +     in: String[] | ListStringFieldRefInput,
+           +     notIn: String[] | ListStringFieldRefInput,
+           +     lt: String | StringFieldRefInput,
+           +     lte: String | StringFieldRefInput,
+           +     gt: String | StringFieldRefInput,
+           +     gte: String | StringFieldRefInput,
+           +     contains: String | StringFieldRefInput,
+           +     startsWith: String | StringFieldRefInput,
+           +     endsWith: String | StringFieldRefInput,
+           +     mode: QueryMode,
+           +     not: String | NestedStringFilter
+           +   }
+             },
+             select: {
+               usuarioDefaultId: true,
+               usuarioDefault: {
+                 select: {
+                   perfil: {
+                     select: {
+                       nome: true,
+                       email: true
+                     }
+                   }
+                 }
+               },
+               createAt: true
+             }
+           })
+
+Argument `equipeId` must not be null.
+19/07/24Y 13:29:43.386 [[31MERROR[39M]: Erro ao buscar solicitações da equipe model 
+Invalid `client.rlSolicitacao.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyRequestEquipe.js:10:61
+
+   7 module.exports = {
+   8   async execute(equipeId) {
+   9     try {
+→ 10       const solicitacoesEquipe = await client.rlSolicitacao.findMany({
+             where: {
+           +   equipeId: {
+           +     equals: String | StringFieldRefInput,
+           +     in: String[] | ListStringFieldRefInput,
+           +     notIn: String[] | ListStringFieldRefInput,
+           +     lt: String | StringFieldRefInput,
+           +     lte: String | StringFieldRefInput,
+           +     gt: String | StringFieldRefInput,
+           +     gte: String | StringFieldRefInput,
+           +     contains: String | StringFieldRefInput,
+           +     startsWith: String | StringFieldRefInput,
+           +     endsWith: String | StringFieldRefInput,
+           +     mode: QueryMode,
+           +     not: String | NestedStringFilter
+           +   }
+             },
+             select: {
+               usuarioDefaultId: true,
+               usuarioDefault: {
+                 select: {
+                   perfil: {
+                     select: {
+                       nome: true,
+                       email: true
+                     }
+                   }
+                 }
+               },
+               createAt: true
+             }
+           })
+
+Argument `equipeId` must not be null.
+19/07/24Y 13:29:48.026 [[31MERROR[39M]: Erro ao buscar solicitações da equipe model 
+Invalid `client.rlSolicitacao.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyRequestEquipe.js:10:61
+
+   7 module.exports = {
+   8   async execute(equipeId) {
+   9     try {
+→ 10       const solicitacoesEquipe = await client.rlSolicitacao.findMany({
+             where: {
+           +   equipeId: {
+           +     equals: String | StringFieldRefInput,
+           +     in: String[] | ListStringFieldRefInput,
+           +     notIn: String[] | ListStringFieldRefInput,
+           +     lt: String | StringFieldRefInput,
+           +     lte: String | StringFieldRefInput,
+           +     gt: String | StringFieldRefInput,
+           +     gte: String | StringFieldRefInput,
+           +     contains: String | StringFieldRefInput,
+           +     startsWith: String | StringFieldRefInput,
+           +     endsWith: String | StringFieldRefInput,
+           +     mode: QueryMode,
+           +     not: String | NestedStringFilter
+           +   }
+             },
+             select: {
+               usuarioDefaultId: true,
+               usuarioDefault: {
+                 select: {
+                   perfil: {
+                     select: {
+                       nome: true,
+                       email: true
+                     }
+                   }
+                 }
+               },
+               createAt: true
+             }
+           })
+
+Argument `equipeId` must not be null.
+19/07/24Y 13:29:48.075 [[31MERROR[39M]: Erro ao buscar solicitações da equipe model 
+Invalid `client.rlSolicitacao.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyRequestEquipe.js:10:61
+
+   7 module.exports = {
+   8   async execute(equipeId) {
+   9     try {
+→ 10       const solicitacoesEquipe = await client.rlSolicitacao.findMany({
+             where: {
+           +   equipeId: {
+           +     equals: String | StringFieldRefInput,
+           +     in: String[] | ListStringFieldRefInput,
+           +     notIn: String[] | ListStringFieldRefInput,
+           +     lt: String | StringFieldRefInput,
+           +     lte: String | StringFieldRefInput,
+           +     gt: String | StringFieldRefInput,
+           +     gte: String | StringFieldRefInput,
+           +     contains: String | StringFieldRefInput,
+           +     startsWith: String | StringFieldRefInput,
+           +     endsWith: String | StringFieldRefInput,
+           +     mode: QueryMode,
+           +     not: String | NestedStringFilter
+           +   }
+             },
+             select: {
+               usuarioDefaultId: true,
+               usuarioDefault: {
+                 select: {
+                   perfil: {
+                     select: {
+                       nome: true,
+                       email: true
+                     }
+                   }
+                 }
+               },
+               createAt: true
+             }
+           })
+
+Argument `equipeId` must not be null.
+19/07/24Y 14:07:58.850 [[31MERROR[39M]: Erro ao aceitar membro na equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\acceptMembroEquipe.js:9:65
+
+  6 async execute(usuarioId, equipeId) {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const aceitarMembroEquipe = await client.usuarioDefault.update({
+            where: {
+              id: undefined,
+          ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+          ?   OR?: UsuarioDefaultWhereInput[],
+          ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+          ?   nome?: StringFilter | String,
+          ?   autorizacao?: StringNullableFilter | String | Null,
+          ?   equipeId?: StringNullableFilter | String | Null,
+          ?   perfilId?: StringFilter | String,
+          ?   createAt?: DateTimeFilter | DateTime,
+          ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+          ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+          ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+          ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+          ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+          ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+            },
+            data: {
+              equipeId: undefined
+            }
+          })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.

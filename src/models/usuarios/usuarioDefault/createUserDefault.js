@@ -60,7 +60,7 @@ module.exports = {
             dataNascimento: perfilDefaultUser.dataNascimento,
             termos: perfilDefaultUser.termos,
             primeiroAcesso: perfilDefaultUser.primeiroAcesso,
-            equipeId: createUsuarioDefault.equipeId,
+            equipeId: "sem equipe",
           };
         } else {
           throw {
