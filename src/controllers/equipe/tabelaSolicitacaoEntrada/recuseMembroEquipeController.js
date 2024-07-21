@@ -1,5 +1,5 @@
-const recuseMembroEquipe = require("../../models/equipe/recuseMembroEquipe");
-const logger = require("../../custom/logger");
+const recuseMembroEquipe = require("../../../models/equipe/recuseMembroEquipe");
+const logger = require("../../../custom/logger");
 
 module.exports = {
   async handle(req, res) {

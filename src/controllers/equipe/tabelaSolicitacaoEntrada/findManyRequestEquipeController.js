@@ -1,5 +1,5 @@
-const findManyRequestEquipe = require("../../models/equipe/findManyRequestEquipe");
-const logger = require("../../custom/logger");
+const findManyRequestEquipe = require("../../../models/equipe/findManyRequestEquipe");
+const logger = require("../../../custom/logger");
 
 module.exports = {
   async handle(req, res) {

@@ -978,3 +978,115 @@ C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\esc
           })
 
 Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+20/07/24Y 19:05:23.957 [[31MERROR[39M]: Erro ao buscar membro da equipe model hostFormatted is not defined
+20/07/24Y 19:25:13.286 [[31MERROR[39M]: Erro ao buscar membro da equipe model 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyMembrosEquipe.js:9:55
+
+  6 async execute(equipeId) {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const usuarioHostEquipe = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/07/24Y 19:27:53.731 [[31MERROR[39M]: Erro ao buscar membro da equipe model 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyMembrosEquipe.js:9:55
+
+  6 async execute(equipeId) {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const usuarioHostEquipe = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/07/24Y 19:28:42.620 [[31MERROR[39M]: Erro ao buscar membro da equipe model 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyMembrosEquipe.js:9:55
+
+  6 async execute(equipeId) {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const usuarioHostEquipe = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/07/24Y 19:30:29.441 [[31MERROR[39M]: Erro ao buscar membro da equipe model 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyMembrosEquipe.js:10:55
+
+   7 try {
+   8   console.log("equipeId", equipeId);
+   9   const response = await client.$transaction(async (client) => {
+→ 10     const usuarioHostEquipe = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/07/24Y 19:32:44.266 [[31MERROR[39M]: Erro ao buscar membro da equipe model Cannot read properties of undefined (reading 'email')
+20/07/24Y 19:32:44.370 [[31MERROR[39M]: Erro ao buscar membro da equipe model 
+Invalid `transactionClient.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyMembrosEquipe.js:10:66
+
+   7 try {
+   8   console.log("equipeId", equipeId);
+   9   const response = await client.$transaction(async (transactionClient) => {
+→ 10     const usuarioHostEquipe = await transactionClient.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/07/24Y 19:35:40.862 [[31MERROR[39M]: Erro ao buscar membro da equipe model 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyMembrosEquipe.js:9:55
+
+  6 async execute(equipeId) {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const usuarioHostEquipe = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/07/24Y 19:39:17.797 [[31MERROR[39M]: Erro ao buscar membro da equipe model 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyMembrosEquipe.js:9:55
+
+  6 async execute(equipeId) {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const usuarioHostEquipe = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/07/24Y 19:39:59.583 [[31MERROR[39M]: Erro ao buscar membro da equipe model 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyMembrosEquipe.js:9:55
+
+  6 async execute(equipeId) {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const usuarioHostEquipe = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/07/24Y 19:42:54.812 [[31MERROR[39M]: Erro ao buscar membro da equipe model 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyMembrosEquipe.js:10:55
+
+   7 try {
+   8   console.log("equipeId", equipeId);
+   9   const response = await client.$transaction(async (client) => {
+→ 10     const usuarioHostEquipe = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/07/24Y 19:47:12.770 [[31MERROR[39M]: Erro ao buscar membro da equipe model 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyMembrosEquipe.js:10:55
+
+   7 try {
+   8   console.log("equipeId", equipeId);
+   9   const response = await client.$transaction(async (client) => {
+→ 10     const usuarioHostEquipe = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/07/24Y 19:47:14.461 [[31MERROR[39M]: Erro ao buscar membro da equipe model 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyMembrosEquipe.js:10:55
+
+   7 try {
+   8   console.log("equipeId", equipeId);
+   9   const response = await client.$transaction(async (client) => {
+→ 10     const usuarioHostEquipe = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/07/24Y 19:47:21.424 [[31MERROR[39M]: Erro ao buscar membro da equipe model 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyMembrosEquipe.js:10:55
+
+   7 try {
+   8   console.log("equipeId", equipeId);
+   9   const response = await client.$transaction(async (client) => {
+→ 10     const usuarioHostEquipe = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/07/24Y 23:30:42.942 [[31MERROR[39M]: Erro ao buscar membro da equipe model Cannot read properties of undefined (reading '0')
+20/07/24Y 23:30:59.874 [[31MERROR[39M]: Erro ao buscar membro da equipe model Cannot read properties of undefined (reading '0')

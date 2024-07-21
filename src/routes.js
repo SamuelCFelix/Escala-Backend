@@ -9,9 +9,11 @@ const createUserDefaultController = require("./controllers/usuarios/usuarioDefau
 const findManyEquipesController = require("./controllers/equipe/findManyEquipesController");
 const requestEquipeController = require("./controllers/equipe/requestEquipeController");
 const findConfigHomeController = require("./controllers/home/findConfigHomeController");
-const findManyRequestEquipeController = require("./controllers/equipe/findManyRequestEquipeController");
-const acceptMembroEquipeController = require("./controllers/equipe/acceptMembroEquipeController");
-const recuseMembroEquipeController = require("./controllers/equipe/recuseMembroEquipeController");
+const findManyRequestEquipeController = require("./controllers/equipe/tabelaSolicitacaoEntrada/findManyRequestEquipeController");
+const acceptMembroEquipeController = require("./controllers/equipe/tabelaSolicitacaoEntrada/acceptMembroEquipeController");
+const recuseMembroEquipeController = require("./controllers/equipe/tabelaSolicitacaoEntrada/recuseMembroEquipeController");
+const findManyMembrosEquipeController = require("./controllers/equipe/tabelaMinhaEquipe/findManyMembrosEquipeController");
+const findManyTagsEquipeController = require("./controllers/equipe/tabelaMinhaEquipe/findManyTagsEquipeController");
 
 const routes = Router();
 
@@ -40,8 +42,10 @@ routes.post(
   tokenAuthentication.handle,
   findConfigHomeController.handle
 );
+
+//Tabela Solicitações
 routes.post(
-  "/tabelaSolicitacoes",
+  "/solicitacoesDeEntrada",
   tokenAuthentication.handle,
   findManyRequestEquipeController.handle
 );
@@ -56,6 +60,19 @@ routes.delete(
   "/recusarMembroEquipe",
   tokenAuthentication.handle,
   recuseMembroEquipeController.handle
+);
+
+//Tabela Minha Equipe
+routes.post(
+  "/buscarMembrosEquipe",
+  tokenAuthentication.handle,
+  findManyMembrosEquipeController.handle
+);
+
+routes.post(
+  "/buscarTagsEquipe",
+  tokenAuthentication.handle,
+  findManyTagsEquipeController.handle
 );
 
 module.exports = routes;
