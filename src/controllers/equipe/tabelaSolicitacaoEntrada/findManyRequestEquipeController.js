@@ -1,4 +1,4 @@
-const findManyRequestEquipe = require("../../../models/equipe/findManyRequestEquipe");
+const findManyRequestEquipe = require("../../../models/equipe/tabelaSolicitacaoEntrada/findManyRequestEquipe");
 const logger = require("../../../custom/logger");
 
 module.exports = {
@@ -11,7 +11,8 @@ module.exports = {
       return res.status(200).json(response);
     } catch (error) {
       if (!error.path) {
-        error.path = "/controllers/equipe/findManyRequestEquipeController";
+        error.path =
+          "/controllers/equipe/tabelaSolicitacaoEntrada/findManyRequestEquipeController";
         logger.error("Erro ao buscar solicitações da equipe:", error);
       }
       res.status(500).json({ error: "Erro interno do servidor" });

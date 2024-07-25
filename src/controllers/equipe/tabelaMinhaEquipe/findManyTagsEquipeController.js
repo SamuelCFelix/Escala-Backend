@@ -1,4 +1,4 @@
-const findManyTagsEquipe = require("../../../models/equipe/findManyTagsEquipe");
+const findManyTagsEquipe = require("../../../models/equipe/tabelaMinhaEquipe/findManyTagsEquipe");
 const logger = require("../../../custom/logger");
 
 module.exports = {
@@ -11,7 +11,8 @@ module.exports = {
       return res.status(200).json(response);
     } catch (error) {
       if (!error.path) {
-        error.path = "/controllers/equipe/findManyTagsEquipeController";
+        error.path =
+          "/controllers/equipe/tabelaMinhaEquipe/findManyTagsEquipeController";
         logger.error("Erro ao buscar tags da equipe:", error);
       }
       res.status(500).json({ error: "Erro interno do servidor" });

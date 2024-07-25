@@ -1,4 +1,4 @@
-const recuseMembroEquipe = require("../../../models/equipe/recuseMembroEquipe");
+const recuseMembroEquipe = require("../../../models/equipe/tabelaSolicitacaoEntrada/recuseMembroEquipe");
 const logger = require("../../../custom/logger");
 
 module.exports = {
@@ -11,7 +11,8 @@ module.exports = {
       return res.status(200).json(response);
     } catch (error) {
       if (!error.path) {
-        error.path = "/controllers/equipe/recuseMembroEquipeController";
+        error.path =
+          "/controllers/equipe/tabelaSolicitacaoEntrada/recuseMembroEquipeController";
         logger.error("Erro ao recusar membro na equipe:", error);
       }
       res.status(500).json({ error: "Erro interno do servidor" });

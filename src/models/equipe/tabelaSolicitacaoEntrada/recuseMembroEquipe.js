@@ -1,20 +1,11 @@
 const { PrismaClient } = require("@prisma/client");
-const logger = require("../../custom/logger");
+const logger = require("../../../custom/logger");
 const client = new PrismaClient();
 
 module.exports = {
   async execute(usuarioId, equipeId) {
     try {
       const response = await client.$transaction(async (client) => {
-        const aceitarMembroEquipe = await client.usuarioDefault.update({
-          where: {
-            id: usuarioId,
-          },
-          data: {
-            equipeId: equipeId,
-          },
-        });
-
         const solicitaçãoUsuario = await client.rlSolicitacao.findMany({
           where: {
             usuarioDefaultId: usuarioId,
@@ -30,12 +21,12 @@ module.exports = {
           });
         }
 
-        return aceitarMembroEquipe;
+        return solicitaçãoUsuario;
       });
       return response;
     } catch (error) {
-      error.path = "/models/equipe/acceptMembroEquipe";
-      logger.error("Erro ao aceitar membro na equipe model", error);
+      error.path = "/models/equipe/tabelaSolicitacaoEntrada/recuseMembroEquipe";
+      logger.error("Erro ao recusar membro na equipe model", error);
       throw error;
     } finally {
       await client.$disconnect();

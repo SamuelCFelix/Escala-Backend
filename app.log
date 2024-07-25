@@ -1090,3 +1090,663 @@ C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\esc
 Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
 20/07/24Y 23:30:42.942 [[31MERROR[39M]: Erro ao buscar membro da equipe model Cannot read properties of undefined (reading '0')
 20/07/24Y 23:30:59.874 [[31MERROR[39M]: Erro ao buscar membro da equipe model Cannot read properties of undefined (reading '0')
+23/07/24Y 21:23:31.096 [[31MERROR[39M]: Erro ao expulsar membro da equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\expulsarMembroEquipe.js:9:58
+
+  6 async execute(usuarioId) {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const buscarMembro = await client.usuarioDefault.update({
+            where: {
+              id: undefined,
+          ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+          ?   OR?: UsuarioDefaultWhereInput[],
+          ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+          ?   nome?: StringFilter | String,
+          ?   autorizacao?: StringNullableFilter | String | Null,
+          ?   equipeId?: StringNullableFilter | String | Null,
+          ?   perfilId?: StringFilter | String,
+          ?   ativo?: BoolNullableFilter | Boolean | Null,
+          ?   createAt?: DateTimeFilter | DateTime,
+          ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+          ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+          ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+          ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+          ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+          ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+            },
+            data: {
+              equipeId: null,
+              updateAt: new Date("2024-07-24T00:23:31.066Z")
+            }
+          })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+23/07/24Y 21:25:56.045 [[31MERROR[39M]: Erro ao expulsar membro da equipe model 
+Invalid `client.escalaUsuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\expulsarMembroEquipe.js:36:43
+
+  33   });
+  34 }
+  35 
+→ 36 await client.escalaUsuarioDefault.update({
+       where: {
+         usuarioDefaultId: "f67cedf9-ed39-4800-a5ae-36f40fc23049",
+     ?   id?: String,
+     ?   AND?: EscalaUsuarioDefaultWhereInput | EscalaUsuarioDefaultWhereInput[],
+     ?   OR?: EscalaUsuarioDefaultWhereInput[],
+     ?   NOT?: EscalaUsuarioDefaultWhereInput | EscalaUsuarioDefaultWhereInput[],
+     ?   servicos?: JsonNullableFilter,
+     ?   disponibilidade?: StringNullableFilter | String | Null,
+     ?   indisponibilidade?: StringNullableFilter | String | Null,
+     ?   createAt?: DateTimeFilter | DateTime,
+     ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+     ?   usuarioDefault?: UsuarioDefaultRelationFilter | UsuarioDefaultWhereInput
+       },
+       data: {
+         servicos: null,
+         disponibilidade: null,
+         indisponibilidade: null,
+         updateAt: new Date("2024-07-24T00:25:56.039Z")
+       }
+     })
+
+Argument `where` of type EscalaUsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+23/07/24Y 21:26:08.401 [[31MERROR[39M]: Erro ao expulsar membro da equipe model 
+Invalid `client.escalaUsuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\expulsarMembroEquipe.js:36:43
+
+  33   });
+  34 }
+  35 
+→ 36 await client.escalaUsuarioDefault.update({
+       where: {
+         usuarioDefaultId: "f67cedf9-ed39-4800-a5ae-36f40fc23049",
+     ?   id?: String,
+     ?   AND?: EscalaUsuarioDefaultWhereInput | EscalaUsuarioDefaultWhereInput[],
+     ?   OR?: EscalaUsuarioDefaultWhereInput[],
+     ?   NOT?: EscalaUsuarioDefaultWhereInput | EscalaUsuarioDefaultWhereInput[],
+     ?   servicos?: JsonNullableFilter,
+     ?   disponibilidade?: StringNullableFilter | String | Null,
+     ?   indisponibilidade?: StringNullableFilter | String | Null,
+     ?   createAt?: DateTimeFilter | DateTime,
+     ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+     ?   usuarioDefault?: UsuarioDefaultRelationFilter | UsuarioDefaultWhereInput
+       },
+       data: {
+         servicos: null,
+         disponibilidade: null,
+         indisponibilidade: null,
+         updateAt: new Date("2024-07-24T00:26:08.395Z")
+       }
+     })
+
+Argument `where` of type EscalaUsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+24/07/24Y 01:18:37.034 [[31MERROR[39M]: Erro ao mudar status do membro da equipe model 
+Invalid `client.usuarioHost.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateStatusMembroEquipe.js:24:59
+
+  21   });
+  22   return buscarMembro;
+  23 } else if (acao === "desativar") {
+→ 24   const buscarMembro = await client.usuarioHost.update(
+An operation failed because it depends on one or more records that were required but not found. Record to update not found.
+24/07/24Y 01:24:39.338 [[31MERROR[39M]: Erro ao mudar status do membro da equipe model 
+Invalid `client.usuarioHost.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateStatusMembroEquipe.js:24:59
+
+  21   });
+  22   return buscarMembro;
+  23 } else if (acao === "desativar") {
+→ 24   const buscarMembro = await client.usuarioHost.update(
+An operation failed because it depends on one or more records that were required but not found. Record to update not found.
+24/07/24Y 01:25:24.132 [[31MERROR[39M]: Erro ao mudar status do membro da equipe model 
+Invalid `client.usuarioHost.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateStatusMembroEquipe.js:24:59
+
+  21   });
+  22   return buscarMembro;
+  23 } else if (acao === "desativar") {
+→ 24   const buscarMembro = await client.usuarioHost.update(
+An operation failed because it depends on one or more records that were required but not found. Record to update not found.
+24/07/24Y 01:25:25.816 [[31MERROR[39M]: Erro ao mudar status do membro da equipe model 
+Invalid `client.usuarioHost.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateStatusMembroEquipe.js:24:59
+
+  21   });
+  22   return buscarMembro;
+  23 } else if (acao === "desativar") {
+→ 24   const buscarMembro = await client.usuarioHost.update(
+An operation failed because it depends on one or more records that were required but not found. Record to update not found.
+24/07/24Y 01:30:23.469 [[31MERROR[39M]: Erro ao mudar status do membro da equipe model 
+Invalid `client.usuarioHost.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateStatusMembroEquipe.js:11:59
+
+   8 const response = await client.$transaction(async (client) => {
+   9   if (host) {
+  10     if (acao === "ativar") {
+→ 11       const buscarMembro = await client.usuarioHost.update(
+An operation failed because it depends on one or more records that were required but not found. Record to update not found.
+24/07/24Y 02:17:22.988 [[31MERROR[39M]: Erro ao atualizar tags do membro da equipe model 
+Invalid `client.rlTagsUsuarioDefault.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateTagsMembroEquipe.js:55:63
+
+  52 if (buscarRlTag) {
+  53   return "Tag já adicionada";
+  54 } else {
+→ 55   buscarRlTag = await client.rlTagsUsuarioDefault.create(
+Foreign key constraint failed on the field: `(not available)`
+24/07/24Y 02:19:50.250 [[31MERROR[39M]: Erro ao atualizar tags do membro da equipe model 
+Invalid `client.rlTagsUsuarioHost.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateTagsMembroEquipe.js:23:60
+
+  20 if (buscarRlTag) {
+  21   return "Tag já adicionada";
+  22 } else {
+→ 23   buscarRlTag = await client.rlTagsUsuarioHost.create(
+Foreign key constraint failed on the field: `(not available)`
+25/07/24Y 15:50:17.129 [[31MERROR[39M]: Erro ao tornar administrador o membro da equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateMembroAdmEquipe.js:21:60
+
+  18   });
+  19   return buscarMembro;
+  20 } else if (acao === "adicionar") {
+→ 21   const buscarMembro = await client.usuarioDefault.update({
+         where: {
+           id: undefined,
+       ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   OR?: UsuarioDefaultWhereInput[],
+       ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   nome?: StringFilter | String,
+       ?   autorizacao?: StringNullableFilter | String | Null,
+       ?   equipeId?: StringNullableFilter | String | Null,
+       ?   perfilId?: StringFilter | String,
+       ?   ativo?: BoolNullableFilter | Boolean | Null,
+       ?   createAt?: DateTimeFilter | DateTime,
+       ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+       ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+       ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+       ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+       ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+       ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+         },
+         data: {
+           autorizacao: "adm002",
+           updateAt: new Date("2024-07-25T18:50:17.117Z")
+         }
+       })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+25/07/24Y 15:50:33.071 [[31MERROR[39M]: Erro ao tornar administrador o membro da equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateMembroAdmEquipe.js:10:60
+
+   7 try {
+   8   const response = await client.$transaction(async (client) => {
+   9     if (acao === "remover") {
+→ 10       const buscarMembro = await client.usuarioDefault.update({
+             where: {
+               id: undefined,
+           ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+           ?   OR?: UsuarioDefaultWhereInput[],
+           ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+           ?   nome?: StringFilter | String,
+           ?   autorizacao?: StringNullableFilter | String | Null,
+           ?   equipeId?: StringNullableFilter | String | Null,
+           ?   perfilId?: StringFilter | String,
+           ?   ativo?: BoolNullableFilter | Boolean | Null,
+           ?   createAt?: DateTimeFilter | DateTime,
+           ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+           ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+           ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+           ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+           ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+           ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+             },
+             data: {
+               autorizacao: null,
+               updateAt: new Date("2024-07-25T18:50:33.068Z")
+             }
+           })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+25/07/24Y 15:50:34.325 [[31MERROR[39M]: Erro ao tornar administrador o membro da equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateMembroAdmEquipe.js:21:60
+
+  18   });
+  19   return buscarMembro;
+  20 } else if (acao === "adicionar") {
+→ 21   const buscarMembro = await client.usuarioDefault.update({
+         where: {
+           id: undefined,
+       ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   OR?: UsuarioDefaultWhereInput[],
+       ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   nome?: StringFilter | String,
+       ?   autorizacao?: StringNullableFilter | String | Null,
+       ?   equipeId?: StringNullableFilter | String | Null,
+       ?   perfilId?: StringFilter | String,
+       ?   ativo?: BoolNullableFilter | Boolean | Null,
+       ?   createAt?: DateTimeFilter | DateTime,
+       ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+       ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+       ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+       ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+       ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+       ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+         },
+         data: {
+           autorizacao: "adm002",
+           updateAt: new Date("2024-07-25T18:50:34.322Z")
+         }
+       })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+25/07/24Y 15:50:50.494 [[31MERROR[39M]: Erro ao tornar administrador o membro da equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateMembroAdmEquipe.js:10:60
+
+   7 try {
+   8   const response = await client.$transaction(async (client) => {
+   9     if (acao === "remover") {
+→ 10       const buscarMembro = await client.usuarioDefault.update({
+             where: {
+               id: undefined,
+           ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+           ?   OR?: UsuarioDefaultWhereInput[],
+           ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+           ?   nome?: StringFilter | String,
+           ?   autorizacao?: StringNullableFilter | String | Null,
+           ?   equipeId?: StringNullableFilter | String | Null,
+           ?   perfilId?: StringFilter | String,
+           ?   ativo?: BoolNullableFilter | Boolean | Null,
+           ?   createAt?: DateTimeFilter | DateTime,
+           ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+           ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+           ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+           ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+           ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+           ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+             },
+             data: {
+               autorizacao: null,
+               updateAt: new Date("2024-07-25T18:50:50.491Z")
+             }
+           })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+25/07/24Y 15:50:50.991 [[31MERROR[39M]: Erro ao tornar administrador o membro da equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateMembroAdmEquipe.js:21:60
+
+  18   });
+  19   return buscarMembro;
+  20 } else if (acao === "adicionar") {
+→ 21   const buscarMembro = await client.usuarioDefault.update({
+         where: {
+           id: undefined,
+       ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   OR?: UsuarioDefaultWhereInput[],
+       ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   nome?: StringFilter | String,
+       ?   autorizacao?: StringNullableFilter | String | Null,
+       ?   equipeId?: StringNullableFilter | String | Null,
+       ?   perfilId?: StringFilter | String,
+       ?   ativo?: BoolNullableFilter | Boolean | Null,
+       ?   createAt?: DateTimeFilter | DateTime,
+       ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+       ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+       ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+       ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+       ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+       ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+         },
+         data: {
+           autorizacao: "adm002",
+           updateAt: new Date("2024-07-25T18:50:50.988Z")
+         }
+       })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+25/07/24Y 15:53:24.935 [[31MERROR[39M]: Erro ao tornar administrador o membro da equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateMembroAdmEquipe.js:10:60
+
+   7 try {
+   8   const response = await client.$transaction(async (client) => {
+   9     if (acao === "remover") {
+→ 10       const buscarMembro = await client.usuarioDefault.update({
+             where: {
+               id: undefined,
+           ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+           ?   OR?: UsuarioDefaultWhereInput[],
+           ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+           ?   nome?: StringFilter | String,
+           ?   autorizacao?: StringNullableFilter | String | Null,
+           ?   equipeId?: StringNullableFilter | String | Null,
+           ?   perfilId?: StringFilter | String,
+           ?   ativo?: BoolNullableFilter | Boolean | Null,
+           ?   createAt?: DateTimeFilter | DateTime,
+           ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+           ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+           ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+           ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+           ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+           ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+             },
+             data: {
+               autorizacao: null,
+               updateAt: new Date("2024-07-25T18:53:24.931Z")
+             }
+           })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+25/07/24Y 15:57:16.640 [[31MERROR[39M]: Erro ao tornar administrador o membro da equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateMembroAdmEquipe.js:10:60
+
+   7 try {
+   8   const response = await client.$transaction(async (client) => {
+   9     if (acao === "remover") {
+→ 10       const buscarMembro = await client.usuarioDefault.update({
+             where: {
+               id: undefined,
+           ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+           ?   OR?: UsuarioDefaultWhereInput[],
+           ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+           ?   nome?: StringFilter | String,
+           ?   autorizacao?: StringNullableFilter | String | Null,
+           ?   equipeId?: StringNullableFilter | String | Null,
+           ?   perfilId?: StringFilter | String,
+           ?   ativo?: BoolNullableFilter | Boolean | Null,
+           ?   createAt?: DateTimeFilter | DateTime,
+           ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+           ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+           ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+           ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+           ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+           ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+             },
+             data: {
+               autorizacao: null,
+               updateAt: new Date("2024-07-25T18:57:16.637Z")
+             }
+           })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+25/07/24Y 15:57:20.515 [[31MERROR[39M]: Erro ao tornar administrador o membro da equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateMembroAdmEquipe.js:10:60
+
+   7 try {
+   8   const response = await client.$transaction(async (client) => {
+   9     if (acao === "remover") {
+→ 10       const buscarMembro = await client.usuarioDefault.update({
+             where: {
+               id: undefined,
+           ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+           ?   OR?: UsuarioDefaultWhereInput[],
+           ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+           ?   nome?: StringFilter | String,
+           ?   autorizacao?: StringNullableFilter | String | Null,
+           ?   equipeId?: StringNullableFilter | String | Null,
+           ?   perfilId?: StringFilter | String,
+           ?   ativo?: BoolNullableFilter | Boolean | Null,
+           ?   createAt?: DateTimeFilter | DateTime,
+           ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+           ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+           ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+           ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+           ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+           ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+             },
+             data: {
+               autorizacao: null,
+               updateAt: new Date("2024-07-25T18:57:20.512Z")
+             }
+           })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+25/07/24Y 16:57:35.207 [[31MERROR[39M]: Erro ao atualizar tags do membro da equipe model 
+Invalid `client.rlTagsUsuarioDefault.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateTagsMembroEquipe.js:68:63
+
+  65 
+  66 if (acao === "adicionar") {
+  67   if (!buscarRlTag) {
+→ 68     buscarRlTag = await client.rlTagsUsuarioDefault.create({
+           data: {
+             usuarioDefaultId: undefined,
+             tagId: "45884e48-e06b-4835-b81c-3ffc1fa79c67",
+         +   usuarioDefault: {
+         +     create: UsuarioDefaultCreateWithoutRlTagsUsuarioDefaultInput | UsuarioDefaultUncheckedCreateWithoutRlTagsUsuarioDefaultInput,
+         +     connectOrCreate: UsuarioDefaultCreateOrConnectWithoutRlTagsUsuarioDefaultInput,
+         +     connect: UsuarioDefaultWhereUniqueInput
+         +   }
+           }
+         })
+
+Argument `usuarioDefault` is missing.
+25/07/24Y 16:57:36.327 [[31MERROR[39M]: Erro ao atualizar tags do membro da equipe model 
+Invalid `client.rlTagsUsuarioDefault.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateTagsMembroEquipe.js:68:63
+
+  65 
+  66 if (acao === "adicionar") {
+  67   if (!buscarRlTag) {
+→ 68     buscarRlTag = await client.rlTagsUsuarioDefault.create({
+           data: {
+             usuarioDefaultId: undefined,
+             tagId: "45884e48-e06b-4835-b81c-3ffc1fa79c67",
+         +   usuarioDefault: {
+         +     create: UsuarioDefaultCreateWithoutRlTagsUsuarioDefaultInput | UsuarioDefaultUncheckedCreateWithoutRlTagsUsuarioDefaultInput,
+         +     connectOrCreate: UsuarioDefaultCreateOrConnectWithoutRlTagsUsuarioDefaultInput,
+         +     connect: UsuarioDefaultWhereUniqueInput
+         +   }
+           }
+         })
+
+Argument `usuarioDefault` is missing.
+25/07/24Y 16:57:36.843 [[31MERROR[39M]: Erro ao atualizar tags do membro da equipe model 
+Invalid `client.rlTagsUsuarioDefault.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateTagsMembroEquipe.js:68:63
+
+  65 
+  66 if (acao === "adicionar") {
+  67   if (!buscarRlTag) {
+→ 68     buscarRlTag = await client.rlTagsUsuarioDefault.create({
+           data: {
+             usuarioDefaultId: undefined,
+             tagId: "45884e48-e06b-4835-b81c-3ffc1fa79c67",
+         +   usuarioDefault: {
+         +     create: UsuarioDefaultCreateWithoutRlTagsUsuarioDefaultInput | UsuarioDefaultUncheckedCreateWithoutRlTagsUsuarioDefaultInput,
+         +     connectOrCreate: UsuarioDefaultCreateOrConnectWithoutRlTagsUsuarioDefaultInput,
+         +     connect: UsuarioDefaultWhereUniqueInput
+         +   }
+           }
+         })
+
+Argument `usuarioDefault` is missing.
+25/07/24Y 16:57:50.670 [[31MERROR[39M]: Erro ao atualizar tags do membro da equipe model 
+Invalid `client.rlTagsUsuarioDefault.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateTagsMembroEquipe.js:68:63
+
+  65 
+  66 if (acao === "adicionar") {
+  67   if (!buscarRlTag) {
+→ 68     buscarRlTag = await client.rlTagsUsuarioDefault.create({
+           data: {
+             usuarioDefaultId: undefined,
+             tagId: "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+         +   usuarioDefault: {
+         +     create: UsuarioDefaultCreateWithoutRlTagsUsuarioDefaultInput | UsuarioDefaultUncheckedCreateWithoutRlTagsUsuarioDefaultInput,
+         +     connectOrCreate: UsuarioDefaultCreateOrConnectWithoutRlTagsUsuarioDefaultInput,
+         +     connect: UsuarioDefaultWhereUniqueInput
+         +   }
+           }
+         })
+
+Argument `usuarioDefault` is missing.
+25/07/24Y 16:57:51.536 [[31MERROR[39M]: Erro ao atualizar tags do membro da equipe model 
+Invalid `client.rlTagsUsuarioDefault.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateTagsMembroEquipe.js:68:63
+
+  65 
+  66 if (acao === "adicionar") {
+  67   if (!buscarRlTag) {
+→ 68     buscarRlTag = await client.rlTagsUsuarioDefault.create({
+           data: {
+             usuarioDefaultId: undefined,
+             tagId: "c85240be-8caf-42d0-add4-d5979cb6d552",
+         +   usuarioDefault: {
+         +     create: UsuarioDefaultCreateWithoutRlTagsUsuarioDefaultInput | UsuarioDefaultUncheckedCreateWithoutRlTagsUsuarioDefaultInput,
+         +     connectOrCreate: UsuarioDefaultCreateOrConnectWithoutRlTagsUsuarioDefaultInput,
+         +     connect: UsuarioDefaultWhereUniqueInput
+         +   }
+           }
+         })
+
+Argument `usuarioDefault` is missing.
+25/07/24Y 16:57:52.106 [[31MERROR[39M]: Erro ao atualizar tags do membro da equipe model 
+Invalid `client.rlTagsUsuarioDefault.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateTagsMembroEquipe.js:68:63
+
+  65 
+  66 if (acao === "adicionar") {
+  67   if (!buscarRlTag) {
+→ 68     buscarRlTag = await client.rlTagsUsuarioDefault.create({
+           data: {
+             usuarioDefaultId: undefined,
+             tagId: "45884e48-e06b-4835-b81c-3ffc1fa79c67",
+         +   usuarioDefault: {
+         +     create: UsuarioDefaultCreateWithoutRlTagsUsuarioDefaultInput | UsuarioDefaultUncheckedCreateWithoutRlTagsUsuarioDefaultInput,
+         +     connectOrCreate: UsuarioDefaultCreateOrConnectWithoutRlTagsUsuarioDefaultInput,
+         +     connect: UsuarioDefaultWhereUniqueInput
+         +   }
+           }
+         })
+
+Argument `usuarioDefault` is missing.
+25/07/24Y 16:58:02.423 [[31MERROR[39M]: Erro ao atualizar tags do membro da equipe model 
+Invalid `client.rlTagsUsuarioDefault.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateTagsMembroEquipe.js:68:63
+
+  65 
+  66 if (acao === "adicionar") {
+  67   if (!buscarRlTag) {
+→ 68     buscarRlTag = await client.rlTagsUsuarioDefault.create({
+           data: {
+             usuarioDefaultId: undefined,
+             tagId: "c85240be-8caf-42d0-add4-d5979cb6d552",
+         +   usuarioDefault: {
+         +     create: UsuarioDefaultCreateWithoutRlTagsUsuarioDefaultInput | UsuarioDefaultUncheckedCreateWithoutRlTagsUsuarioDefaultInput,
+         +     connectOrCreate: UsuarioDefaultCreateOrConnectWithoutRlTagsUsuarioDefaultInput,
+         +     connect: UsuarioDefaultWhereUniqueInput
+         +   }
+           }
+         })
+
+Argument `usuarioDefault` is missing.
+25/07/24Y 16:58:03.231 [[31MERROR[39M]: Erro ao atualizar tags do membro da equipe model 
+Invalid `client.rlTagsUsuarioDefault.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateTagsMembroEquipe.js:68:63
+
+  65 
+  66 if (acao === "adicionar") {
+  67   if (!buscarRlTag) {
+→ 68     buscarRlTag = await client.rlTagsUsuarioDefault.create({
+           data: {
+             usuarioDefaultId: undefined,
+             tagId: "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+         +   usuarioDefault: {
+         +     create: UsuarioDefaultCreateWithoutRlTagsUsuarioDefaultInput | UsuarioDefaultUncheckedCreateWithoutRlTagsUsuarioDefaultInput,
+         +     connectOrCreate: UsuarioDefaultCreateOrConnectWithoutRlTagsUsuarioDefaultInput,
+         +     connect: UsuarioDefaultWhereUniqueInput
+         +   }
+           }
+         })
+
+Argument `usuarioDefault` is missing.
+25/07/24Y 16:58:03.715 [[31MERROR[39M]: Erro ao atualizar tags do membro da equipe model 
+Invalid `client.rlTagsUsuarioDefault.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateTagsMembroEquipe.js:68:63
+
+  65 
+  66 if (acao === "adicionar") {
+  67   if (!buscarRlTag) {
+→ 68     buscarRlTag = await client.rlTagsUsuarioDefault.create({
+           data: {
+             usuarioDefaultId: undefined,
+             tagId: "45884e48-e06b-4835-b81c-3ffc1fa79c67",
+         +   usuarioDefault: {
+         +     create: UsuarioDefaultCreateWithoutRlTagsUsuarioDefaultInput | UsuarioDefaultUncheckedCreateWithoutRlTagsUsuarioDefaultInput,
+         +     connectOrCreate: UsuarioDefaultCreateOrConnectWithoutRlTagsUsuarioDefaultInput,
+         +     connect: UsuarioDefaultWhereUniqueInput
+         +   }
+           }
+         })
+
+Argument `usuarioDefault` is missing.
+25/07/24Y 17:14:13.236 [[31MERROR[39M]: Erro ao atualizar tags do membro da equipe model 
+Invalid `client.rlTagsUsuarioHost.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateTagsMembroEquipe.js:21:60
+
+  18 
+  19 if (acao === "adicionar") {
+  20   if (!buscarRlTag) {
+→ 21     buscarRlTag = await client.rlTagsUsuarioHost.create({
+           data: {
+             usuarioHostId: undefined,
+             tagId: "45884e48-e06b-4835-b81c-3ffc1fa79c67",
+         +   usuarioHost: {
+         +     create: UsuarioHostCreateWithoutRlTagsUsuarioHostInput | UsuarioHostUncheckedCreateWithoutRlTagsUsuarioHostInput,
+         +     connectOrCreate: UsuarioHostCreateOrConnectWithoutRlTagsUsuarioHostInput,
+         +     connect: UsuarioHostWhereUniqueInput
+         +   }
+           }
+         })
+
+Argument `usuarioHost` is missing.
+25/07/24Y 17:14:13.640 [[31MERROR[39M]: Erro ao atualizar tags do membro da equipe model 
+Invalid `client.rlTagsUsuarioHost.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateTagsMembroEquipe.js:21:60
+
+  18 
+  19 if (acao === "adicionar") {
+  20   if (!buscarRlTag) {
+→ 21     buscarRlTag = await client.rlTagsUsuarioHost.create({
+           data: {
+             usuarioHostId: undefined,
+             tagId: "c85240be-8caf-42d0-add4-d5979cb6d552",
+         +   usuarioHost: {
+         +     create: UsuarioHostCreateWithoutRlTagsUsuarioHostInput | UsuarioHostUncheckedCreateWithoutRlTagsUsuarioHostInput,
+         +     connectOrCreate: UsuarioHostCreateOrConnectWithoutRlTagsUsuarioHostInput,
+         +     connect: UsuarioHostWhereUniqueInput
+         +   }
+           }
+         })
+
+Argument `usuarioHost` is missing.
+25/07/24Y 17:14:14.548 [[31MERROR[39M]: Erro ao atualizar tags do membro da equipe model 
+Invalid `client.rlTagsUsuarioHost.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateTagsMembroEquipe.js:21:60
+
+  18 
+  19 if (acao === "adicionar") {
+  20   if (!buscarRlTag) {
+→ 21     buscarRlTag = await client.rlTagsUsuarioHost.create({
+           data: {
+             usuarioHostId: undefined,
+             tagId: "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+         +   usuarioHost: {
+         +     create: UsuarioHostCreateWithoutRlTagsUsuarioHostInput | UsuarioHostUncheckedCreateWithoutRlTagsUsuarioHostInput,
+         +     connectOrCreate: UsuarioHostCreateOrConnectWithoutRlTagsUsuarioHostInput,
+         +     connect: UsuarioHostWhereUniqueInput
+         +   }
+           }
+         })
+
+Argument `usuarioHost` is missing.

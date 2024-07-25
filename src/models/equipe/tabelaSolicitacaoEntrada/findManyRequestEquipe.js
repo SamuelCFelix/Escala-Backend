@@ -1,7 +1,7 @@
 const { PrismaClient } = require("@prisma/client");
 const { format } = require("date-fns");
 const { ptBR } = require("date-fns/locale");
-const logger = require("../../custom/logger");
+const logger = require("../../../custom/logger");
 const client = new PrismaClient();
 
 module.exports = {
@@ -46,7 +46,8 @@ module.exports = {
 
       return solicitacoesTransformadas;
     } catch (error) {
-      error.path = "/models/equipe/findManyRequestEquipe";
+      error.path =
+        "/models/equipe/tabelaSolicitacaoEntrada/findManyRequestEquipe";
       logger.error("Erro ao buscar solicitações da equipe model", error);
       throw error;
     } finally {

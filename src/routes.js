@@ -14,6 +14,10 @@ const acceptMembroEquipeController = require("./controllers/equipe/tabelaSolicit
 const recuseMembroEquipeController = require("./controllers/equipe/tabelaSolicitacaoEntrada/recuseMembroEquipeController");
 const findManyMembrosEquipeController = require("./controllers/equipe/tabelaMinhaEquipe/findManyMembrosEquipeController");
 const findManyTagsEquipeController = require("./controllers/equipe/tabelaMinhaEquipe/findManyTagsEquipeController");
+const expulsarMembroEquipeController = require("./controllers/equipe/perfilEquipe/expulsarMembroEquipeController");
+const updateMembroAdmEquipeController = require("./controllers/equipe/perfilEquipe/updateMembroAdmEquipeController");
+const updateStatusMembroEquipeController = require("./controllers/equipe/perfilEquipe/updateStatusMembroEquipeController");
+const updateTagsMembroEquipeController = require("./controllers/equipe/perfilEquipe/updateTagsMembroEquipeController");
 
 const routes = Router();
 
@@ -73,6 +77,31 @@ routes.post(
   "/buscarTagsEquipe",
   tokenAuthentication.handle,
   findManyTagsEquipeController.handle
+);
+
+//Perfil
+routes.put(
+  "/expulsarMembroEquipe",
+  tokenAuthentication.handle,
+  expulsarMembroEquipeController.handle
+);
+
+routes.put(
+  "/updateAdmMembroEquipe",
+  tokenAuthentication.handle,
+  updateMembroAdmEquipeController.handle
+);
+
+routes.put(
+  "/updateStatusMembroEquipe",
+  tokenAuthentication.handle,
+  updateStatusMembroEquipeController.handle
+);
+
+routes.put(
+  "/updateTagsMembroEquipe",
+  tokenAuthentication.handle,
+  updateTagsMembroEquipeController.handle
 );
 
 module.exports = routes;
