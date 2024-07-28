@@ -59,6 +59,7 @@ module.exports = {
                 dataNascimento: loginEmailExist.dataNascimento,
                 termos: loginEmailExist.termos,
                 primeiroAcesso: loginEmailExist.primeiroAcesso,
+                equipeId: null,
               };
             } else if (loginEmailExist.UsuarioHost.length > 0) {
               const usuarioHost = await client.usuarioHost.findFirst({

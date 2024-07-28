@@ -18,6 +18,7 @@ const expulsarMembroEquipeController = require("./controllers/equipe/perfilEquip
 const updateMembroAdmEquipeController = require("./controllers/equipe/perfilEquipe/updateMembroAdmEquipeController");
 const updateStatusMembroEquipeController = require("./controllers/equipe/perfilEquipe/updateStatusMembroEquipeController");
 const updateTagsMembroEquipeController = require("./controllers/equipe/perfilEquipe/updateTagsMembroEquipeController");
+const findManyTagsMembroEquipeController = require("./controllers/geral/tabelaInformacoes/findManyTagsMembroEquipeController");
 
 const routes = Router();
 
@@ -46,6 +47,18 @@ routes.post(
   tokenAuthentication.handle,
   findConfigHomeController.handle
 );
+
+//TAB GERAL
+
+//Tabela Informações
+
+routes.post(
+  "/buscarTagsMembroEquipe",
+  tokenAuthentication.handle,
+  findManyTagsMembroEquipeController.handle
+);
+
+//TAB EQUIPE
 
 //Tabela Solicitações
 routes.post(
