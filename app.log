@@ -1750,3 +1750,8 @@ C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\esc
          })
 
 Argument `usuarioHost` is missing.
+30/07/24Y 12:52:17.052 [[31MERROR[39M]: Erro ao buscar tags de membro da equipe model Equipe não encontrada
+30/07/24Y 12:55:22.125 [[31MERROR[39M]: Erro ao buscar tags de membro da equipe model Equipe não encontrada
+30/07/24Y 14:47:00.836 [[31MERROR[39M]: Erro ao buscar tags de membro da equipe model Invalid day name
+30/07/24Y 15:49:03.997 [[31MERROR[39M]: Erro ao buscar tags de membro da equipe model monthNames is not defined
+30/07/24Y 15:50:05.691 [[31MERROR[39M]: Erro ao buscar programações da equipe model:  monthNames is not defined
