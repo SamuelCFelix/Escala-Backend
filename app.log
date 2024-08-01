@@ -1755,3 +1755,94 @@ Argument `usuarioHost` is missing.
 30/07/24Y 14:47:00.836 [[31MERROR[39M]: Erro ao buscar tags de membro da equipe model Invalid day name
 30/07/24Y 15:49:03.997 [[31MERROR[39M]: Erro ao buscar tags de membro da equipe model monthNames is not defined
 30/07/24Y 15:50:05.691 [[31MERROR[39M]: Erro ao buscar programações da equipe model:  monthNames is not defined
+31/07/24Y 03:38:26.657 [[31MERROR[39M]: Erro ao salvar disponibilidade de membro da equipe model 
+Invalid `client.escalaUsuarioHost.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\saveDisponibilidade.js:10:64
+
+   7 try {
+   8   const response = await client.$transaction(async (client) => {
+   9     if (host) {
+→ 10       const escalaUsuario = await client.escalaUsuarioHost.update({
+             where: {
+               usuarioHostId: "a6764cb7-c679-4a6d-abf1-210b0295e7ea"
+             },
+             data: {
+               disponibilidade: [
+                 {
+                   culto: "Culto Celebração - ZS08",
+                   programacaoId: "03c0dd08-fe84-4d69-8a2e-3c8bddd1d816",
+                   disponibilidade: false,
+                   indisponibilidade: []
+                 },
+                 {
+                   culto: "Culto Celebração - ZS10",
+                   programacaoId: "2d6f17cc-9399-4881-ace9-f2c24c4964ed",
+                   disponibilidade: true,
+                   indisponibilidade: [
+                     {
+                       data: "04/08/2024"
+                     }
+                   ]
+                 },
+                 {
+                   culto: "Culto Celebração - ZS16",
+                   programacaoId: "deb92857-0da6-41e7-8570-ab35e94f13e3",
+                   disponibilidade: true,
+                   indisponibilidade: []
+                 },
+                 {
+                   culto: "Culto Terça-Feira",
+                   programacaoId: "ed0a122b-d28f-4650-aaf2-c52d029975e4",
+                   disponibilidade: false,
+                   indisponibilidade: []
+                 },
+                 {
+                   culto: "Culto de Doutrina",
+                   programacaoId: "4253b035-3f3b-4f05-ba10-3712d0fe7c98",
+                   disponibilidade: true,
+                   indisponibilidade: [
+                     {
+                       data: "08/08/2024"
+                     },
+                     {
+                       data: "22/08/2024"
+                     },
+                     {
+                       data: "29/08/2024"
+                     }
+                   ]
+                 }
+               ],
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               updateAt: new Date("2024-07-31T06:38:26.639Z")
+             }
+           })
+
+Argument `disponibilidade`: Invalid value provided. Expected String, NullableStringFieldUpdateOperationsInput or Null, provided (Object, Object, Object, Object, Object).
+31/07/24Y 03:53:00.124 [[31MERROR[39M]: Erro ao salvar disponibilidade de membro da equipe model 
+Invalid `client.escalaUsuarioHost.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\saveDisponibilidade.js:10:64
+
+   7 try {
+   8   const response = await client.$transaction(async (client) => {
+   9     if (host) {
+→ 10       const escalaUsuario = await client.escalaUsuarioHost.update({
+             where: {
+               usuarioHostId: "a6764cb7-c679-4a6d-abf1-210b0295e7ea",
+           ?   id?: String,
+           ?   AND?: EscalaUsuarioHostWhereInput | EscalaUsuarioHostWhereInput[],
+           ?   OR?: EscalaUsuarioHostWhereInput[],
+           ?   NOT?: EscalaUsuarioHostWhereInput | EscalaUsuarioHostWhereInput[],
+           ?   servicos?: JsonNullableFilter,
+           ?   disponibilidade?: JsonNullableFilter,
+           ?   createAt?: DateTimeFilter | DateTime,
+           ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+           ?   usuarioHost?: UsuarioHostRelationFilter | UsuarioHostWhereInput
+             },
+             data: {
+               disponibilidade: "[{\"culto\":\"Culto Celebração - ZS08\",\"programacaoId\":\"03c0dd08-fe84-4d69-8a2e-3c8bddd1d816\",\"disponibilidade\":false,\"indisponibilidade\":[]},{\"culto\":\"Culto Celebração - ZS10\",\"programacaoId\":\"2d6f17cc-9399-4881-ace9-f2c24c4964ed\",\"disponibilidade\":true,\"indisponibilidade\":[{\"data\":\"04/08/2024\"}]},{\"culto\":\"Culto Celebração - ZS16\",\"programacaoId\":\"deb92857-0da6-41e7-8570-ab35e94f13e3\",\"disponibilidade\":true,\"indisponibilidade\":[]},{\"culto\":\"Culto Terça-Feira\",\"programacaoId\":\"ed0a122b-d28f-4650-aaf2-c52d029975e4\",\"disponibilidade\":false,\"indisponibilidade\":[]},{\"culto\":\"Culto de Doutrina\",\"programacaoId\":\"4253b035-3f3b-4f05-ba10-3712d0fe7c98\",\"disponibilidade\":true,\"indisponibilidade\":[{\"data\":\"15/08/2024\"},{\"data\":\"22/08/2024\"}]}]",
+               updateAt: new Date("2024-07-31T06:53:00.106Z")
+             }
+           })
+
+Argument `where` of type EscalaUsuarioHostWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
