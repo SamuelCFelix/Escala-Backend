@@ -17,7 +17,7 @@ module.exports = {
       if (!error.path) {
         error.path =
           "/controllers/geral/tabelaInformacoes/saveDisponibilidadeController";
-        logger.error("Erro ao buscar tags de membro da equipe:", error);
+        logger.error("Erro salvar disponibilidade de membro da equipe:", error);
       }
       res.status(500).json({ error: "Erro interno do servidor" });
     }
