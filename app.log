@@ -1846,3 +1846,227 @@ C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\esc
            })
 
 Argument `where` of type EscalaUsuarioHostWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+02/08/24Y 01:43:36.238 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:9:54
+
+  6 async execute(equipeId) {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const buscarInfoEquipe = await client.equipe.findFirst(
+Unknown nested field 'usuarioDefault' for operation findFirstEquipe does not match any query.
+02/08/24Y 02:00:17.162 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Equipe não encontrada
+02/08/24Y 02:02:24.113 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model uuidv4 is not defined
+02/08/24Y 02:02:30.622 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model uuidv4 is not defined
+02/08/24Y 02:53:38.424 [[31MERROR[39M]: Erro ao mudar status do membro da equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateStatusMembroEquipe.js:46:62
+
+  43   });
+  44   return buscarMembro;
+  45 } else if (acao === "desativar") {
+→ 46   const buscarMembro = await client.usuarioDefault.update({
+         where: {
+           id: undefined,
+       ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   OR?: UsuarioDefaultWhereInput[],
+       ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   nome?: StringFilter | String,
+       ?   autorizacao?: StringNullableFilter | String | Null,
+       ?   equipeId?: StringNullableFilter | String | Null,
+       ?   perfilId?: StringFilter | String,
+       ?   ativo?: BoolNullableFilter | Boolean | Null,
+       ?   createAt?: DateTimeFilter | DateTime,
+       ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+       ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+       ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+       ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+       ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+       ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+         },
+         data: {
+           ativo: false,
+           updateAt: new Date("2024-08-02T05:53:38.413Z")
+         }
+       })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+02/08/24Y 02:55:28.675 [[31MERROR[39M]: Erro ao mudar status do membro da equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateStatusMembroEquipe.js:46:62
+
+  43   });
+  44   return buscarMembro;
+  45 } else if (acao === "desativar") {
+→ 46   const buscarMembro = await client.usuarioDefault.update({
+         where: {
+           id: undefined,
+       ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   OR?: UsuarioDefaultWhereInput[],
+       ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   nome?: StringFilter | String,
+       ?   autorizacao?: StringNullableFilter | String | Null,
+       ?   equipeId?: StringNullableFilter | String | Null,
+       ?   perfilId?: StringFilter | String,
+       ?   ativo?: BoolNullableFilter | Boolean | Null,
+       ?   createAt?: DateTimeFilter | DateTime,
+       ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+       ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+       ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+       ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+       ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+       ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+         },
+         data: {
+           ativo: false,
+           updateAt: new Date("2024-08-02T05:55:28.672Z")
+         }
+       })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+02/08/24Y 02:55:53.738 [[31MERROR[39M]: Erro ao mudar status do membro da equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateStatusMembroEquipe.js:46:62
+
+  43   });
+  44   return buscarMembro;
+  45 } else if (acao === "desativar") {
+→ 46   const buscarMembro = await client.usuarioDefault.update({
+         where: {
+           id: undefined,
+       ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   OR?: UsuarioDefaultWhereInput[],
+       ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   nome?: StringFilter | String,
+       ?   autorizacao?: StringNullableFilter | String | Null,
+       ?   equipeId?: StringNullableFilter | String | Null,
+       ?   perfilId?: StringFilter | String,
+       ?   ativo?: BoolNullableFilter | Boolean | Null,
+       ?   createAt?: DateTimeFilter | DateTime,
+       ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+       ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+       ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+       ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+       ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+       ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+         },
+         data: {
+           ativo: false,
+           updateAt: new Date("2024-08-02T05:55:53.735Z")
+         }
+       })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+02/08/24Y 03:14:59.728 [[31MERROR[39M]: Erro ao mudar status do membro da equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateStatusMembroEquipe.js:46:62
+
+  43   });
+  44   return buscarMembro;
+  45 } else if (acao === "desativar") {
+→ 46   const buscarMembro = await client.usuarioDefault.update({
+         where: {
+           id: undefined,
+       ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   OR?: UsuarioDefaultWhereInput[],
+       ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   nome?: StringFilter | String,
+       ?   autorizacao?: StringNullableFilter | String | Null,
+       ?   equipeId?: StringNullableFilter | String | Null,
+       ?   perfilId?: StringFilter | String,
+       ?   ativo?: BoolNullableFilter | Boolean | Null,
+       ?   createAt?: DateTimeFilter | DateTime,
+       ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+       ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+       ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+       ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+       ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+       ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+         },
+         data: {
+           ativo: false,
+           updateAt: new Date("2024-08-02T06:14:59.724Z")
+         }
+       })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+02/08/24Y 03:15:32.136 [[31MERROR[39M]: Erro ao mudar status do membro da equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateStatusMembroEquipe.js:46:62
+
+  43   });
+  44   return buscarMembro;
+  45 } else if (acao === "desativar") {
+→ 46   const buscarMembro = await client.usuarioDefault.update({
+         where: {
+           id: undefined,
+       ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   OR?: UsuarioDefaultWhereInput[],
+       ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   nome?: StringFilter | String,
+       ?   autorizacao?: StringNullableFilter | String | Null,
+       ?   equipeId?: StringNullableFilter | String | Null,
+       ?   perfilId?: StringFilter | String,
+       ?   ativo?: BoolNullableFilter | Boolean | Null,
+       ?   createAt?: DateTimeFilter | DateTime,
+       ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+       ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+       ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+       ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+       ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+       ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+         },
+         data: {
+           ativo: false,
+           updateAt: new Date("2024-08-02T06:15:32.133Z")
+         }
+       })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+02/08/24Y 03:15:40.953 [[31MERROR[39M]: Erro ao mudar status do membro da equipe model 
+Invalid `client.usuarioDefault.update()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\perfilEquipe\updateStatusMembroEquipe.js:46:62
+
+  43   });
+  44   return buscarMembro;
+  45 } else if (acao === "desativar") {
+→ 46   const buscarMembro = await client.usuarioDefault.update({
+         where: {
+           id: undefined,
+       ?   AND?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   OR?: UsuarioDefaultWhereInput[],
+       ?   NOT?: UsuarioDefaultWhereInput | UsuarioDefaultWhereInput[],
+       ?   nome?: StringFilter | String,
+       ?   autorizacao?: StringNullableFilter | String | Null,
+       ?   equipeId?: StringNullableFilter | String | Null,
+       ?   perfilId?: StringFilter | String,
+       ?   ativo?: BoolNullableFilter | Boolean | Null,
+       ?   createAt?: DateTimeFilter | DateTime,
+       ?   updateAt?: DateTimeNullableFilter | DateTime | Null,
+       ?   equipe?: EquipeNullableRelationFilter | EquipeWhereInput | Null,
+       ?   perfil?: PerfilRelationFilter | PerfilWhereInput,
+       ?   RlTagsUsuarioDefault?: RlTagsUsuarioDefaultListRelationFilter,
+       ?   EscalaUsuarioDefault?: EscalaUsuarioDefaultListRelationFilter,
+       ?   RlSolicitacao?: RlSolicitacaoListRelationFilter
+         },
+         data: {
+           ativo: false,
+           updateAt: new Date("2024-08-02T06:15:40.951Z")
+         }
+       })
+
+Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+02/08/24Y 12:05:04.190 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Assignment to constant variable.
+02/08/24Y 12:29:02.851 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model buscarInfoEquipe?.map is not a function
+02/08/24Y 12:37:42.156 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model "undefined" is not valid JSON
+02/08/24Y 12:39:33.948 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model "undefined" is not valid JSON
+02/08/24Y 14:00:41.659 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model usuario?.EscalaUsuarioDefault?.disponibilidade?.some(...)?.map is not a function
+02/08/24Y 15:21:57.602 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model escalaDia?.map is not a function
+02/08/24Y 16:06:09.269 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model programacaoMensal is not iterable
+02/08/24Y 16:24:22.204 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Cannot read properties of undefined (reading 'map')
+02/08/24Y 16:27:14.077 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Assignment to constant variable.
+02/08/24Y 16:27:15.364 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Assignment to constant variable.
+02/08/24Y 16:27:16.252 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Assignment to constant variable.
+02/08/24Y 16:27:52.728 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Assignment to constant variable.
+02/08/24Y 16:27:53.813 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Assignment to constant variable.
+02/08/24Y 16:58:15.186 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model programacao.map is not a function

@@ -48,7 +48,6 @@ module.exports = {
             data: {
               servicos: null,
               disponibilidade: null,
-              indisponibilidade: null,
               updateAt: new Date(),
             },
           });
