@@ -2070,3 +2070,18 @@ Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `i
 02/08/24Y 16:27:52.728 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Assignment to constant variable.
 02/08/24Y 16:27:53.813 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Assignment to constant variable.
 02/08/24Y 16:58:15.186 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model programacao.map is not a function
+06/08/24Y 15:34:14.480 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model usuario?.EscalaUsuarioDefault?.disponibilidade?.some is not a function
+06/08/24Y 15:36:05.606 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model usuario?.EscalaUsuarioDefault?.disponibilidade?.some is not a function
+06/08/24Y 15:36:26.393 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model usuario?.EscalaUsuarioDefault?.disponibilidade?.some is not a function
+06/08/24Y 15:44:55.311 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model usuario?.EscalaUsuarioDefault?.disponibilidade?.some is not a function
+06/08/24Y 15:48:50.635 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model usuario?.EscalaUsuarioDefault?.disponibilidade?.some is not a function
+06/08/24Y 15:50:26.972 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Cannot read properties of undefined (reading 'forEach')
+06/08/24Y 15:51:18.951 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Cannot read properties of undefined (reading 'forEach')
+06/08/24Y 16:09:35.239 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model usuario?.EscalaUsuarioDefault?.disponibilidade?.some is not a function
+06/08/24Y 16:13:56.872 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Cannot read properties of undefined (reading 'programacaoId')
+06/08/24Y 16:16:15.506 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model escala?.map is not a function
+06/08/24Y 16:19:38.752 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Cannot read properties of undefined (reading 'programacaoId')
+06/08/24Y 16:19:45.111 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Cannot read properties of undefined (reading 'programacaoId')
+06/08/24Y 16:21:52.622 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Cannot read properties of undefined (reading 'programacaoId')
+06/08/24Y 16:21:54.317 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Cannot read properties of undefined (reading 'programacaoId')
+06/08/24Y 17:24:49.663 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model usuario?.EscalaUsuarioDefault?.disponibilidade?.some is not a function

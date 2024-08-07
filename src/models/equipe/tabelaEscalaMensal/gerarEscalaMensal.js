@@ -54,11 +54,7 @@ const getDatesForDayInMonth = (day, month, year) => {
   return dates;
 };
 
-function handleEscalaMembros(programacaoMensal) {
-  const escaladosProgramacao = [];
-  const membrosEscalados = [];
-
-  programacaoMensal.forEach((programacao) => {
+/* programacaoMensal?.forEach((programacao) => {
     const escaladosDia = (programacao = {
       programacaoId: programacao.escalaDia.programacaoId,
       data: programacao.escalaDia.data,
@@ -75,11 +71,51 @@ function handleEscalaMembros(programacaoMensal) {
       }),
     });
 
-    let membrosDisponiveis = programacao.membrosDisponiveis.forEach(
-      (membro) => {}
+    escaladosProgramacao.push(escaladosDia);
+  }); */
+
+function handleEscalaMembros(programacaoMensal, usuariosAtivos) {
+  const escaladosProgramacao = [];
+
+  programacaoMensal?.forEach((programacao) => {
+    const usuariosDisponiveis = usuariosAtivos
+      ?.filter((usuario) => {
+        const disponibilidade =
+          usuario.EscalaUsuarioHost?.disponibilidade ||
+          usuario.EscalaUsuarioDefault?.disponibilidade;
+
+        if (!Array.isArray(disponibilidade)) {
+          return false;
+        }
+
+        return disponibilidade?.some(
+          (infoUser) =>
+            infoUser.programacaoId === programacao.id &&
+            infoUser.disponibilidade === true
+        );
+      })
+      .map((usuario) => {
+        const indisponibilidade =
+          usuario.EscalaUsuarioHost?.disponibilidade?.filter(
+            (infoUser) => infoUser.programacaoId === programacao.id
+          ) ||
+          usuario.EscalaUsuarioDefault?.disponibilidade?.filter(
+            (infoUser) => infoUser.programacaoId === programacao.id
+          );
+
+        return {
+          id: usuario.id,
+          nome: usuario.nome,
+          tags: usuario.tags,
+          indisponibilidade: indisponibilidade[0]?.indisponibilidade || [],
+        };
+      });
+
+    const ordemEscalarUsuario = usuariosDisponiveis?.sort(
+      (a, b) => b?.indisponibilidade?.length - a?.indisponibilidade?.length
     );
 
-    escaladosProgramacao.push(escaladosDia);
+    escaladosProgramacao.push(ordemEscalarUsuario);
   });
 
   return escaladosProgramacao;
@@ -230,8 +266,8 @@ module.exports = {
           })
         );
 
-        const corpoEscalaMensal = programacaoMensal?.map((programacao) => {
-          const escalaMensal = programacao.datasProgramacaoMes.map((data) => {
+        /* const corpoEscalaMensal = programacaoMensal?.map((programacao) => {
+          const escalaMensal = programacao?.datasProgramacaoMes?.map((data) => {
             const escala = {
               programacaoId: programacao.id,
               data: data.data,
@@ -244,7 +280,7 @@ module.exports = {
             return escala;
           });
           return escalaMensal;
-        });
+        }); */
 
         const usuariosAtivos =
           buscarInfoEquipe?.UsuarioDefault?.filter(
@@ -293,7 +329,15 @@ module.exports = {
 
         const escalaMensalFormada = [];
 
-        corpoEscalaMensal?.forEach((escala) => {
+        escalaMensalFormada?.push(
+          handleEscalaMembros(programacaoMensal, usuariosAtivos)
+        );
+
+        return escalaMensalFormada;
+
+        /* escalaMensalFormada?.push(handleEscalaMembros(programacaoMensal)); */
+
+        /*  corpoEscalaMensal?.forEach((escala) => {
           const programacaoMensal = escala?.map((escalaDia) => {
             const membrosDisponiveis = usuariosAtivos
               ?.filter((usuario) => {
@@ -320,18 +364,27 @@ module.exports = {
                 }
               })
               .map((usuario) => {
+                const indisponibilidade = usuario.EscalaUsuarioHost
+                  ? JSON.parse(usuario.EscalaUsuarioHost?.[0]?.disponibilidade)
+                      .indisponibilidade
+                  : JSON.parse(
+                      usuario.EscalaUsuarioDefault?.[0]?.disponibilidade
+                    ).indisponibilidade;
+
                 return {
                   id: usuario.id,
                   nome: usuario.nome,
                   tags: usuario.tags,
+                  indisponibilidade: indisponibilidade || [],
                 };
               });
 
             return { escalaDia, membrosDisponiveis };
           });
 
+          console.log(usuariosAtivos);
           escalaMensalFormada?.push(handleEscalaMembros(programacaoMensal));
-        });
+        }); */
 
         return escalaMensalFormada;
       });
