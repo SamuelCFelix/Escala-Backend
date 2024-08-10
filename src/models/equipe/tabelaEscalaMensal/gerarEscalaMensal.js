@@ -54,47 +54,30 @@ const getDatesForDayInMonth = (day, month, year) => {
   return dates;
 };
 
-/* programacaoMensal?.forEach((programacao) => {
-    const escaladosDia = (programacao = {
-      programacaoId: programacao.escalaDia.programacaoId,
-      data: programacao.escalaDia.data,
-      dia: programacao.escalaDia.dia,
-      horario: programacao.escalaDia.horario,
-      culto: programacao.escalaDia.culto,
-      escalados: programacao.escalaDia.tags?.map((tag) => {
-        return {
-          tagId: tag.id,
-          tagNome: tag.nome,
-          membroId: "Sem membro",
-          membroNome: "Sem membro",
-        };
-      }),
-    });
-
-    escaladosProgramacao.push(escaladosDia);
-  }); */
-
 function handleEscalaMembros(programacaoMensal, usuariosAtivos) {
-  const escaladosProgramacao = [];
+  // Array que irá armazenar as escalas para todas as programações mensais
+  const escalaEquipe = [];
 
+  // Itera sobre cada programação mensal
   programacaoMensal?.forEach((programacao) => {
+    // Filtra e mapeia os usuários disponíveis para a programação atual
     const usuariosDisponiveis = usuariosAtivos
       ?.filter((usuario) => {
         const disponibilidade =
           usuario.EscalaUsuarioHost?.disponibilidade ||
           usuario.EscalaUsuarioDefault?.disponibilidade;
 
-        if (!Array.isArray(disponibilidade)) {
-          return false;
-        }
-
-        return disponibilidade?.some(
-          (infoUser) =>
-            infoUser.programacaoId === programacao.id &&
-            infoUser.disponibilidade === true
+        return (
+          Array.isArray(disponibilidade) &&
+          disponibilidade.some(
+            (infoUser) =>
+              infoUser.programacaoId === programacao.id &&
+              infoUser.disponibilidade === true
+          )
         );
       })
       .map((usuario) => {
+        // Filtra a indisponibilidade do usuário para a programação atual
         const indisponibilidade =
           usuario.EscalaUsuarioHost?.disponibilidade?.filter(
             (infoUser) => infoUser.programacaoId === programacao.id
@@ -111,57 +94,128 @@ function handleEscalaMembros(programacaoMensal, usuariosAtivos) {
         };
       });
 
-    const ordemEscalarUsuario = usuariosDisponiveis?.sort(
-      (a, b) => b?.indisponibilidade?.length - a?.indisponibilidade?.length
+    // Cria uma cópia da lista de usuários disponíveis e das tags da programação
+    let copyUsuariosDisponiveis = [...usuariosDisponiveis];
+    const copyTagsProgramacao = [...programacao.tags];
+
+    // Cria a estrutura de escala para o mês com base nas datas da programação
+    const escalaProgramacaoMensal = programacao.datasProgramacaoMes.map(
+      (data) => ({
+        programacaoId: programacao.id,
+        data: data.data,
+        dia: programacao.dia,
+        horario: programacao.horario,
+        culto: programacao.culto,
+        escalados: programacao.tags?.map((tag) => ({
+          tagId: tag.id,
+          tagNome: tag.nome,
+          membroId: "sem membro",
+          membroNome: "sem membro",
+        })),
+      })
     );
 
-    escaladosProgramacao.push(ordemEscalarUsuario);
-  });
-
-  return escaladosProgramacao;
-}
-
-/* const escalados = [];
-  const membrosDisponiveisCopy = [...membrosDisponiveis]; // Cria uma cópia da lista de membros disponíveis
-
-  tags?.forEach((tag) => {
-    // Filtra membros que possuem a tag atual
-    const membrosDisponiveisComTag = membrosDisponiveisCopy?.filter((membro) =>
-      membro.tags?.some((tagMembro) => tagMembro.id === tag.id)
-    );
-
-    if (membrosDisponiveisComTag.length > 0) {
-      // Escolhe um membro aleatório da lista filtrada
+    // Loop para processar todas as tags da programação
+    while (copyTagsProgramacao.length > 0) {
+      // Escolhe uma tag aleatoriamente
       const randomIndex = Math.floor(
-        Math.random() * membrosDisponiveisComTag?.length
+        Math.random() * copyTagsProgramacao.length
       );
-      const membro = membrosDisponiveisComTag[randomIndex];
+      const getTag = copyTagsProgramacao[randomIndex];
 
-      escalados.push({
-        tagId: tag.id,
-        tagNome: tag.nome,
-        membroId: membro.id,
-        membroNome: membro.nome,
-      });
+      // Itera sobre todas as datas da programação mensal
+      for (let i = 0; i < escalaProgramacaoMensal.length; i++) {
+        const escala = escalaProgramacaoMensal[i];
 
-      // Remove o membro selecionado da lista de disponíveis
-      const membroIndex = membrosDisponiveisCopy.findIndex(
-        (m) => m.id === membro.id
-      );
-      if (membroIndex !== -1) {
-        membrosDisponiveisCopy.splice(membroIndex, 1);
+        // Filtra os usuários que têm a tag atual e não estão indisponíveis na data específica
+        let usuariosComTag = copyUsuariosDisponiveis
+          ?.filter(
+            (usuario) =>
+              usuario.tags?.some((tag) => tag.id === getTag.id) &&
+              !usuario.indisponibilidade.some((ind) => ind.data === escala.data)
+          )
+          .sort((a, b) => {
+            const diff =
+              b.indisponibilidade.length - a.indisponibilidade.length;
+            // Se a quantidade de indisponibilidade for igual, embaralha a ordem
+            if (diff === 0) {
+              return Math.random() - 0.5;
+            }
+            return diff;
+          });
+
+        // Se há usuários disponíveis com a tag
+        if (usuariosComTag.length > 0) {
+          // Tenta alocar um usuário disponível na escala
+          for (const usuario of usuariosComTag) {
+            if (
+              !escala.escalados.some(
+                (escalados) => escalados.membroId === usuario.id
+              )
+            ) {
+              const posicaoIndex = escala.escalados.findIndex(
+                (escalado) =>
+                  escalado.tagId === getTag.id &&
+                  escalado.membroId === "sem membro"
+              );
+
+              if (posicaoIndex !== -1) {
+                // Atribui o usuário à posição disponível na escala
+                escala.escalados[posicaoIndex] = {
+                  tagId: getTag.id,
+                  tagNome: getTag.nome,
+                  membroId: usuario.id,
+                  membroNome: usuario.nome,
+                };
+
+                // Remove o usuário da lista de disponíveis
+                copyUsuariosDisponiveis = copyUsuariosDisponiveis.filter(
+                  (u) => u.id !== usuario.id
+                );
+
+                break; // Sai do loop assim que um usuário for escalado
+              }
+            }
+          }
+
+          if (
+            escala.escalados.some(
+              (escalado) =>
+                escalado.tagId === getTag.id &&
+                escalado.membroId === "sem membro"
+            )
+          ) {
+            console.log("Sem membro escalado");
+          }
+        } else if (
+          usuariosDisponiveis?.filter(
+            (usuario) =>
+              usuario.tags?.some((tag) => tag.id === getTag.id) &&
+              !usuario.indisponibilidade.some(
+                (ind) =>
+                  ind.data === escala.data &&
+                  !escala.escalados.some(
+                    (escalados) => escalados.membroId === usuario.id
+                  )
+              )
+          ).length > 0
+        ) {
+          // Se não há usuários disponíveis na lista copiada, repõe a lista original e reinicia o loop
+          copyUsuariosDisponiveis = [...usuariosDisponiveis];
+          i--; // Reinicia o loop para tentar escalá-los novamente
+        }
       }
-    } else {
-      escalados.push({
-        tagId: tag.id,
-        tagNome: tag.nome,
-        membroId: "Sem membro",
-        membroNome: "Sem membro",
-      });
+
+      // Remove a tag do loop após atribuir a todos os dias
+      copyTagsProgramacao.splice(randomIndex, 1);
     }
+
+    // Adiciona a escala mensal à equipe
+    escalaEquipe.push(escalaProgramacaoMensal);
   });
 
-  return escalados; */
+  return escalaEquipe;
+}
 
 module.exports = {
   async execute(equipeId) {
@@ -266,22 +320,6 @@ module.exports = {
           })
         );
 
-        /* const corpoEscalaMensal = programacaoMensal?.map((programacao) => {
-          const escalaMensal = programacao?.datasProgramacaoMes?.map((data) => {
-            const escala = {
-              programacaoId: programacao.id,
-              data: data.data,
-              dia: programacao.dia,
-              horario: programacao.horario,
-              culto: programacao.culto,
-              tags: programacao.tags,
-              escalados: [],
-            };
-            return escala;
-          });
-          return escalaMensal;
-        }); */
-
         const usuariosAtivos =
           buscarInfoEquipe?.UsuarioDefault?.filter(
             (usuario) => usuario.ativo
@@ -332,59 +370,6 @@ module.exports = {
         escalaMensalFormada?.push(
           handleEscalaMembros(programacaoMensal, usuariosAtivos)
         );
-
-        return escalaMensalFormada;
-
-        /* escalaMensalFormada?.push(handleEscalaMembros(programacaoMensal)); */
-
-        /*  corpoEscalaMensal?.forEach((escala) => {
-          const programacaoMensal = escala?.map((escalaDia) => {
-            const membrosDisponiveis = usuariosAtivos
-              ?.filter((usuario) => {
-                if (usuario.EscalaUsuarioHost) {
-                  return usuario?.EscalaUsuarioHost?.disponibilidade?.some(
-                    (programacao) =>
-                      programacao.programacaoId === escalaDia.programacaoId &&
-                      programacao.disponibilidade === true &&
-                      !programacao.indisponibilidade?.some(
-                        (dataIndisponivel) =>
-                          dataIndisponivel.data === escalaDia.data
-                      )
-                  );
-                } else {
-                  return usuario?.EscalaUsuarioDefault?.disponibilidade?.some(
-                    (programacao) =>
-                      programacao.programacaoId === escalaDia.programacaoId &&
-                      programacao.disponibilidade === true &&
-                      !programacao.indisponibilidade?.some(
-                        (dataIndisponivel) =>
-                          dataIndisponivel.data === escalaDia.data
-                      )
-                  );
-                }
-              })
-              .map((usuario) => {
-                const indisponibilidade = usuario.EscalaUsuarioHost
-                  ? JSON.parse(usuario.EscalaUsuarioHost?.[0]?.disponibilidade)
-                      .indisponibilidade
-                  : JSON.parse(
-                      usuario.EscalaUsuarioDefault?.[0]?.disponibilidade
-                    ).indisponibilidade;
-
-                return {
-                  id: usuario.id,
-                  nome: usuario.nome,
-                  tags: usuario.tags,
-                  indisponibilidade: indisponibilidade || [],
-                };
-              });
-
-            return { escalaDia, membrosDisponiveis };
-          });
-
-          console.log(usuariosAtivos);
-          escalaMensalFormada?.push(handleEscalaMembros(programacaoMensal));
-        }); */
 
         return escalaMensalFormada;
       });

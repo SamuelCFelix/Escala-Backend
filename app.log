@@ -2085,3 +2085,10 @@ Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `i
 06/08/24Y 16:21:52.622 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Cannot read properties of undefined (reading 'programacaoId')
 06/08/24Y 16:21:54.317 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Cannot read properties of undefined (reading 'programacaoId')
 06/08/24Y 17:24:49.663 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model usuario?.EscalaUsuarioDefault?.disponibilidade?.some is not a function
+09/08/24Y 11:05:13.249 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model undefined is not a function
+09/08/24Y 15:34:00.296 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model usuario.tags?.some(...)?.sort is not a function
+09/08/24Y 15:34:24.882 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model usuario.tags?.some(...)?.sort is not a function
+09/08/24Y 15:34:25.876 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model usuario.tags?.some(...)?.sort is not a function
+09/08/24Y 15:34:26.794 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model usuario.tags?.some(...)?.sort is not a function
+09/08/24Y 16:49:56.429 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Assignment to constant variable.
+09/08/24Y 18:35:37.563 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model usuario is not defined
