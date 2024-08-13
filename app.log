@@ -2092,3 +2092,127 @@ Argument `where` of type UsuarioDefaultWhereUniqueInput needs at least one of `i
 09/08/24Y 15:34:26.794 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model usuario.tags?.some(...)?.sort is not a function
 09/08/24Y 16:49:56.429 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Assignment to constant variable.
 09/08/24Y 18:35:37.563 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model usuario is not defined
+13/08/24Y 14:24:45.018 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Cannot read properties of undefined (reading 'escalados')
+13/08/24Y 14:26:21.612 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Cannot read properties of undefined (reading 'escalados')
+13/08/24Y 14:38:25.450 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Cannot read properties of undefined (reading 'escalados')
+13/08/24Y 14:39:16.135 [[31MERROR[39M]: Erro ao gerar escala mensal da equipe model Cannot read properties of undefined (reading 'escalados')
+13/08/24Y 16:46:35.680 [[34MDEBUG[39M]: Gerando escala mensal da equipe
+13/08/24Y 16:46:35.787 [[32MINFO[39M]: Escala mensal da equipe gerada com sucesso
+2024-08-13 16:55:21.089 [[34MDEBUG[39M]: Gerando escala mensal da equipe
+2024-08-13 16:55:21.197 [[32MINFO[39M]: Escala mensal da equipe gerada com sucesso
+13/08/2024 17:00:27.863 [[34MDEBUG[39M] (Unknown location): Gerando escala mensal da equipe
+13/08/2024 17:00:28.056 [[32MINFO[39M] (Unknown location): Escala mensal da equipe gerada com sucesso
+13/08/2024 17:06:00.430 [[35mDEBUG[0m] (Unknown location): Gerando escala mensal da equipe
+13/08/2024 17:06:00.634 [[32mINFO[0m] (Unknown location): Escala mensal da equipe gerada com sucesso
+13/08/2024 17:08:29.561 [[35mDEBUG[0m] (node_modules\logform\printf.js): Gerando escala mensal da equipe
+13/08/2024 17:08:29.654 [[32mINFO[0m] (node_modules\logform\printf.js): Escala mensal da equipe gerada com sucesso
+13/08/2024 17:10:13.539 [[35mDEBUG[0m] (node_modules\logform\printf.js): Gerando escala mensal da equipe
+13/08/2024 17:10:13.634 [[32mINFO[0m] (node_modules\logform\printf.js): Escala mensal da equipe gerada com sucesso
+13/08/2024 17:13:21.730 [[35mDEBUG[0m] : Gerando escala mensal da equipe
+13/08/2024 17:13:21.840 [[31mERROR[0m] (/models/equipe/tabelaEscalaMensal/gerarEscalaMensal): Erro ao gerar escala mensal da equipe model
+13/08/2024 17:18:47.069 [[35mDEBUG[0m] : Gerando escala mensal da equipe
+13/08/2024 17:18:47.178 [[31mERROR[0m] (/models/equipe/tabelaEscalaMensal/gerarEscalaMensal): Erro ao gerar escala mensal da equipe model
+Stack trace:
+Error: Teste de erro
+    at C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:417:15
+    at async Proxy._transactionWithCallback (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\@prisma\client\runtime\library.js:131:8372)
+    at async Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:255:24)
+    at async handle (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\controllers\equipe\tabelaEscalaMensal\gerarEscalaMensalController.js:9:22)
+13/08/2024 17:21:00.393 [[35mDEBUG[0m] (node_modules\logform\printf.js:11): Gerando escala mensal da equipe
+
+13/08/2024 17:21:00.600 [[31mERROR[0m] (node_modules\logform\printf.js:11): Erro ao gerar escala mensal da equipe model: Error: Teste de erro
+    at C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:417:15
+    at async Proxy._transactionWithCallback (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\@prisma\client\runtime\library.js:131:8372)
+    at async Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:255:24)
+    at async handle (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\controllers\equipe\tabelaEscalaMensal\gerarEscalaMensalController.js:9:22)
+
+13/08/2024 17:23:21.401 [[35mDEBUG[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26): Gerando escala mensal da equipe
+13/08/2024 17:23:21.502 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26): Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:23:28.995 [[35mDEBUG[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26): Gerando escala mensal da equipe
+13/08/2024 17:23:29.101 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26): Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:23:39.192 [[35mDEBUG[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26): Gerando escala mensal da equipe
+13/08/2024 17:23:39.294 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26): Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:25:44.394 [[35mDEBUG[0m] (): Gerando escala mensal da equipe
+13/08/2024 17:25:44.500 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js): Erro ao gerar escala mensal da equipe model:     at C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:417:15
+    at async Proxy._transactionWithCallback (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\@prisma\client\runtime\library.js:131:8372)
+    at async Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:255:24)
+    at async handle (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\controllers\equipe\tabelaEscalaMensal\gerarEscalaMensalController.js:9:22)
+13/08/2024 17:26:50.113 [[35mDEBUG[0m] (): Gerando escala mensal da equipe
+13/08/2024 17:26:50.204 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js): Erro ao gerar escala mensal da equipe model: at C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:417:15
+    at async Proxy._transactionWithCallback (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\@prisma\client\runtime\library.js:131:8372)
+    at async Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:255:24)
+    at async handle (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\controllers\equipe\tabelaEscalaMensal\gerarEscalaMensalController.js:9:22)
+13/08/2024 17:28:23.801 [[35mDEBUG[0m] (): Gerando escala mensal da equipe
+13/08/2024 17:28:23.909 [[31mERROR[0m] (node_modules\logform\printf.js): Erro ao gerar escala mensal da equipe model: at C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:417:15
+13/08/2024 17:29:30.877 [[35mDEBUG[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26): Gerando escala mensal da equipe
+13/08/2024 17:29:31.005 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26): Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:31:34.788 [[35mDEBUG[0m] : Gerando escala mensal da equipe
+13/08/2024 17:31:34.883 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\custom\logger.js:5:17) : Erro ao gerar escala mensal da equipe model: Teste de erro
+Stack trace:
+Error: Teste de erro
+    at C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:417:15
+    at async Proxy._transactionWithCallback (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\@prisma\client\runtime\library.js:131:8372)
+    at async Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:255:24)
+    at async handle (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\controllers\equipe\tabelaEscalaMensal\gerarEscalaMensalController.js:9:22)
+13/08/2024 17:31:49.932 [[35mDEBUG[0m] : Gerando escala mensal da equipe
+13/08/2024 17:31:50.035 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\custom\logger.js:5:17) : Erro ao gerar escala mensal da equipe model: Teste de erro
+Stack trace:
+Error: Teste de erro
+    at C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:417:15
+    at async Proxy._transactionWithCallback (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\@prisma\client\runtime\library.js:131:8372)
+    at async Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:255:24)
+    at async handle (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\controllers\equipe\tabelaEscalaMensal\gerarEscalaMensalController.js:9:22)
+13/08/2024 17:32:08.765 [[35mDEBUG[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26): Gerando escala mensal da equipe
+13/08/2024 17:32:08.866 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26): Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:33:18.831 [[35mDEBUG[0m] : Gerando escala mensal da equipe
+13/08/2024 17:33:18.937 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\custom\logger.js) : Erro ao gerar escala mensal da equipe model: Teste de erro
+Stack trace:
+Error: Teste de erro
+    at C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:417:15
+    at async Proxy._transactionWithCallback (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\@prisma\client\runtime\library.js:131:8372)
+    at async Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:255:24)
+    at async handle (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\controllers\equipe\tabelaEscalaMensal\gerarEscalaMensalController.js:9:22)
+13/08/2024 17:33:29.673 [[35mDEBUG[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26): Gerando escala mensal da equipe
+13/08/2024 17:33:29.775 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26): Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:35:16.913 [[35mDEBUG[0m] : Gerando escala mensal da equipe
+13/08/2024 17:35:17.030 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js) : Erro ao gerar escala mensal da equipe model: Teste de erro
+Stack trace:
+Error: Teste de erro
+    at C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:417:15
+    at async Proxy._transactionWithCallback (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\@prisma\client\runtime\library.js:131:8372)
+    at async Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:255:24)
+    at async handle (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\controllers\equipe\tabelaEscalaMensal\gerarEscalaMensalController.js:9:22)
+13/08/2024 17:36:16.288 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 17:36:16.401 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js) Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:40:19.036 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 17:40:19.138 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26) Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:42:43.390 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 17:42:43.484 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26) Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:43:43.998 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 17:43:44.139 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js) Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:45:19.393 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 17:45:19.488 [[31mERROR[0m] (    at getCallerFile (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\custom\logger.js) Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:46:34.619 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 17:46:34.725 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\custom\logger.js) Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:48:13.598 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 17:48:13.692 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26) Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:50:40.677 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 17:50:40.770 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26) Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:51:12.552 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 17:51:12.752 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\logform\printf.js:11:26) Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:52:26.790 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 17:52:26.886 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\custom\logger.js) Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:53:26.090 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 17:53:31.409 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 17:53:40.579 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 17:53:40.781 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\custom\logger.js) Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 17:56:55.324 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 17:56:55.519 [[31mERROR[0m] (/models/equipe/tabelaEscalaMensal/gerarEscalaMensal) Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 18:00:54.165 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 18:00:54.271 [[31mERROR[0m] (Unknown location) Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 18:01:42.261 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 18:01:42.366 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:417) Erro ao gerar escala mensal da equipe model: Teste de erro
+13/08/2024 18:04:13.858 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 18:04:14.049 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+13/08/2024 18:04:40.758 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 18:04:40.863 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso

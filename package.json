@@ -12,6 +12,7 @@
   "dependencies": {
     "@prisma/client": "^5.9.1",
     "bcrypt": "^5.1.1",
+    "colors": "^1.4.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "date-fns": "^3.6.0",
@@ -19,8 +20,10 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "nodemon": "^3.0.2",
+    "stack-trace": "^1.0.0-pre2",
     "uuid": "^10.0.0",
-    "winston": "^3.11.0"
+    "winston": "^3.14.1",
+    "winston-daily-rotate-file": "^5.0.0"
   },
   "devDependencies": {
     "prisma": "^5.9.1"

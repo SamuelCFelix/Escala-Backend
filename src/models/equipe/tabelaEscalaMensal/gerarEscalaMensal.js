@@ -177,32 +177,62 @@ function handleEscalaMembros(programacaoMensal, usuariosAtivos) {
               }
             }
           }
-
-          if (
-            escala.escalados.some(
-              (escalado) =>
-                escalado.tagId === getTag.id &&
-                escalado.membroId === "sem membro"
-            )
-          ) {
-            console.log("Sem membro escalado");
-          }
         } else if (
           usuariosDisponiveis?.filter(
             (usuario) =>
               usuario.tags?.some((tag) => tag.id === getTag.id) &&
               !usuario.indisponibilidade.some(
-                (ind) =>
-                  ind.data === escala.data &&
-                  !escala.escalados.some(
-                    (escalados) => escalados.membroId === usuario.id
-                  )
+                (ind) => ind.data === escala.data
+              ) &&
+              !escala.escalados.some(
+                (escalados) => escalados.membroId === usuario.id
               )
           ).length > 0
         ) {
           // Se não há usuários disponíveis na lista copiada, repõe a lista original e reinicia o loop
           copyUsuariosDisponiveis = [...usuariosDisponiveis];
           i--; // Reinicia o loop para tentar escalá-los novamente
+        }
+
+        if (
+          escala.escalados.some(
+            (escalado) =>
+              escalado.tagId === getTag.id && escalado.membroId === "sem membro"
+          )
+        ) {
+          let usuariosComDisponibilidade = usuariosDisponiveis?.filter(
+            (usuario) =>
+              usuario.tags?.some((tag) => tag.id === getTag.id) &&
+              !usuario.indisponibilidade.some(
+                (ind) => ind.data === escala.data
+              ) &&
+              !escala.escalados.some(
+                (escalados) => escalados.membroId === usuario.id
+              )
+          );
+
+          if (usuariosComDisponibilidade.length > 0) {
+            const randomIndex = Math.floor(
+              Math.random() * usuariosComDisponibilidade.length
+            );
+            const usuario = usuariosComDisponibilidade[randomIndex];
+
+            const posicaoIndex = escala.escalados.findIndex(
+              (escalado) =>
+                escalado.tagId === getTag.id &&
+                escalado.membroId === "sem membro"
+            );
+
+            if (posicaoIndex !== -1) {
+              // Atribui o usuário à posição disponível na escala
+              escala.escalados[posicaoIndex] = {
+                tagId: getTag.id,
+                tagNome: getTag.nome,
+                membroId: usuario.id,
+                membroNome: usuario.nome,
+              };
+            }
+          }
         }
       }
 
@@ -220,6 +250,8 @@ function handleEscalaMembros(programacaoMensal, usuariosAtivos) {
 module.exports = {
   async execute(equipeId) {
     try {
+      logger.debug("Gerando escala mensal da equipe");
+
       const response = await client.$transaction(async (client) => {
         const buscarInfoEquipe = await client.equipe.findFirst({
           where: {
@@ -365,11 +397,25 @@ module.exports = {
           usuariosAtivos?.push(usuarioHost);
         }
 
-        const escalaMensalFormada = [];
+        let escalaMensalFormada = [];
 
         escalaMensalFormada?.push(
           handleEscalaMembros(programacaoMensal, usuariosAtivos)
         );
+
+        escalaMensalFormada = JSON.stringify(escalaMensalFormada);
+
+        await client.equipe.update({
+          where: {
+            id: equipeId,
+          },
+          data: {
+            escalaMensal: escalaMensalFormada,
+            updateAt: new Date(),
+          },
+        });
+
+        logger.info("Escala mensal da equipe gerada com sucesso");
 
         return escalaMensalFormada;
       });

@@ -62,25 +62,27 @@ model UsuarioDefault {
 }
 
 model EscalaUsuarioHost {
-  id              String      @id @default(uuid())
-  servicos        Json?
-  disponibilidade Json?
-  usuarioHostId   String
-  usuarioHost     UsuarioHost @relation(fields: [usuarioHostId], references: [id], onDelete: Cascade)
-  createAt        DateTime    @default(now())
-  updateAt        DateTime?
+  id                    String      @id @default(uuid())
+  servicos              Json?
+  disponibilidade       Json?
+  backupDisponibilidade Json?
+  usuarioHostId         String
+  usuarioHost           UsuarioHost @relation(fields: [usuarioHostId], references: [id], onDelete: Cascade)
+  createAt              DateTime    @default(now())
+  updateAt              DateTime?
 
   @@map("escalaUsuarioHost")
 }
 
 model EscalaUsuarioDefault {
-  id               String         @id @default(uuid())
-  servicos         Json?
-  disponibilidade  Json?
-  usuarioDefaultId String
-  usuarioDefault   UsuarioDefault @relation(fields: [usuarioDefaultId], references: [id], onDelete: Cascade)
-  createAt         DateTime       @default(now())
-  updateAt         DateTime?
+  id                    String         @id @default(uuid())
+  servicos              Json?
+  disponibilidade       Json?
+  backupDisponibilidade Json?
+  usuarioDefaultId      String
+  usuarioDefault        UsuarioDefault @relation(fields: [usuarioDefaultId], references: [id], onDelete: Cascade)
+  createAt              DateTime       @default(now())
+  updateAt              DateTime?
 
   @@map("escalaUsuarioDefault")
 }
@@ -90,6 +92,7 @@ model Equipe {
   nome           String
   descricao      String
   usuarioHostId  String
+  escalaMensal   Json?
   usuarioHost    UsuarioHost      @relation(fields: [usuarioHostId], references: [id], onDelete: Cascade)
   Tags           Tags[]
   Programacao    Programacao[]
