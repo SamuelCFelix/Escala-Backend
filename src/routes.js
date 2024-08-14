@@ -23,6 +23,7 @@ const findManyProgramacoesController = require("./controllers/geral/tabelaInform
 const saveDisponibilidadeController = require("./controllers/geral/tabelaInformacoes/saveDisponibilidadeController");
 const findDisponibilidadeMembroController = require("./controllers/geral/tabelaInformacoes/findDisponibilidadeMembroController");
 const gerarEscalaMensalController = require("./controllers/equipe/tabelaEscalaMensal/gerarEscalaMensalController");
+const findEscalaMensalController = require("./controllers/equipe/tabelaEscalaMensal/findEscalaMensalController");
 
 const routes = Router();
 
@@ -87,6 +88,12 @@ routes.post(
   "/gerarEscalaMensal",
   tokenAuthentication.handle,
   gerarEscalaMensalController.handle
+);
+
+routes.post(
+  "/buscarEscalaMensal",
+  tokenAuthentication.handle,
+  findEscalaMensalController.handle
 );
 
 //Tabela Solicitações

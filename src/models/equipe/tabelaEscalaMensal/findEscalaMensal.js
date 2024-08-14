@@ -250,211 +250,43 @@ function handleEscalaMembros(programacaoMensal, usuariosAtivos) {
 module.exports = {
   async execute(equipeId) {
     try {
-      logger.debug("Gerando escala mensal da equipe");
-
-      const response = await client.$transaction(async (client) => {
-        const buscarInfoEquipe = await client.equipe.findFirst({
-          where: {
-            id: equipeId,
-          },
-          select: {
-            Programacao: {
-              select: {
-                id: true,
-                culto: true,
-                dia: true,
-                horario: true,
-                RlTagsProgramacao: {
-                  select: {
-                    tags: {
-                      select: {
-                        id: true,
-                        nome: true,
-                      },
-                    },
-                  },
-                },
-              },
-            },
-            usuarioHost: {
-              select: {
-                id: true,
-                nome: true,
-                ativo: true,
-                RlTagsUsuarioHost: {
-                  select: {
-                    tags: {
-                      select: {
-                        id: true,
-                        nome: true,
-                      },
-                    },
-                  },
-                },
-                EscalaUsuarioHost: {
-                  select: {
-                    id: true,
-                    disponibilidade: true,
-                  },
-                },
-              },
-            },
-            UsuarioDefault: {
-              select: {
-                id: true,
-                nome: true,
-                ativo: true,
-                RlTagsUsuarioDefault: {
-                  select: {
-                    tags: {
-                      select: {
-                        id: true,
-                        nome: true,
-                      },
-                    },
-                  },
-                },
-                EscalaUsuarioDefault: {
-                  select: {
-                    id: true,
-                    disponibilidade: true,
-                  },
-                },
-              },
-            },
-          },
-        });
-
-        if (!buscarInfoEquipe) {
-          throw new Error("Equipe não encontrada");
-        }
-
-        /* const { month, year } = getCurrentMonthAndYear(); */
-        const { month, year } = getNextMonthAndYear();
-
-        const programacaoMensal = buscarInfoEquipe?.Programacao?.map(
-          (programacao) => ({
-            id: programacao.id,
-            culto: programacao.culto,
-            dia: programacao.dia,
-            horario: programacao.horario,
-            tags: programacao.RlTagsProgramacao?.map((tagRelation) => ({
-              id: tagRelation.tags.id,
-              nome: tagRelation.tags.nome,
-            })),
-            datasProgramacaoMes: getDatesForDayInMonth(
-              programacao.dia,
-              month,
-              year
-            ).map((data) => ({
-              data,
-            })),
-          })
-        );
-
-        const usuariosAtivos =
-          buscarInfoEquipe?.UsuarioDefault?.filter(
-            (usuario) => usuario.ativo
-          )?.map((usuario) => {
-            return {
-              id: usuario.id,
-              nome: usuario.nome,
-              ativo: usuario.ativo,
-              tags: usuario.RlTagsUsuarioDefault?.map((tagRelation) => ({
-                id: tagRelation.tags.id,
-                nome: tagRelation.tags.nome,
-              })),
-              EscalaUsuarioDefault: {
-                id: usuario.EscalaUsuarioDefault[0]?.id,
-                disponibilidade:
-                  JSON?.parse(
-                    usuario.EscalaUsuarioDefault[0]?.disponibilidade
-                  ) || {},
-              },
-            };
-          }) || [];
-
-        if (buscarInfoEquipe?.usuarioHost?.ativo) {
-          const usuarioHost = {
-            id: buscarInfoEquipe?.usuarioHost?.id,
-            nome: buscarInfoEquipe?.usuarioHost?.nome,
-            ativo: buscarInfoEquipe?.usuarioHost?.ativo,
-            tags: buscarInfoEquipe?.usuarioHost?.RlTagsUsuarioHost?.map(
-              (tagRelation) => ({
-                id: tagRelation.tags.id,
-                nome: tagRelation.tags.nome,
-              })
-            ),
-            EscalaUsuarioHost: {
-              id: buscarInfoEquipe?.usuarioHost?.EscalaUsuarioHost[0]?.id,
-              disponibilidade:
-                JSON?.parse(
-                  buscarInfoEquipe?.usuarioHost?.EscalaUsuarioHost[0]
-                    ?.disponibilidade
-                ) || {},
-            },
-          };
-          usuariosAtivos?.push(usuarioHost);
-        }
-
-        let escalaMensalFormada = [];
-
-        escalaMensalFormada?.push(
-          handleEscalaMembros(programacaoMensal, usuariosAtivos)
-        );
-
-        escalaMensalFormada = JSON.stringify(escalaMensalFormada);
-
-        await client.equipe.update({
-          where: {
-            id: equipeId,
-          },
-          data: {
-            escalaMensal: escalaMensalFormada,
-            updateAt: new Date(),
-          },
-        });
-
-        logger.info("Escala mensal da equipe gerada com sucesso");
-
-        //Salvar backup da disponibilidade dos usuários
-        await Promise.all(
-          buscarInfoEquipe?.UsuarioDefault?.map(async (usuario) => {
-            await client.escalaUsuarioDefault.update({
-              where: {
-                id: usuario.EscalaUsuarioDefault[0]?.id,
-              },
-              data: {
-                backupDisponibilidade:
-                  usuario.EscalaUsuarioDefault[0]?.disponibilidade,
-                updateAt: new Date(),
-              },
-            });
-          })
-        );
-
-        let usuarioHostBackupEscala = buscarInfoEquipe?.usuarioHost;
-
-        if (usuarioHostBackupEscala) {
-          await client.escalaUsuarioHost.update({
-            where: {
-              id: usuarioHostBackupEscala.EscalaUsuarioHost[0]?.id,
-            },
-            data: {
-              backupDisponibilidade:
-                usuarioHostBackupEscala.EscalaUsuarioHost[0]?.disponibilidade,
-              updateAt: new Date(),
-            },
-          });
-        }
-
-        return escalaMensalFormada;
+      // Busca a programação mensal da equipe
+      const buscarEscalaEquipe = await client.equipe.findFirst({
+        where: {
+          id: equipeId,
+        },
+        select: {
+          escalaMensal: true,
+        },
       });
 
-      return response;
+      let programacaoMensal = [];
+
+      if (!buscarEscalaEquipe) {
+        throw new Error("Equipe não encontrada");
+      } else {
+        // colocar na ordem cronológica
+        const dataArray = JSON.parse(buscarEscalaEquipe?.escalaMensal);
+
+        // 1. Achatar o array para que todos os objetos estejam no mesmo nível.
+        const flattenedArray = dataArray.flat(Infinity);
+
+        // 2. Ordenar o array achatado por data e horário.
+        programacaoMensal = flattenedArray.sort((a, b) => {
+          const dateA = new Date(
+            a.data.split("/").reverse().join("-") + " " + a.horario
+          );
+          const dateB = new Date(
+            b.data.split("/").reverse().join("-") + " " + b.horario
+          );
+          return dateA - dateB;
+        });
+      }
+
+      return programacaoMensal;
     } catch (error) {
-      error.path = "/models/equipe/tabelaEscalaMensal/gerarEscalaMensal";
-      logger.error("Erro ao gerar escala mensal da equipe model", error);
+      error.path = "/models/equipe/tabelaEscalaMensal/findEscalaMensal";
+      logger.error("Erro ao buscar escala mensal da equipe model", error);
       throw error;
     } finally {
       await client.$disconnect();

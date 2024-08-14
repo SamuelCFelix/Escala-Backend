@@ -2216,3 +2216,46 @@ Error: Teste de erro
 13/08/2024 18:04:14.049 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
 13/08/2024 18:04:40.758 [[35mDEBUG[0m] Gerando escala mensal da equipe
 13/08/2024 18:04:40.863 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+13/08/2024 20:18:05.734 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 20:26:27.502 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 20:26:27.600 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+13/08/2024 20:26:44.800 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 20:26:44.913 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+13/08/2024 20:26:44.916 [[31mERROR[0m] (Unknown location) Erro ao gerar escala mensal da equipe model: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+13/08/2024 20:29:41.915 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 20:29:42.027 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+13/08/2024 20:33:24.166 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 20:33:24.275 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+13/08/2024 20:33:24.282 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:435) Erro ao gerar escala mensal da equipe model: buscarInfoEquipe?.usuarioHost?.map is not a function
+13/08/2024 20:34:06.107 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 20:34:06.229 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+13/08/2024 20:34:06.239 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:435) Erro ao gerar escala mensal da equipe model: buscarInfoEquipe?.usuarioHost?.forEach is not a function
+13/08/2024 20:34:24.993 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 20:34:25.104 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+13/08/2024 20:34:25.118 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\gerarEscalaMensal.js:436) Erro ao gerar escala mensal da equipe model: buscarInfoEquipe?.usuarioHost?.forEach is not a function
+13/08/2024 20:37:27.493 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 20:37:27.591 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+13/08/2024 20:37:59.688 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 20:37:59.895 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+13/08/2024 21:02:21.789 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 21:17:58.460 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 21:17:58.578 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 21:18:50.578 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 21:19:20.334 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 21:24:24.527 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 21:24:55.476 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 21:25:12.161 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 21:26:00.371 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 21:26:13.435 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 21:28:20.651 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 21:28:36.035 [[35mDEBUG[0m] Gerando escala mensal da equipe
+13/08/2024 21:29:33.126 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/08/2024 00:03:20.287 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/08/2024 00:05:22.201 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/08/2024 00:05:27.844 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/08/2024 00:05:27.975 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/08/2024 00:05:29.635 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/08/2024 00:05:29.727 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/08/2024 00:05:31.506 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/08/2024 00:05:31.601 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/08/2024 00:05:58.657 [[35mDEBUG[0m] Gerando escala mensal da equipe
