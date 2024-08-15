@@ -260,30 +260,15 @@ module.exports = {
         },
       });
 
-      let programacaoMensal = [];
-
       if (!buscarEscalaEquipe) {
         throw new Error("Equipe não encontrada");
-      } else {
-        // colocar na ordem cronológica
-        const dataArray = JSON.parse(buscarEscalaEquipe?.escalaMensal);
-
-        // 1. Achatar o array para que todos os objetos estejam no mesmo nível.
-        const flattenedArray = dataArray.flat(Infinity);
-
-        // 2. Ordenar o array achatado por data e horário.
-        programacaoMensal = flattenedArray.sort((a, b) => {
-          const dateA = new Date(
-            a.data.split("/").reverse().join("-") + " " + a.horario
-          );
-          const dateB = new Date(
-            b.data.split("/").reverse().join("-") + " " + b.horario
-          );
-          return dateA - dateB;
-        });
       }
 
-      return programacaoMensal;
+      if (buscarEscalaEquipe.escalaMensal !== null) {
+        return JSON.parse(buscarEscalaEquipe?.escalaMensal);
+      } else {
+        return [];
+      }
     } catch (error) {
       error.path = "/models/equipe/tabelaEscalaMensal/findEscalaMensal";
       logger.error("Erro ao buscar escala mensal da equipe model", error);

@@ -403,6 +403,21 @@ module.exports = {
           handleEscalaMembros(programacaoMensal, usuariosAtivos)
         );
 
+        // colocar na ordem cronológica:
+        // 1. Achatar o array para que todos os objetos estejam no mesmo nível.
+        const flattenedArray = escalaMensalFormada?.flat(Infinity);
+
+        // 2. Ordenar o array achatado por data e horário.
+        escalaMensalFormada = flattenedArray.sort((a, b) => {
+          const dateA = new Date(
+            a.data.split("/").reverse().join("-") + " " + a.horario
+          );
+          const dateB = new Date(
+            b.data.split("/").reverse().join("-") + " " + b.horario
+          );
+          return dateA - dateB;
+        });
+
         escalaMensalFormada = JSON.stringify(escalaMensalFormada);
 
         await client.equipe.update({
@@ -417,7 +432,8 @@ module.exports = {
 
         logger.info("Escala mensal da equipe gerada com sucesso");
 
-        //Salvar backup da disponibilidade dos usuários
+        //Salvar backup da disponibilidade dos usuários e mantendo as disponibilidades com remoção das indisponibilidades
+
         await Promise.all(
           buscarInfoEquipe?.UsuarioDefault?.map(async (usuario) => {
             await client.escalaUsuarioDefault.update({

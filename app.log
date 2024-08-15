@@ -2259,3 +2259,8 @@ Error: Teste de erro
 14/08/2024 00:05:31.506 [[35mDEBUG[0m] Gerando escala mensal da equipe
 14/08/2024 00:05:31.601 [[35mDEBUG[0m] Gerando escala mensal da equipe
 14/08/2024 00:05:58.657 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/08/2024 20:16:32.450 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/08/2024 20:16:32.581 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+14/08/2024 20:18:50.016 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/08/2024 20:18:50.117 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+14/08/2024 22:35:35.388 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:23) Erro ao buscar escala do membro da equipe model: escalaEquipe?.escalaMensal?.map is not a function

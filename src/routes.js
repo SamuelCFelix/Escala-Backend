@@ -24,6 +24,8 @@ const saveDisponibilidadeController = require("./controllers/geral/tabelaInforma
 const findDisponibilidadeMembroController = require("./controllers/geral/tabelaInformacoes/findDisponibilidadeMembroController");
 const gerarEscalaMensalController = require("./controllers/equipe/tabelaEscalaMensal/gerarEscalaMensalController");
 const findEscalaMensalController = require("./controllers/equipe/tabelaEscalaMensal/findEscalaMensalController");
+const findProximaEscalaController = require("./controllers/geral/tabelaProximaEscala/findProximaEscalaController");
+const findEscalacoesUsuarioController = require("./controllers/geral/tabelaInformacoes/findEscalacoesUsuarioController");
 
 const routes = Router();
 
@@ -55,6 +57,13 @@ routes.post(
 
 //TAB GERAL
 
+//Tabela Próxima Escala
+routes.post(
+  "/buscarProximaEscala",
+  tokenAuthentication.handle,
+  findProximaEscalaController.handle
+);
+
 //Tabela Informações
 
 routes.post(
@@ -79,6 +88,12 @@ routes.post(
   "/buscarDisponibilidadeMembro",
   tokenAuthentication.handle,
   findDisponibilidadeMembroController.handle
+);
+
+routes.post(
+  "/buscarEscalacoesUsuario",
+  tokenAuthentication.handle,
+  findEscalacoesUsuarioController.handle
 );
 
 //TAB EQUIPE
