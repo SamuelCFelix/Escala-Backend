@@ -15,6 +15,7 @@ module.exports = {
           select: {
             id: true,
             nome: true,
+            ativo: true,
             Equipe: {
               select: {
                 id: true,
@@ -38,6 +39,7 @@ module.exports = {
           select: {
             id: true,
             nome: true,
+            ativo: true,
             equipeId: true,
             autorizacao: true,
           },

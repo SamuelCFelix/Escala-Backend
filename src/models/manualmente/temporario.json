@@ -1,0 +1,632 @@
+{
+  "programacoes": [
+    {
+      "id": "2d6f17cc-9399-4881-ace9-f2c24c4964ed",
+      "culto": "Culto Celebração - ZS10",
+      "dia": "Domingo",
+      "horario": "10:00",
+      "RlTagsProgramacao": [
+        {
+          "tags": {
+            "id": "45884e48-e06b-4835-b81c-3ffc1fa79c67",
+            "nome": "Câmera de Cortes"
+          }
+        },
+        {
+          "tags": {
+            "id": "c85240be-8caf-42d0-add4-d5979cb6d552",
+            "nome": "Câmera Central"
+          }
+        },
+        {
+          "tags": {
+            "id": "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+            "nome": "Gimball"
+          }
+        }
+      ]
+    },
+    {
+      "id": "deb92857-0da6-41e7-8570-ab35e94f13e3",
+      "culto": "Culto Celebração - ZS16",
+      "dia": "Domingo",
+      "horario": "16:00",
+      "RlTagsProgramacao": [
+        {
+          "tags": {
+            "id": "45884e48-e06b-4835-b81c-3ffc1fa79c67",
+            "nome": "Câmera de Cortes"
+          }
+        },
+        {
+          "tags": {
+            "id": "c85240be-8caf-42d0-add4-d5979cb6d552",
+            "nome": "Câmera Central"
+          }
+        },
+        {
+          "tags": {
+            "id": "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+            "nome": "Gimball"
+          }
+        }
+      ]
+    },
+    {
+      "id": "4253b035-3f3b-4f05-ba10-3712d0fe7c98",
+      "culto": "Culto de Doutrina",
+      "dia": "Quinta-Feira",
+      "horario": "19:15",
+      "RlTagsProgramacao": [
+        {
+          "tags": {
+            "id": "45884e48-e06b-4835-b81c-3ffc1fa79c67",
+            "nome": "Câmera de Cortes"
+          }
+        },
+        {
+          "tags": {
+            "id": "c85240be-8caf-42d0-add4-d5979cb6d552",
+            "nome": "Câmera Central"
+          }
+        },
+        {
+          "tags": {
+            "id": "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+            "nome": "Gimball"
+          }
+        }
+      ]
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "af7043af-d937-4a46-bf90-cedcd8446f5b",
+      "nome": "Samuel Félix",
+      "ativo": true,
+      "tags": [
+        {
+          "id": "45884e48-e06b-4835-b81c-3ffc1fa79c67",
+          "nome": "Câmera de Cortes"
+        },
+        {
+          "id": "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+          "nome": "Gimball"
+        }
+      ],
+      "EscalaUsuarioDefault": {
+        "id": "4c1c95aa-e404-4c62-b8ae-30c565436acd",
+        "disponibilidade": [
+          {
+            "culto": "Culto Celebração - ZS10",
+            "programacaoId": "2d6f17cc-9399-4881-ace9-f2c24c4964ed",
+            "disponibilidade": true,
+            "indisponibilidade": [
+              {
+                "data": "01/09/2024"
+              }
+            ]
+          },
+          {
+            "culto": "Culto Celebração - ZS16",
+            "programacaoId": "deb92857-0da6-41e7-8570-ab35e94f13e3",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto de Doutrina",
+            "programacaoId": "4253b035-3f3b-4f05-ba10-3712d0fe7c98",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "58429cbb-31bd-4afa-82b3-15af15586b3f",
+      "nome": "Pedro Lucas",
+      "ativo": true,
+      "tags": [
+        {
+          "id": "c85240be-8caf-42d0-add4-d5979cb6d552",
+          "nome": "Câmera Central"
+        }
+      ],
+      "EscalaUsuarioDefault": {
+        "id": "4c1c95aa-e404-4c62-b8ae-30c565436acd",
+        "disponibilidade": [
+          {
+            "culto": "Culto Celebração - ZS10",
+            "programacaoId": "2d6f17cc-9399-4881-ace9-f2c24c4964ed",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto Celebração - ZS16",
+            "programacaoId": "deb92857-0da6-41e7-8570-ab35e94f13e3",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto de Doutrina",
+            "programacaoId": "4253b035-3f3b-4f05-ba10-3712d0fe7c98",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "f90aefb1-2de3-44f1-9367-612809c12eec",
+      "nome": "Wênya Layane",
+      "ativo": true,
+      "tags": [
+        {
+          "id": "c85240be-8caf-42d0-add4-d5979cb6d552",
+          "nome": "Câmera Central"
+        },
+        {
+          "id": "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+          "nome": "Gimball"
+        }
+      ],
+      "EscalaUsuarioDefault": {
+        "id": "4c1c95aa-e404-4c62-b8ae-30c565436acd",
+        "disponibilidade": [
+          {
+            "culto": "Culto Celebração - ZS10",
+            "programacaoId": "2d6f17cc-9399-4881-ace9-f2c24c4964ed",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto Celebração - ZS16",
+            "programacaoId": "deb92857-0da6-41e7-8570-ab35e94f13e3",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto de Doutrina",
+            "programacaoId": "4253b035-3f3b-4f05-ba10-3712d0fe7c98",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "a46e0b11-a057-4199-8ddc-553a7cadfdcd",
+      "nome": "Samuel Silva",
+      "ativo": true,
+      "tags": [
+        {
+          "id": "45884e48-e06b-4835-b81c-3ffc1fa79c67",
+          "nome": "Câmera de Cortes"
+        },
+        {
+          "id": "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+          "nome": "Gimball"
+        }
+      ],
+      "EscalaUsuarioDefault": {
+        "id": "4c1c95aa-e404-4c62-b8ae-30c565436acd",
+        "disponibilidade": [
+          {
+            "culto": "Culto Celebração - ZS10",
+            "programacaoId": "2d6f17cc-9399-4881-ace9-f2c24c4964ed",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto Celebração - ZS16",
+            "programacaoId": "deb92857-0da6-41e7-8570-ab35e94f13e3",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto de Doutrina",
+            "programacaoId": "4253b035-3f3b-4f05-ba10-3712d0fe7c98",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "0a97592f-9102-4137-9307-8d06b6d5ef47",
+      "nome": "Gabriela Eugênio",
+      "ativo": true,
+      "tags": [
+        {
+          "id": "c85240be-8caf-42d0-add4-d5979cb6d552",
+          "nome": "Câmera Central"
+        },
+        {
+          "id": "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+          "nome": "Gimball"
+        }
+      ],
+      "EscalaUsuarioDefault": {
+        "id": "4c1c95aa-e404-4c62-b8ae-30c565436acd",
+        "disponibilidade": [
+          {
+            "culto": "Culto Celebração - ZS10",
+            "programacaoId": "2d6f17cc-9399-4881-ace9-f2c24c4964ed",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto Celebração - ZS16",
+            "programacaoId": "deb92857-0da6-41e7-8570-ab35e94f13e3",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto de Doutrina",
+            "programacaoId": "4253b035-3f3b-4f05-ba10-3712d0fe7c98",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "45f02f1b-0218-4cc5-8ec8-7c6940b2149c",
+      "nome": "Andrey",
+      "ativo": true,
+      "tags": [
+        {
+          "id": "c85240be-8caf-42d0-add4-d5979cb6d552",
+          "nome": "Câmera Central"
+        },
+        {
+          "id": "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+          "nome": "Gimball"
+        }
+      ],
+      "EscalaUsuarioDefault": {
+        "id": "4c1c95aa-e404-4c62-b8ae-30c565436acd",
+        "disponibilidade": [
+          {
+            "culto": "Culto Celebração - ZS10",
+            "programacaoId": "2d6f17cc-9399-4881-ace9-f2c24c4964ed",
+            "disponibilidade": true,
+            "indisponibilidade": [
+              {
+                "data": "01/09/2024"
+              }
+            ]
+          },
+          {
+            "culto": "Culto Celebração - ZS16",
+            "programacaoId": "deb92857-0da6-41e7-8570-ab35e94f13e3",
+            "disponibilidade": true,
+            "indisponibilidade": [
+              {
+                "data": "01/09/2024"
+              }
+            ]
+          },
+          {
+            "culto": "Culto de Doutrina",
+            "programacaoId": "4253b035-3f3b-4f05-ba10-3712d0fe7c98",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "53d94f0e-694b-4234-ae3a-20c4407738a7",
+      "nome": "Sofia Macêdo",
+      "ativo": true,
+      "tags": [
+        {
+          "id": "c85240be-8caf-42d0-add4-d5979cb6d552",
+          "nome": "Câmera Central"
+        },
+        {
+          "id": "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+          "nome": "Gimball"
+        }
+      ],
+      "EscalaUsuarioDefault": {
+        "id": "4c1c95aa-e404-4c62-b8ae-30c565436acd",
+        "disponibilidade": [
+          {
+            "culto": "Culto Celebração - ZS10",
+            "programacaoId": "2d6f17cc-9399-4881-ace9-f2c24c4964ed",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto Celebração - ZS16",
+            "programacaoId": "deb92857-0da6-41e7-8570-ab35e94f13e3",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto de Doutrina",
+            "programacaoId": "4253b035-3f3b-4f05-ba10-3712d0fe7c98",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "9bd696f7-a3aa-4d2d-840e-568c3ca37e64",
+      "nome": "Erika Facci",
+      "ativo": true,
+      "tags": [
+        {
+          "id": "c85240be-8caf-42d0-add4-d5979cb6d552",
+          "nome": "Câmera Central"
+        },
+        {
+          "id": "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+          "nome": "Gimball"
+        }
+      ],
+      "EscalaUsuarioDefault": {
+        "id": "4c1c95aa-e404-4c62-b8ae-30c565436acd",
+        "disponibilidade": [
+          {
+            "culto": "Culto Celebração - ZS10",
+            "programacaoId": "2d6f17cc-9399-4881-ace9-f2c24c4964ed",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto Celebração - ZS16",
+            "programacaoId": "deb92857-0da6-41e7-8570-ab35e94f13e3",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto de Doutrina",
+            "programacaoId": "4253b035-3f3b-4f05-ba10-3712d0fe7c98",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "cd71d323-aac4-4d61-bb07-a5261c674361",
+      "nome": "Renata Xaviêr",
+      "ativo": true,
+      "tags": [
+        {
+          "id": "45884e48-e06b-4835-b81c-3ffc1fa79c67",
+          "nome": "Câmera de Cortes"
+        },
+        {
+          "id": "c85240be-8caf-42d0-add4-d5979cb6d552",
+          "nome": "Câmera Central"
+        },
+        {
+          "id": "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+          "nome": "Gimball"
+        }
+      ],
+      "EscalaUsuarioDefault": {
+        "id": "4c1c95aa-e404-4c62-b8ae-30c565436acd",
+        "disponibilidade": [
+          {
+            "culto": "Culto Celebração - ZS10",
+            "programacaoId": "2d6f17cc-9399-4881-ace9-f2c24c4964ed",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto Celebração - ZS16",
+            "programacaoId": "deb92857-0da6-41e7-8570-ab35e94f13e3",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto de Doutrina",
+            "programacaoId": "4253b035-3f3b-4f05-ba10-3712d0fe7c98",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "d270afb6-3fc4-4c44-8c6e-1413bb57e492",
+      "nome": "Carol Xaviêr",
+      "ativo": true,
+      "tags": [
+        {
+          "id": "c85240be-8caf-42d0-add4-d5979cb6d552",
+          "nome": "Câmera Central"
+        },
+        {
+          "id": "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+          "nome": "Gimball"
+        }
+      ],
+      "EscalaUsuarioDefault": {
+        "id": "4c1c95aa-e404-4c62-b8ae-30c565436acd",
+        "disponibilidade": [
+          {
+            "culto": "Culto Celebração - ZS10",
+            "programacaoId": "2d6f17cc-9399-4881-ace9-f2c24c4964ed",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto Celebração - ZS16",
+            "programacaoId": "deb92857-0da6-41e7-8570-ab35e94f13e3",
+            "disponibilidade": true,
+            "indisponibilidade": [
+              {
+                "data": "01/09/2024"
+              }
+            ]
+          },
+          {
+            "culto": "Culto de Doutrina",
+            "programacaoId": "4253b035-3f3b-4f05-ba10-3712d0fe7c98",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "5caf4519-561e-4069-97bc-df0579c8ad81",
+      "nome": "Patrick Guilherme",
+      "ativo": true,
+      "tags": [
+        {
+          "id": "45884e48-e06b-4835-b81c-3ffc1fa79c67",
+          "nome": "Câmera de Cortes"
+        },
+        {
+          "id": "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+          "nome": "Gimball"
+        }
+      ],
+      "EscalaUsuarioDefault": {
+        "id": "4c1c95aa-e404-4c62-b8ae-30c565436acd",
+        "disponibilidade": [
+          {
+            "culto": "Culto Celebração - ZS10",
+            "programacaoId": "2d6f17cc-9399-4881-ace9-f2c24c4964ed",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto Celebração - ZS16",
+            "programacaoId": "deb92857-0da6-41e7-8570-ab35e94f13e3",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto de Doutrina",
+            "programacaoId": "4253b035-3f3b-4f05-ba10-3712d0fe7c98",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "ea2f750a-3558-4083-841b-fabd11cb36a9",
+      "nome": "Letícia Natália",
+      "ativo": true,
+      "tags": [
+        {
+          "id": "c85240be-8caf-42d0-add4-d5979cb6d552",
+          "nome": "Câmera Central"
+        }
+      ],
+      "EscalaUsuarioDefault": {
+        "id": "4c1c95aa-e404-4c62-b8ae-30c565436acd",
+        "disponibilidade": [
+          {
+            "culto": "Culto Celebração - ZS10",
+            "programacaoId": "2d6f17cc-9399-4881-ace9-f2c24c4964ed",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto Celebração - ZS16",
+            "programacaoId": "deb92857-0da6-41e7-8570-ab35e94f13e3",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto de Doutrina",
+            "programacaoId": "4253b035-3f3b-4f05-ba10-3712d0fe7c98",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "e2b6f7d2-0ad4-4ac2-952b-2041626204d6",
+      "nome": "Samuel Brasil",
+      "ativo": true,
+      "tags": [
+        {
+          "id": "c85240be-8caf-42d0-add4-d5979cb6d552",
+          "nome": "Câmera Central"
+        },
+        {
+          "id": "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+          "nome": "Gimball"
+        }
+      ],
+      "EscalaUsuarioDefault": {
+        "id": "4c1c95aa-e404-4c62-b8ae-30c565436acd",
+        "disponibilidade": [
+          {
+            "culto": "Culto Celebração - ZS10",
+            "programacaoId": "2d6f17cc-9399-4881-ace9-f2c24c4964ed",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto Celebração - ZS16",
+            "programacaoId": "deb92857-0da6-41e7-8570-ab35e94f13e3",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto de Doutrina",
+            "programacaoId": "4253b035-3f3b-4f05-ba10-3712d0fe7c98",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "0e20b999-a853-4b1e-aac9-74f8d43d42de",
+      "nome": "Anna Esther",
+      "ativo": true,
+      "tags": [
+        {
+          "id": "45884e48-e06b-4835-b81c-3ffc1fa79c67",
+          "nome": "Câmera de Cortes"
+        },
+        {
+          "id": "c85240be-8caf-42d0-add4-d5979cb6d552",
+          "nome": "Câmera Central"
+        },
+        {
+          "id": "5b8a397e-5243-4118-8841-d05e5a59f8e7",
+          "nome": "Gimball"
+        }
+      ],
+      "EscalaUsuarioDefault": {
+        "id": "4c1c95aa-e404-4c62-b8ae-30c565436acd",
+        "disponibilidade": [
+          {
+            "culto": "Culto Celebração - ZS10",
+            "programacaoId": "2d6f17cc-9399-4881-ace9-f2c24c4964ed",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto Celebração - ZS16",
+            "programacaoId": "deb92857-0da6-41e7-8570-ab35e94f13e3",
+            "disponibilidade": true,
+            "indisponibilidade": []
+          },
+          {
+            "culto": "Culto de Doutrina",
+            "programacaoId": "4253b035-3f3b-4f05-ba10-3712d0fe7c98",
+            "disponibilidade": false,
+            "indisponibilidade": []
+          }
+        ]
+      }
+    }
+  ]
+}

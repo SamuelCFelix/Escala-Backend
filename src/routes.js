@@ -26,8 +26,21 @@ const gerarEscalaMensalController = require("./controllers/equipe/tabelaEscalaMe
 const findEscalaMensalController = require("./controllers/equipe/tabelaEscalaMensal/findEscalaMensalController");
 const findProximaEscalaController = require("./controllers/geral/tabelaProximaEscala/findProximaEscalaController");
 const findEscalacoesUsuarioController = require("./controllers/geral/tabelaInformacoes/findEscalacoesUsuarioController");
+const findUsuariosDisponiveisEscalaDataController = require("./controllers/geral/tabelaProximaEscala/findUsuariosDisponiveisEscalaDataController");
+const gerarEscalaManualController = require("./controllers/manualmente/gerarEscalaManualController");
+const updateEscalaDataController = require("./controllers/geral/tabelaProximaEscala/updateEscalaDataController");
 
 const routes = Router();
+
+//Gerar Escala Manualmente
+
+routes.post(
+  "/gerarEscalaManual",
+  tokenAuthentication.handle,
+  gerarEscalaManualController.handle
+);
+
+//Login e Perfil
 
 routes.post("/createPerfil", createPerfilController.handle);
 routes.post("/loginAuth", loginAuthController.handle);
@@ -62,6 +75,18 @@ routes.post(
   "/buscarProximaEscala",
   tokenAuthentication.handle,
   findProximaEscalaController.handle
+);
+
+routes.post(
+  "/buscarUsuariosDisponiveisEscalaData",
+  tokenAuthentication.handle,
+  findUsuariosDisponiveisEscalaDataController.handle
+);
+
+routes.post(
+  "/updateEscalaData",
+  tokenAuthentication.handle,
+  updateEscalaDataController.handle
 );
 
 //Tabela Informações

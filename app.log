@@ -2264,3 +2264,41 @@ Error: Teste de erro
 14/08/2024 20:18:50.016 [[35mDEBUG[0m] Gerando escala mensal da equipe
 14/08/2024 20:18:50.117 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
 14/08/2024 22:35:35.388 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:23) Erro ao buscar escala do membro da equipe model: escalaEquipe?.escalaMensal?.map is not a function
+23/08/2024 14:03:53.880 [[35mDEBUG[0m] Gerando escala mensal da equipe
+23/08/2024 14:03:54.110 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+23/08/2024 14:04:34.468 [[35mDEBUG[0m] Gerando escala mensal da equipe
+23/08/2024 14:04:34.621 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+23/08/2024 14:17:49.716 [[35mDEBUG[0m] Gerando escala mensal da equipe
+23/08/2024 14:17:49.877 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+26/08/2024 19:31:54.240 [[35mDEBUG[0m] Gerando escala mensal da equipe
+26/08/2024 19:34:11.399 [[35mDEBUG[0m] Gerando escala mensal da equipe
+26/08/2024 22:06:57.333 [[35mDEBUG[0m] Gerando escala mensal da equipe
+26/08/2024 22:07:10.585 [[35mDEBUG[0m] Gerando escala mensal da equipe
+26/08/2024 23:19:51.363 [[35mDEBUG[0m] Gerando escala mensal da equipe
+26/08/2024 23:19:51.426 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+26/08/2024 23:20:39.440 [[35mDEBUG[0m] Gerando escala mensal da equipe
+26/08/2024 23:20:39.516 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+26/08/2024 23:25:49.527 [[35mDEBUG[0m] Gerando escala mensal da equipe
+26/08/2024 23:25:49.579 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+27/08/2024 00:53:26.410 [[35mDEBUG[0m] Gerando escala mensal da equipe
+27/08/2024 00:53:26.482 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+27/08/2024 01:00:11.677 [[35mDEBUG[0m] Gerando escala mensal da equipe
+27/08/2024 01:00:11.739 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+27/08/2024 01:04:30.016 [[35mDEBUG[0m] Gerando escala mensal da equipe
+27/08/2024 01:04:30.075 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+27/08/2024 01:06:01.060 [[35mDEBUG[0m] Gerando escala mensal da equipe
+27/08/2024 01:06:01.127 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+27/08/2024 01:07:50.859 [[35mDEBUG[0m] Gerando escala mensal da equipe
+27/08/2024 01:07:50.916 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+27/08/2024 01:53:48.697 [[35mDEBUG[0m] Gerando escala mensal da equipe
+27/08/2024 01:53:48.800 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+27/08/2024 01:54:52.059 [[35mDEBUG[0m] Gerando escala mensal da equipe
+27/08/2024 01:54:52.178 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+27/08/2024 14:23:05.533 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findUsuariosDisponiveisEscalaData.js:71) Erro ao buscar próxima escala da equipe model: Cannot read properties of undefined (reading 'some')
+27/08/2024 14:27:31.581 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findUsuariosDisponiveisEscalaData.js:111) Erro ao buscar próxima escala da equipe model: Assignment to constant variable.
+27/08/2024 14:58:07.489 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findUsuariosDisponiveisEscalaData.js:130) Erro ao buscar próxima escala da equipe model: usuario.EscalaUsuarioDefault?.disponibilidade?.some is not a function
+27/08/2024 15:09:15.073 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findUsuariosDisponiveisEscalaData.js:131) Erro ao buscar próxima escala da equipe model: disponibilidade is not iterable
+28/08/2024 00:09:50.269 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\updateEscalaData.js:31) Erro ao atualizar escala data da equipe model: Cannot set properties of undefined (setting 'escalados')
+28/08/2024 00:12:18.553 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\updateEscalaData.js:31) Erro ao atualizar escala data da equipe model: Cannot set properties of undefined (setting 'escalados')
+28/08/2024 00:12:26.781 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\updateEscalaData.js:31) Erro ao atualizar escala data da equipe model: Cannot set properties of undefined (setting 'escalados')
+28/08/2024 00:15:17.647 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\updateEscalaData.js:31) Erro ao atualizar escala data da equipe model: Cannot set properties of undefined (setting 'escalados')

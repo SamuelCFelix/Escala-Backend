@@ -23,14 +23,16 @@ module.exports = {
 
       const programacoes = JSON.parse(escalaEquipe.escalaMensal);
 
-      // Encontra a próxima programação que ocorre após a data e horário atuais
-      const proximaProgramacao = programacoes.find((programacao) => {
+      // Encontra a próxima programação que ocorre dentro do prazo até 1 hora após o horário atual
+      const proximaProgramacao = programacoes?.find((programacao) => {
         const programacaoTime = new Date(
           programacao.data.split("/").reverse().join("-") +
             " " +
             programacao.horario
         ).getTime();
-        return programacaoTime > agora;
+
+        // Considera o prazo de 1 hora após o horário programado
+        return programacaoTime > agora || agora - programacaoTime <= 3600000;
       });
 
       return proximaProgramacao || null;
