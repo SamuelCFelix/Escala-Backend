@@ -20,6 +20,7 @@ module.exports = {
           const createUsuarioHost = await client.usuarioHost.create({
             data: {
               nome: updatePerfil.nome,
+              foto: updatePerfil.foto,
               autorizacao: "adm001",
               perfilId: usuarioPerfilId,
             },

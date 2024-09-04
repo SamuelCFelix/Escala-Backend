@@ -14,6 +14,7 @@ module.exports = {
             usuarioHost: {
               select: {
                 nome: true,
+                foto: true,
               },
             },
             Programacao: {

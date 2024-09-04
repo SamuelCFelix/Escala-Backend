@@ -15,6 +15,7 @@ module.exports = {
             select: {
               id: true,
               nome: true,
+              foto: true,
               ativo: true,
               RlTagsUsuarioHost: {
                 select: {
@@ -38,6 +39,7 @@ module.exports = {
             select: {
               id: true,
               nome: true,
+              foto: true,
               ativo: true,
               RlTagsUsuarioDefault: {
                 select: {
@@ -75,6 +77,7 @@ module.exports = {
           return {
             id: usuario.id,
             nome: usuario.nome,
+            foto: usuario.foto,
             ativo: usuario.ativo,
             tags: usuario.RlTagsUsuarioDefault?.map((tagRelation) => ({
               id: tagRelation.tags.id,
@@ -93,6 +96,7 @@ module.exports = {
         const usuarioHost = {
           id: buscarInfoEquipe?.usuarioHost?.id,
           nome: buscarInfoEquipe?.usuarioHost?.nome,
+          foto: buscarInfoEquipe?.usuarioHost?.foto,
           ativo: buscarInfoEquipe?.usuarioHost?.ativo,
           tags: buscarInfoEquipe?.usuarioHost?.RlTagsUsuarioHost?.map(
             (tagRelation) => ({
@@ -154,6 +158,7 @@ module.exports = {
           return {
             usuarioId: usuario.id,
             nome: usuario.nome,
+            foto: usuario.foto,
             possuiTag: usuario.tags.some((tag) => tag.id === tagId),
             possuiDisponibilidade,
           };

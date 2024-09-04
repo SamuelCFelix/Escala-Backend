@@ -12,6 +12,7 @@ datasource db {
 
 model Perfil {
   id             String           @id @default(uuid())
+  foto           String?
   nome           String
   cpf            String           @unique
   dataNascimento String
@@ -30,6 +31,7 @@ model Perfil {
 model UsuarioHost {
   id                String              @id @default(uuid())
   nome              String
+  foto              String?
   autorizacao       String
   perfilId          String
   perfil            Perfil              @relation(fields: [perfilId], references: [id], onDelete: Cascade)
@@ -46,6 +48,7 @@ model UsuarioHost {
 model UsuarioDefault {
   id                   String                 @id @default(uuid())
   nome                 String
+  foto                 String?
   autorizacao          String?
   equipeId             String?
   equipe               Equipe?                @relation(fields: [equipeId], references: [id], onDelete: Cascade)

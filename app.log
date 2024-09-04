@@ -2330,3 +2330,73 @@ Error: Teste de erro
 31/08/2024 19:09:04.395 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
 31/08/2024 20:36:38.686 [[35mDEBUG[0m] Gerando escala mensal da equipe
 31/08/2024 20:36:38.836 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+02/09/2024 20:55:28.225 [[35mDEBUG[0m] Gerando escala mensal da equipe
+02/09/2024 20:55:28.381 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+02/09/2024 20:59:34.752 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:27) Erro ao buscar próxima escala da equipe model: programacoes?.find is not a function
+02/09/2024 20:59:34.760 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:30) Erro ao buscar escala do membro da equipe model: escalacoesUsuario.map is not a function
+02/09/2024 20:59:34.832 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:30) Erro ao buscar escala do membro da equipe model: escalacoesUsuario.map is not a function
+02/09/2024 20:59:34.836 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:27) Erro ao buscar próxima escala da equipe model: programacoes?.find is not a function
+02/09/2024 21:01:11.178 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:30) Erro ao buscar escala do membro da equipe model: escalacoesUsuario.map is not a function
+02/09/2024 21:01:11.261 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:30) Erro ao buscar escala do membro da equipe model: escalacoesUsuario.map is not a function
+02/09/2024 21:01:11.293 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:27) Erro ao buscar próxima escala da equipe model: programacoes?.find is not a function
+02/09/2024 21:01:11.341 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:27) Erro ao buscar próxima escala da equipe model: programacoes?.find is not a function
+02/09/2024 21:01:20.563 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:30) Erro ao buscar escala do membro da equipe model: escalacoesUsuario.map is not a function
+02/09/2024 21:01:20.569 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:27) Erro ao buscar próxima escala da equipe model: programacoes?.find is not a function
+02/09/2024 21:01:20.625 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:30) Erro ao buscar escala do membro da equipe model: escalacoesUsuario.map is not a function
+02/09/2024 21:01:20.629 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:27) Erro ao buscar próxima escala da equipe model: programacoes?.find is not a function
+02/09/2024 21:02:39.840 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:30) Erro ao buscar escala do membro da equipe model: escalacoesUsuario.map is not a function
+02/09/2024 21:02:39.898 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:30) Erro ao buscar escala do membro da equipe model: escalacoesUsuario.map is not a function
+02/09/2024 21:07:54.991 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:27) Erro ao buscar próxima escala da equipe model: programacoes?.find is not a function
+02/09/2024 21:07:54.999 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:30) Erro ao buscar escala do membro da equipe model: escalacoesUsuario.map is not a function
+02/09/2024 21:07:55.040 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:30) Erro ao buscar escala do membro da equipe model: escalacoesUsuario.map is not a function
+02/09/2024 21:07:55.155 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:27) Erro ao buscar próxima escala da equipe model: programacoes?.find is not a function
+02/09/2024 21:08:34.265 [[35mDEBUG[0m] Gerando escala mensal da equipe
+02/09/2024 21:08:34.357 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+03/09/2024 18:32:42.838 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: 
+Invalid `client.perfil.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:44:41
+
+  41   };
+  42 });
+  43 
+→ 44 let usuario = await client.perfil.findFirst({
+       where: {
+         id: "a6764cb7-c679-4a6d-abf1-210b0295e7ea"
+       },
+       select: {
+         escalaMensal: true,
+         ~~~~~~~~~~~~
+     ?   id?: true,
+     ?   foto?: true,
+     ?   nome?: true,
+     ?   cpf?: true,
+     ?   dataNascimento?: true,
+     ?   email?: true,
+     ?   senha?: true,
+     ?   termos?: true,
+     ?   primeiroAcesso?: true,
+     ?   createAt?: true,
+     ?   updateAt?: true,
+     ?   UsuarioHost?: true,
+     ?   UsuarioDefault?: true,
+     ?   _count?: true
+       }
+     })
+
+Unknown field `escalaMensal` for select statement on model `Perfil`. Available options are marked with ?.
+04/09/2024 12:25:04.834 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findEscalaMensal.js:51) Erro ao buscar escala mensal da equipe model: Cannot read properties of null (reading 'id')
+04/09/2024 12:26:10.958 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findEscalaMensal.js:51) Erro ao buscar escala mensal da equipe model: Cannot read properties of null (reading 'id')
+04/09/2024 12:42:20.874 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:71) Erro ao buscar próxima escala da equipe model: Cannot read properties of null (reading 'id')
+04/09/2024 12:42:20.976 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:71) Erro ao buscar próxima escala da equipe model: Cannot read properties of null (reading 'id')
+04/09/2024 12:42:28.485 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:71) Erro ao buscar próxima escala da equipe model: Cannot read properties of null (reading 'id')
+04/09/2024 12:42:28.699 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:71) Erro ao buscar próxima escala da equipe model: Cannot read properties of null (reading 'id')
+04/09/2024 12:43:25.513 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:46) Erro ao buscar próxima escala da equipe model: Cannot destructure property 'membroId' of 'object null' as it is null.
+04/09/2024 12:43:25.666 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:46) Erro ao buscar próxima escala da equipe model: Cannot destructure property 'membroId' of 'object null' as it is null.
+04/09/2024 12:44:27.105 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:46) Erro ao buscar próxima escala da equipe model: Cannot destructure property 'membroId' of 'object null' as it is null.
+04/09/2024 12:44:27.170 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:46) Erro ao buscar próxima escala da equipe model: Cannot destructure property 'membroId' of 'object null' as it is null.
+04/09/2024 12:45:24.367 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:46) Erro ao buscar próxima escala da equipe model: Cannot destructure property 'membroId' of 'undefined' as it is undefined.
+04/09/2024 12:45:24.458 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:46) Erro ao buscar próxima escala da equipe model: Cannot destructure property 'membroId' of 'undefined' as it is undefined.
+04/09/2024 12:46:02.854 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:46) Erro ao buscar próxima escala da equipe model: Cannot destructure property 'membroId' of 'undefined' as it is undefined.
+04/09/2024 12:46:02.923 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:46) Erro ao buscar próxima escala da equipe model: Cannot destructure property 'membroId' of 'undefined' as it is undefined.
+04/09/2024 12:46:50.120 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:48) Erro ao buscar próxima escala da equipe model: Cannot destructure property 'membroId' of 'undefined' as it is undefined.
+04/09/2024 12:48:08.102 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:75) Erro ao buscar próxima escala da equipe model: Cannot read properties of null (reading 'id')

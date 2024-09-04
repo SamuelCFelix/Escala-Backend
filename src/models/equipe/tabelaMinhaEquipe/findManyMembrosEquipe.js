@@ -14,6 +14,7 @@ module.exports = {
             select: {
               id: true,
               nome: true,
+              foto: true,
               autorizacao: true,
               ativo: true,
               perfil: {
@@ -46,6 +47,7 @@ module.exports = {
             select: {
               id: true,
               nome: true,
+              foto: true,
               autorizacao: true,
               ativo: true,
               perfil: {
@@ -74,6 +76,7 @@ module.exports = {
           return {
             usuarioDefaultId: membro?.id,
             nome: membro?.nome,
+            foto: membro?.foto,
             autorizacao: membro?.autorizacao,
             email: membro?.perfil?.email,
             dataNascimento: membro?.perfil?.dataNascimento,
@@ -89,6 +92,7 @@ module.exports = {
       const hostFormatted = {
         usuarioHostId: usuarioHostEquipe?.usuarioHost?.id,
         nome: usuarioHostEquipe?.usuarioHost?.nome,
+        foto: usuarioHostEquipe?.usuarioHost?.foto,
         autorizacao: usuarioHostEquipe?.usuarioHost?.autorizacao,
         email: usuarioHostEquipe?.usuarioHost?.perfil?.email,
         dataNascimento: usuarioHostEquipe?.usuarioHost?.perfil?.dataNascimento,

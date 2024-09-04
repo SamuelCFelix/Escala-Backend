@@ -20,12 +20,13 @@ async function hashInfo(info) {
 const client = new PrismaClient();
 
 module.exports = {
-  async execute(nome, cpf, dataNascimento, email, senha, termos) {
+  async execute(nome, foto, cpf, dataNascimento, email, senha, termos) {
     try {
       const response = await client.$transaction(async (client) => {
         const createPerfil = await client.perfil.create({
           data: {
             nome,
+            foto,
             cpf,
             dataNascimento,
             email,

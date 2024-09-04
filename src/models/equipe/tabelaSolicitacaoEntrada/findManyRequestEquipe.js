@@ -18,6 +18,7 @@ module.exports = {
               perfil: {
                 select: {
                   nome: true,
+                  foto: true,
                   email: true,
                 },
               },
@@ -38,6 +39,7 @@ module.exports = {
           return {
             usuarioDefaultId: solicitacao.usuarioDefaultId,
             nome: solicitacao.usuarioDefault.perfil.nome,
+            foto: solicitacao.usuarioDefault.perfil.foto,
             email: solicitacao.usuarioDefault.perfil.email,
             createAt: formattedDate,
           };

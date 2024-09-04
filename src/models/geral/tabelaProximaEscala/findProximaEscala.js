@@ -35,7 +35,50 @@ module.exports = {
         return programacaoTime > agora || agora - programacaoTime <= 3600000;
       });
 
-      return proximaProgramacao || null;
+      let escalados = proximaProgramacao?.escalados?.map((escalado) => {
+        return {
+          membroId: escalado.membroId,
+        };
+      });
+
+      let fotosUsuarios = await Promise.all(
+        escalados?.map(async ({ membroId }) => {
+          if (membroId === "sem membro") return;
+
+          let usuario = {};
+
+          usuario = await client.usuarioDefault.findFirst({
+            where: {
+              id: membroId,
+            },
+            select: {
+              id: true,
+              foto: true,
+            },
+          });
+
+          if (!usuario) {
+            usuario = await client.usuarioHost.findFirst({
+              where: {
+                id: membroId,
+              },
+              select: {
+                id: true,
+                foto: true,
+              },
+            });
+          }
+
+          return {
+            membroId: usuario.id,
+            membroFoto: usuario.foto,
+          };
+        })
+      );
+
+      fotosUsuarios = fotosUsuarios?.filter((foto) => foto !== undefined);
+
+      return { proximaProgramacao, fotosUsuarios } || null;
     } catch (error) {
       error.path = "/models/geral/tabelaProximaEscala/findProximaEscala";
       logger.error("Erro ao buscar próxima escala da equipe model", error);

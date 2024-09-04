@@ -4,9 +4,11 @@ const logger = require("../../custom/logger");
 module.exports = {
   async handle(req, res) {
     try {
-      const { nome, cpf, dataNascimento, email, senha, termos } = req.body;
+      const { nome, foto, cpf, dataNascimento, email, senha, termos } =
+        req.body;
       let response = await createPerfil.execute(
         nome,
+        foto,
         cpf,
         dataNascimento,
         email,

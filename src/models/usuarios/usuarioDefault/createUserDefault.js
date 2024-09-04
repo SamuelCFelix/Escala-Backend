@@ -29,6 +29,7 @@ module.exports = {
           const createUsuarioDefault = await client.usuarioDefault.create({
             data: {
               nome: updatePerfil.nome,
+              foto: updatePerfil.foto,
               perfilId: usuarioPerfilId,
             },
           });
