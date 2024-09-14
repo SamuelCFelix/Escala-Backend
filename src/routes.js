@@ -26,9 +26,13 @@ const gerarEscalaMensalController = require("./controllers/equipe/tabelaEscalaMe
 const findEscalaMensalController = require("./controllers/equipe/tabelaEscalaMensal/findEscalaMensalController");
 const findProximaEscalaController = require("./controllers/geral/tabelaProximaEscala/findProximaEscalaController");
 const findEscalacoesUsuarioController = require("./controllers/geral/tabelaInformacoes/findEscalacoesUsuarioController");
-const findUsuariosDisponiveisEscalaDataController = require("./controllers/geral/tabelaProximaEscala/findUsuariosDisponiveisEscalaDataController");
+const findUsuariosDisponiveisEscalaDataController = require("./controllers/equipe/tabelaEscalaMensal/findUsuariosDisponiveisEscalaDataController");
 const gerarEscalaManualController = require("./controllers/manualmente/gerarEscalaManualController");
-const updateEscalaDataController = require("./controllers/geral/tabelaProximaEscala/updateEscalaDataController");
+const updateEscalaDataController = require("./controllers/equipe/tabelaEscalaMensal/updateEscalaDataController");
+const findProximaEscalaMensalController = require("./controllers/equipe/tabelaEscalaMensal/findProximaEscalaMensalController");
+const updateProximaEscalaDataController = require("./controllers/equipe/tabelaEscalaMensal/updateProximaEscalaDataController");
+const deleteEscalaDataController = require("./controllers/equipe/tabelaEscalaMensal/deleteEscalaDataController");
+const deleteProximaEscalaDataController = require("./controllers/equipe/tabelaEscalaMensal/deleteProximaEscalaDataController");
 
 const routes = Router();
 
@@ -89,6 +93,24 @@ routes.post(
   updateEscalaDataController.handle
 );
 
+routes.post(
+  "/deleteEscalaData",
+  tokenAuthentication.handle,
+  deleteEscalaDataController.handle
+);
+
+routes.post(
+  "/updateProximaEscalaData",
+  tokenAuthentication.handle,
+  updateProximaEscalaDataController.handle
+);
+
+routes.post(
+  "/deleteProximaEscalaData",
+  tokenAuthentication.handle,
+  deleteProximaEscalaDataController.handle
+);
+
 //Tabela Informações
 
 routes.post(
@@ -136,6 +158,12 @@ routes.post(
   findEscalaMensalController.handle
 );
 
+routes.post(
+  "/buscarProximaEscalaMensal",
+  tokenAuthentication.handle,
+  findProximaEscalaMensalController.handle
+);
+
 //Tabela Solicitações
 routes.post(
   "/solicitacoesDeEntrada",
@@ -149,7 +177,7 @@ routes.put(
   acceptMembroEquipeController.handle
 );
 
-routes.delete(
+routes.put(
   "/recusarMembroEquipe",
   tokenAuthentication.handle,
   recuseMembroEquipeController.handle

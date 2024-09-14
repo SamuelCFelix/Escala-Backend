@@ -2400,3 +2400,172 @@ Unknown field `escalaMensal` for select statement on model `Perfil`. Available o
 04/09/2024 12:46:02.923 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:46) Erro ao buscar próxima escala da equipe model: Cannot destructure property 'membroId' of 'undefined' as it is undefined.
 04/09/2024 12:46:50.120 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:48) Erro ao buscar próxima escala da equipe model: Cannot destructure property 'membroId' of 'undefined' as it is undefined.
 04/09/2024 12:48:08.102 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:75) Erro ao buscar próxima escala da equipe model: Cannot read properties of null (reading 'id')
+05/09/2024 14:10:28.801 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+05/09/2024 14:16:18.421 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+05/09/2024 15:34:14.833 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaSolicitacaoEntrada\acceptMembroEquipe.js:36) Erro ao aceitar membro na equipe model: aceitarMembroEquipe is not defined
+05/09/2024 15:34:22.410 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaSolicitacaoEntrada\acceptMembroEquipe.js:36) Erro ao aceitar membro na equipe model: aceitarMembroEquipe is not defined
+05/09/2024 15:34:26.132 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaSolicitacaoEntrada\acceptMembroEquipe.js:36) Erro ao aceitar membro na equipe model: aceitarMembroEquipe is not defined
+09/09/2024 14:34:10.821 [[32mINFO[0m] Executando criação de escala mensal das equipes a cada 10 segundos...
+09/09/2024 14:34:10.824 [[35mDEBUG[0m] Buscando equipes para gerar escala mensal
+09/09/2024 14:34:20.904 [[32mINFO[0m] Executando criação de escala mensal das equipes a cada 10 segundos...
+09/09/2024 14:34:20.905 [[35mDEBUG[0m] Buscando equipes para gerar escala mensal
+09/09/2024 14:34:30.023 [[32mINFO[0m] Executando criação de escala mensal das equipes a cada 10 segundos...
+09/09/2024 14:34:30.023 [[35mDEBUG[0m] Buscando equipes para gerar escala mensal
+09/09/2024 14:34:40.108 [[32mINFO[0m] Executando criação de escala mensal das equipes a cada 10 segundos...
+09/09/2024 14:34:40.109 [[35mDEBUG[0m] Buscando equipes para gerar escala mensal
+09/09/2024 14:34:50.160 [[32mINFO[0m] Executando criação de escala mensal das equipes a cada 10 segundos...
+09/09/2024 14:34:50.162 [[35mDEBUG[0m] Buscando equipes para gerar escala mensal
+09/09/2024 14:35:00.252 [[32mINFO[0m] Executando criação de escala mensal das equipes a cada 10 segundos...
+09/09/2024 14:35:00.253 [[35mDEBUG[0m] Buscando equipes para gerar escala mensal
+09/09/2024 14:35:10.372 [[32mINFO[0m] Executando criação de escala mensal das equipes a cada 10 segundos...
+09/09/2024 14:35:10.373 [[35mDEBUG[0m] Buscando equipes para gerar escala mensal
+09/09/2024 14:35:20.487 [[32mINFO[0m] Executando criação de escala mensal das equipes a cada 10 segundos...
+09/09/2024 14:35:20.488 [[35mDEBUG[0m] Buscando equipes para gerar escala mensal
+09/09/2024 14:35:30.570 [[32mINFO[0m] Executando criação de escala mensal das equipes a cada 10 segundos...
+09/09/2024 14:35:30.570 [[35mDEBUG[0m] Buscando equipes para gerar escala mensal
+09/09/2024 14:35:40.662 [[32mINFO[0m] Executando criação de escala mensal das equipes a cada 10 segundos...
+09/09/2024 14:35:40.663 [[35mDEBUG[0m] Buscando equipes para gerar escala mensal
+09/09/2024 14:35:50.772 [[32mINFO[0m] Executando criação de escala mensal das equipes a cada 10 segundos...
+09/09/2024 14:35:50.773 [[35mDEBUG[0m] Buscando equipes para gerar escala mensal
+09/09/2024 16:38:24.285 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 16:38:42.923 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 16:39:21.698 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 16:40:56.182 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 16:42:34.590 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 16:42:34.690 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+09/09/2024 17:25:39.398 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 17:25:39.515 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+09/09/2024 17:25:48.188 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:29) Erro ao buscar próxima escala da equipe model: Cannot read properties of null (reading 'data')
+09/09/2024 17:25:48.272 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:29) Erro ao buscar próxima escala da equipe model: Cannot read properties of null (reading 'data')
+09/09/2024 17:25:48.288 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:31) Erro ao buscar escala do membro da equipe model: Cannot read properties of null (reading 'escalados')
+09/09/2024 17:25:48.343 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:31) Erro ao buscar escala do membro da equipe model: Cannot read properties of null (reading 'escalados')
+09/09/2024 17:25:50.188 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findEscalaMensal.js:29) Erro ao buscar escala mensal da equipe model: Cannot read properties of null (reading 'escalados')
+09/09/2024 17:25:50.309 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findEscalaMensal.js:29) Erro ao buscar escala mensal da equipe model: Cannot read properties of null (reading 'escalados')
+09/09/2024 17:26:16.280 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 17:26:16.399 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+09/09/2024 17:26:46.390 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 17:26:46.471 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+09/09/2024 17:26:54.077 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 17:26:54.164 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+09/09/2024 17:26:59.800 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 17:26:59.883 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+09/09/2024 17:27:10.485 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 17:27:10.584 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+09/09/2024 17:28:10.008 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 17:28:10.203 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+09/09/2024 17:28:24.946 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 17:28:25.036 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+09/09/2024 17:29:58.040 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 17:29:58.123 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+09/09/2024 17:30:06.307 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 17:30:06.389 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+09/09/2024 20:34:23.308 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 20:34:23.406 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+09/09/2024 22:21:58.628 [[35mDEBUG[0m] Gerando escala mensal da equipe
+09/09/2024 22:21:58.788 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+11/09/2024 10:47:13.613 [[35mDEBUG[0m] Gerando escala mensal da equipe
+11/09/2024 10:47:13.706 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+11/09/2024 12:29:45.494 [[35mDEBUG[0m] Gerando escala mensal da equipe
+11/09/2024 12:29:45.623 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+11/09/2024 12:31:02.560 [[35mDEBUG[0m] Gerando escala mensal da equipe
+11/09/2024 12:31:02.636 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+11/09/2024 12:31:31.786 [[35mDEBUG[0m] Gerando escala mensal da equipe
+11/09/2024 12:31:31.865 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+11/09/2024 12:31:38.242 [[35mDEBUG[0m] Gerando escala mensal da equipe
+11/09/2024 12:31:38.328 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+11/09/2024 12:31:44.774 [[35mDEBUG[0m] Gerando escala mensal da equipe
+11/09/2024 12:31:44.853 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+11/09/2024 12:31:53.826 [[35mDEBUG[0m] Gerando escala mensal da equipe
+11/09/2024 12:31:53.902 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+11/09/2024 12:32:57.564 [[35mDEBUG[0m] Gerando escala mensal da equipe
+11/09/2024 12:32:57.650 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+11/09/2024 12:33:08.429 [[35mDEBUG[0m] Gerando escala mensal da equipe
+11/09/2024 12:33:08.520 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+11/09/2024 12:33:18.254 [[35mDEBUG[0m] Gerando escala mensal da equipe
+11/09/2024 12:33:18.328 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+11/09/2024 12:33:23.161 [[35mDEBUG[0m] Gerando escala mensal da equipe
+11/09/2024 12:33:23.240 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+11/09/2024 14:16:04.621 [[35mDEBUG[0m] Gerando escala mensal da equipe
+11/09/2024 14:16:04.706 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+11/09/2024 14:30:25.332 [[35mDEBUG[0m] Gerando escala mensal da equipe
+11/09/2024 14:30:25.413 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+11/09/2024 14:30:29.133 [[35mDEBUG[0m] Gerando escala mensal da equipe
+11/09/2024 14:30:29.225 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+11/09/2024 14:30:36.280 [[35mDEBUG[0m] Gerando escala mensal da equipe
+11/09/2024 14:30:36.353 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+12/09/2024 14:01:04.071 [[35mDEBUG[0m] Gerando escala mensal da equipe
+12/09/2024 14:01:04.176 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+12/09/2024 14:45:31.616 [[35mDEBUG[0m] Gerando escala mensal da equipe
+12/09/2024 14:45:31.698 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+12/09/2024 14:46:12.656 [[35mDEBUG[0m] Gerando escala mensal da equipe
+12/09/2024 14:46:12.735 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+12/09/2024 14:46:24.368 [[35mDEBUG[0m] Gerando escala mensal da equipe
+12/09/2024 14:46:24.448 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+12/09/2024 14:46:33.585 [[35mDEBUG[0m] Gerando escala mensal da equipe
+12/09/2024 14:46:33.667 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+12/09/2024 14:46:36.415 [[35mDEBUG[0m] Gerando escala mensal da equipe
+12/09/2024 14:46:36.490 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+12/09/2024 14:46:39.369 [[35mDEBUG[0m] Gerando escala mensal da equipe
+12/09/2024 14:46:39.450 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+12/09/2024 14:46:42.016 [[35mDEBUG[0m] Gerando escala mensal da equipe
+12/09/2024 14:46:42.098 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+12/09/2024 14:46:46.069 [[35mDEBUG[0m] Gerando escala mensal da equipe
+12/09/2024 14:46:46.175 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+12/09/2024 14:46:49.386 [[35mDEBUG[0m] Gerando escala mensal da equipe
+12/09/2024 14:46:49.464 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+12/09/2024 14:46:57.864 [[35mDEBUG[0m] Gerando escala mensal da equipe
+12/09/2024 14:46:57.944 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+14/09/2024 10:25:27.180 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/09/2024 10:25:27.272 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+14/09/2024 12:00:52.469 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findUsuariosDisponiveisEscalaData.js:136) Erro ao buscar usuários disponíveis para preencher a escala da equipe model: usuario is not defined
+14/09/2024 15:07:10.052 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/09/2024 15:07:10.146 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+14/09/2024 15:07:20.916 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/09/2024 15:07:20.998 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+14/09/2024 15:17:33.764 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/09/2024 15:17:33.850 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+14/09/2024 15:19:34.007 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/09/2024 15:19:34.104 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+14/09/2024 15:19:43.396 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/09/2024 15:19:43.477 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+14/09/2024 15:19:48.669 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/09/2024 15:19:48.746 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+14/09/2024 15:20:07.596 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/09/2024 15:20:07.735 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+14/09/2024 15:20:13.156 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/09/2024 15:20:13.236 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+14/09/2024 15:20:17.771 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/09/2024 15:20:17.854 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+14/09/2024 15:20:22.415 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/09/2024 15:20:22.498 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+14/09/2024 15:20:27.750 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/09/2024 15:20:27.830 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+14/09/2024 16:57:03.492 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+14/09/2024 16:57:03.566 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+14/09/2024 16:57:13.062 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+14/09/2024 16:57:13.136 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+14/09/2024 16:58:15.540 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+14/09/2024 17:02:11.270 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+14/09/2024 17:02:11.319 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+14/09/2024 17:03:40.244 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+14/09/2024 17:03:40.333 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+14/09/2024 17:51:59.088 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/09/2024 17:51:59.199 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+14/09/2024 18:03:06.180 [[35mDEBUG[0m] Gerando escala mensal da equipe
+14/09/2024 18:03:06.374 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso

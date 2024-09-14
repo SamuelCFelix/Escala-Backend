@@ -11,7 +11,7 @@ async function generateJWT(userId) {
   };
 
   const options = {
-    expiresIn: "4h",
+    expiresIn: "6h",
   };
 
   const token = jwt.sign(payload, secretKey, options);

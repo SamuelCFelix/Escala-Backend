@@ -3,7 +3,14 @@ const logger = require("../../../custom/logger");
 const client = new PrismaClient();
 
 module.exports = {
-  async execute(equipeId, escalaDataId, tagId, modoEdit, escaladosModoEdit) {
+  async execute(
+    equipeId,
+    escalaDataId,
+    tagId,
+    tipo,
+    modoEdit,
+    escaladosModoEdit
+  ) {
     try {
       const buscarInfoEquipe = await client.equipe.findFirst({
         where: {
@@ -11,6 +18,7 @@ module.exports = {
         },
         select: {
           escalaMensal: true,
+          proximaEscalaMensal: true,
           usuarioHost: {
             select: {
               id: true,
@@ -31,6 +39,7 @@ module.exports = {
                 select: {
                   id: true,
                   disponibilidade: true,
+                  backupDisponibilidade: true,
                 },
               },
             },
@@ -55,6 +64,7 @@ module.exports = {
                 select: {
                   id: true,
                   disponibilidade: true,
+                  backupDisponibilidade: true,
                 },
               },
             },
@@ -66,9 +76,17 @@ module.exports = {
         return [];
       }
 
-      const escalaData = JSON.parse(buscarInfoEquipe?.escalaMensal)?.find(
-        (escala) => escala.escalaDataId === escalaDataId
-      );
+      let escalaData = [];
+
+      if (tipo === 1) {
+        escalaData = JSON.parse(buscarInfoEquipe?.escalaMensal)?.find(
+          (escala) => escala.escalaDataId === escalaDataId
+        );
+      } else if (tipo === 2) {
+        escalaData = JSON.parse(buscarInfoEquipe?.proximaEscalaMensal)?.find(
+          (escala) => escala.escalaDataId === escalaDataId
+        );
+      }
 
       const usuariosAtivos =
         buscarInfoEquipe?.UsuarioDefault?.filter(
@@ -86,8 +104,14 @@ module.exports = {
             EscalaUsuarioDefault: {
               id: usuario.EscalaUsuarioDefault[0]?.id,
               disponibilidade:
-                JSON?.parse(usuario.EscalaUsuarioDefault[0]?.disponibilidade) ||
-                {},
+                tipo === 1
+                  ? JSON?.parse(
+                      usuario.EscalaUsuarioDefault[0]?.backupDisponibilidade ||
+                        "{}"
+                    )
+                  : JSON?.parse(
+                      usuario.EscalaUsuarioDefault[0]?.disponibilidade || "{}"
+                    ),
             },
           };
         }) || [];
@@ -107,10 +131,15 @@ module.exports = {
           EscalaUsuarioHost: {
             id: buscarInfoEquipe?.usuarioHost?.EscalaUsuarioHost[0]?.id,
             disponibilidade:
-              JSON?.parse(
-                buscarInfoEquipe?.usuarioHost?.EscalaUsuarioHost[0]
-                  ?.disponibilidade
-              ) || {},
+              tipo === 1
+                ? JSON?.parse(
+                    buscarInfoEquipe?.usuarioHost?.EscalaUsuarioHost[0]
+                      ?.backupDisponibilidade || "{}"
+                  )
+                : JSON?.parse(
+                    buscarInfoEquipe?.usuarioHost?.EscalaUsuarioHost[0]
+                      ?.disponibilidade || "{}"
+                  ),
           },
         };
         usuariosAtivos?.push(usuarioHost);
@@ -182,7 +211,7 @@ module.exports = {
 
       return usuariosFiltrados;
     } catch (error) {
-      error.path = "/models/geral/tabelaProximaEscala/findUsuariosDisponiveis";
+      error.path = "/models/geral/tabelaEscalaMensal/findUsuariosDisponiveis";
       logger.error(
         "Erro ao buscar usuários disponíveis para preencher a escala da equipe model",
         error

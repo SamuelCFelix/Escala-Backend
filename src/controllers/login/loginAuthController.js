@@ -10,7 +10,7 @@ module.exports = {
       if (response !== "Credenciais inválidas") {
         return res.status(200).json(response);
       } else {
-        return res.status(401).json(response);
+        return res.status(401).json({ message: response });
       }
     } catch (error) {
       if (!error.path) {

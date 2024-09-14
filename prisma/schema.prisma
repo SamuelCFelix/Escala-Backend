@@ -91,18 +91,19 @@ model EscalaUsuarioDefault {
 }
 
 model Equipe {
-  id             String           @id @default(uuid())
-  nome           String
-  descricao      String
-  usuarioHostId  String
-  escalaMensal   Json?
-  usuarioHost    UsuarioHost      @relation(fields: [usuarioHostId], references: [id], onDelete: Cascade)
-  Tags           Tags[]
-  Programacao    Programacao[]
-  UsuarioDefault UsuarioDefault[]
-  RlSolicitacao  RlSolicitacao[]
-  createAt       DateTime         @default(now())
-  updateAt       DateTime?
+  id                  String           @id @default(uuid())
+  nome                String
+  descricao           String
+  usuarioHostId       String
+  escalaMensal        Json?
+  proximaEscalaMensal Json?
+  usuarioHost         UsuarioHost      @relation(fields: [usuarioHostId], references: [id], onDelete: Cascade)
+  Tags                Tags[]
+  Programacao         Programacao[]
+  UsuarioDefault      UsuarioDefault[]
+  RlSolicitacao       RlSolicitacao[]
+  createAt            DateTime         @default(now())
+  updateAt            DateTime?
 
   @@map("equipe")
 }

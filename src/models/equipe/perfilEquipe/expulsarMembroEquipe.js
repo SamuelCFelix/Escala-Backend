@@ -3,7 +3,7 @@ const logger = require("../../../custom/logger");
 const client = new PrismaClient();
 
 module.exports = {
-  async execute(usuarioId) {
+  async execute(equipeId, usuarioId) {
     try {
       const response = await client.$transaction(async (client) => {
         const buscarMembro = await client.usuarioDefault.update({
@@ -48,7 +48,80 @@ module.exports = {
             data: {
               servicos: null,
               disponibilidade: null,
+              backupDisponibilidade: null,
               updateAt: new Date(),
+            },
+          });
+        }
+
+        const buscarEquipe = await client.equipe.findFirst({
+          where: {
+            id: equipeId,
+          },
+          select: {
+            escalaMensal: true,
+            proximaEscalaMensal: true,
+          },
+        });
+
+        if (buscarEquipe?.escalaMensal) {
+          const programacoes = JSON.parse(buscarEquipe.escalaMensal);
+
+          const novasProgramacoes = programacoes?.map((programacao) => {
+            const novosEscalados = programacao.escalados?.map((escalado) => {
+              if (escalado.membroId === usuarioId) {
+                return {
+                  ...escalado,
+                  membroId: "sem membro",
+                  membroNome: "sem membro",
+                };
+              }
+              return escalado;
+            });
+
+            return {
+              ...programacao,
+              escalados: novosEscalados,
+            };
+          });
+
+          await client.equipe.update({
+            where: {
+              id: equipeId,
+            },
+            data: {
+              escalaMensal: JSON.stringify(novasProgramacoes),
+            },
+          });
+        }
+
+        if (buscarEquipe?.proximaEscalaMensal) {
+          const programacoes = JSON.parse(buscarEquipe.proximaEscalaMensal);
+
+          const novasProgramacoes = programacoes?.map((programacao) => {
+            const novosEscalados = programacao.escalados?.map((escalado) => {
+              if (escalado.membroId === usuarioId) {
+                return {
+                  ...escalado,
+                  membroId: "sem membro",
+                  membroNome: "sem membro",
+                };
+              }
+              return escalado;
+            });
+
+            return {
+              ...programacao,
+              escalados: novosEscalados,
+            };
+          });
+
+          await client.equipe.update({
+            where: {
+              id: equipeId,
+            },
+            data: {
+              proximaEscalaMensal: JSON.stringify(novasProgramacoes),
             },
           });
         }

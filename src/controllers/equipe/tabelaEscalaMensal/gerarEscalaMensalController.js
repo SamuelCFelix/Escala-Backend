@@ -4,9 +4,9 @@ const logger = require("../../../custom/logger");
 module.exports = {
   async handle(req, res) {
     try {
-      const { equipeId } = req.body;
+      const { equipeId, tipo } = req.body;
 
-      let response = await gerarEscalaMensal.execute(equipeId);
+      let response = await gerarEscalaMensal.execute(equipeId, tipo);
 
       return res.status(200).json(response);
     } catch (error) {

@@ -19,6 +19,7 @@
     "dotenv": "^16.4.4",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
+    "node-cron": "^3.0.3",
     "nodemon": "^3.0.2",
     "stack-trace": "^1.0.0-pre2",
     "uuid": "^10.0.0",

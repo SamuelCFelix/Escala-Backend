@@ -3,13 +3,13 @@ const logger = require("../../../custom/logger");
 const client = new PrismaClient();
 const { v4: uuidv4 } = require("uuid");
 
-/* const getCurrentMonthAndYear = () => {
+const getCurrentMonthAndYear = () => {
   const date = new Date();
   const month = date.getMonth() + 1; // Mês atual
   const year = date.getFullYear();
 
   return { month, year };
-}; */
+};
 
 const getNextMonthAndYear = () => {
   const date = new Date();
@@ -277,11 +277,29 @@ function handleEscalaMembros(programacaoMensal, usuariosAtivos) {
 }
 
 module.exports = {
-  async execute(equipeId) {
+  async execute(equipeId, tipo) {
+    //1 = Gerar escala para o mês atual
+    //2 = Gerar escala do próximo mês
     try {
       logger.debug("Gerando escala mensal da equipe");
 
+      // Verifica se os parâmetros são válidos
+      if (!equipeId || !tipo) {
+        return {
+          error: "Informe o id da equipe e o tipo de escala a ser gerada.",
+        };
+      }
+
       const response = await client.$transaction(async (client) => {
+        let mesAtual = false;
+        let proximoMes = false;
+
+        if (tipo === 1) {
+          mesAtual = true;
+        } else if (tipo === 2) {
+          proximoMes = true;
+        }
+
         const buscarInfoEquipe = await client.equipe.findFirst({
           where: {
             id: equipeId,
@@ -324,6 +342,7 @@ module.exports = {
                   select: {
                     id: true,
                     disponibilidade: true,
+                    backupDisponibilidade: true,
                   },
                 },
               },
@@ -347,6 +366,7 @@ module.exports = {
                   select: {
                     id: true,
                     disponibilidade: true,
+                    backupDisponibilidade: true,
                   },
                 },
               },
@@ -358,8 +378,13 @@ module.exports = {
           throw new Error("Equipe não encontrada");
         }
 
-        /* const { month, year } = getCurrentMonthAndYear(); */
-        const { month, year } = getNextMonthAndYear();
+        let month, year;
+
+        if (mesAtual) {
+          ({ month, year } = getCurrentMonthAndYear());
+        } else if (proximoMes) {
+          ({ month, year } = getNextMonthAndYear());
+        }
 
         const programacaoMensal = buscarInfoEquipe?.Programacao?.map(
           (programacao) => ({
@@ -397,7 +422,9 @@ module.exports = {
                 id: usuario.EscalaUsuarioDefault[0]?.id,
                 disponibilidade:
                   JSON?.parse(
-                    usuario.EscalaUsuarioDefault[0]?.disponibilidade
+                    proximoMes
+                      ? usuario.EscalaUsuarioDefault[0]?.disponibilidade
+                      : usuario.EscalaUsuarioDefault[0]?.backupDisponibilidade
                   ) || {},
               },
             };
@@ -418,8 +445,11 @@ module.exports = {
               id: buscarInfoEquipe?.usuarioHost?.EscalaUsuarioHost[0]?.id,
               disponibilidade:
                 JSON?.parse(
-                  buscarInfoEquipe?.usuarioHost?.EscalaUsuarioHost[0]
-                    ?.disponibilidade
+                  proximoMes
+                    ? buscarInfoEquipe?.usuarioHost?.EscalaUsuarioHost[0]
+                        ?.disponibilidade
+                    : buscarInfoEquipe?.usuarioHost?.EscalaUsuarioHost[0]
+                        ?.backupDisponibilidade
                 ) || {},
             },
           };
@@ -449,50 +479,29 @@ module.exports = {
 
         escalaMensalFormada = JSON.stringify(escalaMensalFormada);
 
-        await client.equipe.update({
-          where: {
-            id: equipeId,
-          },
-          data: {
-            escalaMensal: escalaMensalFormada,
-            updateAt: new Date(),
-          },
-        });
-
-        logger.info("Escala mensal da equipe gerada com sucesso");
-
-        //Salvar backup da disponibilidade dos usuários e mantendo as disponibilidades com remoção das indisponibilidades
-
-        await Promise.all(
-          buscarInfoEquipe?.UsuarioDefault?.map(async (usuario) => {
-            await client.escalaUsuarioDefault.update({
-              where: {
-                id: usuario.EscalaUsuarioDefault[0]?.id,
-              },
-              data: {
-                backupDisponibilidade:
-                  usuario.EscalaUsuarioDefault[0]?.disponibilidade,
-                updateAt: new Date(),
-              },
-            });
-          })
-        );
-
-        let usuarioHostBackupEscala = buscarInfoEquipe?.usuarioHost;
-
-        if (usuarioHostBackupEscala) {
-          await client.escalaUsuarioHost.update({
+        if (proximoMes) {
+          await client.equipe.update({
             where: {
-              id: usuarioHostBackupEscala.EscalaUsuarioHost[0]?.id,
+              id: equipeId,
             },
             data: {
-              backupDisponibilidade:
-                usuarioHostBackupEscala.EscalaUsuarioHost[0]?.disponibilidade,
+              proximaEscalaMensal: escalaMensalFormada,
+              updateAt: new Date(),
+            },
+          });
+        } else if (mesAtual) {
+          await client.equipe.update({
+            where: {
+              id: equipeId,
+            },
+            data: {
+              escalaMensal: escalaMensalFormada,
               updateAt: new Date(),
             },
           });
         }
 
+        logger.info("Escala mensal da equipe gerada com sucesso");
         return escalaMensalFormada;
       });
 

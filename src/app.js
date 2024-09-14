@@ -16,16 +16,14 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors(corsOptions));
 app.use(routes);
-
-app.listen(3000, "0.0.0.0", () => {
-  console.log("Listening on port 3000");
-});
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
+});
+
+app.listen(3000, "0.0.0.0", () => {
+  console.log("Listening on port 3000");
 });
