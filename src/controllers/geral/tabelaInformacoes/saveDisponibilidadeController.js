@@ -4,12 +4,11 @@ const logger = require("../../../custom/logger");
 module.exports = {
   async handle(req, res) {
     try {
-      const { usuarioId, disponibilidade, host } = req.body;
+      const { usuarioId, disponibilidadeProximoMes } = req.body;
 
       let response = await saveDisponibilidade.execute(
         usuarioId,
-        disponibilidade,
-        host
+        disponibilidadeProximoMes
       );
 
       return res.status(200).json(response);

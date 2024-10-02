@@ -60,13 +60,13 @@ module.exports = {
           id: equipeId,
         },
         select: {
-          Programacao: {
+          Programacoes: {
             select: {
               id: true,
               culto: true,
               dia: true,
               horario: true,
-              RlTagsProgramacao: {
+              RlTagsProgramacoes: {
                 select: {
                   tags: {
                     select: {
@@ -87,13 +87,13 @@ module.exports = {
 
       const { month, year } = getNextMonth();
 
-      const programacoesEquipeFormatted = programacoesEquipe?.Programacao?.map(
+      const programacoesEquipeFormatted = programacoesEquipe?.Programacoes?.map(
         (programacao) => ({
           id: programacao.id,
           culto: programacao.culto,
           dia: programacao.dia,
           horario: programacao.horario,
-          tags: programacao.RlTagsProgramacao?.map((tagRelation) => ({
+          tags: programacao.RlTagsProgramacoes?.map((tagRelation) => ({
             id: tagRelation.tags.id,
             nome: tagRelation.tags.nome,
           })),

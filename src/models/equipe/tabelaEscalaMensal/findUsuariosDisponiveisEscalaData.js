@@ -19,13 +19,13 @@ module.exports = {
         select: {
           escalaMensal: true,
           proximaEscalaMensal: true,
-          usuarioHost: {
+          Usuarios: {
             select: {
               id: true,
               nome: true,
               foto: true,
-              ativo: true,
-              RlTagsUsuarioHost: {
+              statusUsuario: true,
+              RlTagsUsuarios: {
                 select: {
                   tags: {
                     select: {
@@ -35,36 +35,11 @@ module.exports = {
                   },
                 },
               },
-              EscalaUsuarioHost: {
+              EscalaUsuarios: {
                 select: {
                   id: true,
-                  disponibilidade: true,
-                  backupDisponibilidade: true,
-                },
-              },
-            },
-          },
-          UsuarioDefault: {
-            select: {
-              id: true,
-              nome: true,
-              foto: true,
-              ativo: true,
-              RlTagsUsuarioDefault: {
-                select: {
-                  tags: {
-                    select: {
-                      id: true,
-                      nome: true,
-                    },
-                  },
-                },
-              },
-              EscalaUsuarioDefault: {
-                select: {
-                  id: true,
-                  disponibilidade: true,
-                  backupDisponibilidade: true,
+                  disponibilidadeProximoMes: true,
+                  disponibilidadeMensal: true,
                 },
               },
             },
@@ -89,61 +64,32 @@ module.exports = {
       }
 
       const usuariosAtivos =
-        buscarInfoEquipe?.UsuarioDefault?.filter(
-          (usuario) => usuario.ativo
+        buscarInfoEquipe?.Usuarios?.filter(
+          (usuario) => usuario.statusUsuario
         )?.map((usuario) => {
           return {
             id: usuario.id,
             nome: usuario.nome,
             foto: usuario.foto,
-            ativo: usuario.ativo,
-            tags: usuario.RlTagsUsuarioDefault?.map((tagRelation) => ({
+            statusUsuario: usuario.statusUsuario,
+            tags: usuario.RlTagsUsuarios?.map((tagRelation) => ({
               id: tagRelation.tags.id,
               nome: tagRelation.tags.nome,
             })),
-            EscalaUsuarioDefault: {
-              id: usuario.EscalaUsuarioDefault[0]?.id,
+            EscalaUsuarios: {
+              id: usuario.EscalaUsuarios[0]?.id,
               disponibilidade:
                 tipo === 1
                   ? JSON?.parse(
-                      usuario.EscalaUsuarioDefault[0]?.backupDisponibilidade ||
-                        "{}"
+                      usuario.EscalaUsuarios[0]?.disponibilidadeMensal || "{}"
                     )
                   : JSON?.parse(
-                      usuario.EscalaUsuarioDefault[0]?.disponibilidade || "{}"
+                      usuario.EscalaUsuarios[0]?.disponibilidadeProximoMes ||
+                        "{}"
                     ),
             },
           };
         }) || [];
-
-      if (buscarInfoEquipe?.usuarioHost?.ativo) {
-        const usuarioHost = {
-          id: buscarInfoEquipe?.usuarioHost?.id,
-          nome: buscarInfoEquipe?.usuarioHost?.nome,
-          foto: buscarInfoEquipe?.usuarioHost?.foto,
-          ativo: buscarInfoEquipe?.usuarioHost?.ativo,
-          tags: buscarInfoEquipe?.usuarioHost?.RlTagsUsuarioHost?.map(
-            (tagRelation) => ({
-              id: tagRelation.tags.id,
-              nome: tagRelation.tags.nome,
-            })
-          ),
-          EscalaUsuarioHost: {
-            id: buscarInfoEquipe?.usuarioHost?.EscalaUsuarioHost[0]?.id,
-            disponibilidade:
-              tipo === 1
-                ? JSON?.parse(
-                    buscarInfoEquipe?.usuarioHost?.EscalaUsuarioHost[0]
-                      ?.backupDisponibilidade || "{}"
-                  )
-                : JSON?.parse(
-                    buscarInfoEquipe?.usuarioHost?.EscalaUsuarioHost[0]
-                      ?.disponibilidade || "{}"
-                  ),
-          },
-        };
-        usuariosAtivos?.push(usuarioHost);
-      }
 
       let usuariosFiltrados = [];
 
@@ -161,21 +107,10 @@ module.exports = {
         })
         ?.map((usuario) => {
           const disponibilidade = Array.isArray(
-            usuario.EscalaUsuarioDefault?.disponibilidade
-          )
-            ? usuario.EscalaUsuarioDefault.disponibilidade
-            : [];
+            usuario.EscalaUsuarios?.disponibilidade
+          );
 
-          const disponibilidadeHost = Array.isArray(
-            usuario.EscalaUsuarioHost?.disponibilidade
-          )
-            ? usuario.EscalaUsuarioHost.disponibilidade
-            : [];
-
-          const possuiDisponibilidade = [
-            ...disponibilidade,
-            ...disponibilidadeHost,
-          ].some(
+          const possuiDisponibilidade = [...disponibilidade].some(
             (dispoUsuario) =>
               dispoUsuario.programacaoId === escalaData?.programacaoId &&
               dispoUsuario.disponibilidade === true &&

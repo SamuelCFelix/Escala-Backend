@@ -3,32 +3,19 @@ const logger = require("../../../custom/logger");
 const client = new PrismaClient();
 
 module.exports = {
-  async execute(usuarioId, host) {
+  async execute(usuarioId) {
     try {
       const response = await client.$transaction(async (client) => {
-        if (host) {
-          const escalaUsuario = await client.escalaUsuarioHost.findFirst({
-            where: {
-              usuarioHostId: usuarioId,
-            },
-            select: {
-              disponibilidade: true,
-            },
-          });
+        const escalaUsuario = await client.escalaUsuarios.findFirst({
+          where: {
+            usuarioId,
+          },
+          select: {
+            disponibilidadeProximoMes: true,
+          },
+        });
 
-          return escalaUsuario;
-        } else {
-          const escalaUsuario = await client.escalaUsuarioDefault.findFirst({
-            where: {
-              usuarioDefaultId: usuarioId,
-            },
-            select: {
-              disponibilidade: true,
-            },
-          });
-
-          return escalaUsuario;
-        }
+        return escalaUsuario;
       });
       return response;
     } catch (error) {

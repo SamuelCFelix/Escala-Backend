@@ -3,52 +3,29 @@ const logger = require("../../../custom/logger");
 const client = new PrismaClient();
 
 module.exports = {
-  async execute(usuarioId, disponibilidade, host) {
+  async execute(usuarioId, disponibilidadeProximoMes) {
     try {
       const response = await client.$transaction(async (client) => {
-        if (host) {
-          const escalaUsuarioId = await client.escalaUsuarioHost.findFirst({
-            where: {
-              usuarioHostId: usuarioId,
-            },
-            select: {
-              id: true,
-            },
-          });
+        const escalaUsuarioId = await client.escalaUsuarios.findFirst({
+          where: {
+            usuarioId,
+          },
+          select: {
+            id: true,
+          },
+        });
 
-          const escalaUsuario = await client.escalaUsuarioHost.update({
-            where: {
-              id: escalaUsuarioId?.id,
-            },
-            data: {
-              disponibilidade,
-              updateAt: new Date(),
-            },
-          });
+        const escalaUsuario = await client.escalaUsuarios.update({
+          where: {
+            id: escalaUsuarioId?.id,
+          },
+          data: {
+            disponibilidadeProximoMes,
+            updateAt: new Date(),
+          },
+        });
 
-          return escalaUsuario;
-        } else {
-          const escalaUsuarioId = await client.escalaUsuarioDefault.findFirst({
-            where: {
-              usuarioDefaultId: usuarioId,
-            },
-            select: {
-              id: true,
-            },
-          });
-
-          const escalaUsuario = await client.escalaUsuarioDefault.update({
-            where: {
-              id: escalaUsuarioId?.id,
-            },
-            data: {
-              disponibilidade,
-              updateAt: new Date(),
-            },
-          });
-
-          return escalaUsuario;
-        }
+        return escalaUsuario;
       });
       return response;
     } catch (error) {

@@ -47,7 +47,7 @@ module.exports = {
         escalados.map(async ({ membroId }) => {
           if (membroId === "sem membro") return;
 
-          let usuario = await client.usuarioDefault.findFirst({
+          let usuario = await client.usuarios.findFirst({
             where: {
               id: membroId,
             },
@@ -56,18 +56,6 @@ module.exports = {
               foto: true,
             },
           });
-
-          if (!usuario) {
-            usuario = await client.usuarioHost.findFirst({
-              where: {
-                id: membroId,
-              },
-              select: {
-                id: true,
-                foto: true,
-              },
-            });
-          }
 
           return usuario
             ? {

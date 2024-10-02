@@ -64,9 +64,7 @@ function handleEscalaMembros(programacaoMensal, usuariosAtivos) {
     // Filtra e mapeia os usuários disponíveis para a programação atual
     const usuariosDisponiveis = usuariosAtivos
       ?.filter((usuario) => {
-        const disponibilidade =
-          usuario.EscalaUsuarioHost?.disponibilidade ||
-          usuario.EscalaUsuarioDefault?.disponibilidade;
+        const disponibilidade = usuario.EscalaUsuarios?.disponibilidade;
 
         return (
           Array.isArray(disponibilidade) &&
@@ -80,10 +78,7 @@ function handleEscalaMembros(programacaoMensal, usuariosAtivos) {
       .map((usuario) => {
         // Filtra a indisponibilidade do usuário para a programação atual
         const indisponibilidade =
-          usuario.EscalaUsuarioHost?.disponibilidade?.filter(
-            (infoUser) => infoUser.programacaoId === programacao.id
-          ) ||
-          usuario.EscalaUsuarioDefault?.disponibilidade?.filter(
+          usuario.EscalaUsuarios?.disponibilidade?.filter(
             (infoUser) => infoUser.programacaoId === programacao.id
           );
 
@@ -305,13 +300,13 @@ module.exports = {
             id: equipeId,
           },
           select: {
-            Programacao: {
+            Programacoes: {
               select: {
                 id: true,
                 culto: true,
                 dia: true,
                 horario: true,
-                RlTagsProgramacao: {
+                RlTagsProgramacoes: {
                   select: {
                     tags: {
                       select: {
@@ -323,12 +318,12 @@ module.exports = {
                 },
               },
             },
-            usuarioHost: {
+            Usuarios: {
               select: {
                 id: true,
                 nome: true,
-                ativo: true,
-                RlTagsUsuarioHost: {
+                statusUsuario: true,
+                RlTagsUsuarios: {
                   select: {
                     tags: {
                       select: {
@@ -338,35 +333,11 @@ module.exports = {
                     },
                   },
                 },
-                EscalaUsuarioHost: {
+                EscalaUsuarios: {
                   select: {
                     id: true,
-                    disponibilidade: true,
-                    backupDisponibilidade: true,
-                  },
-                },
-              },
-            },
-            UsuarioDefault: {
-              select: {
-                id: true,
-                nome: true,
-                ativo: true,
-                RlTagsUsuarioDefault: {
-                  select: {
-                    tags: {
-                      select: {
-                        id: true,
-                        nome: true,
-                      },
-                    },
-                  },
-                },
-                EscalaUsuarioDefault: {
-                  select: {
-                    id: true,
-                    disponibilidade: true,
-                    backupDisponibilidade: true,
+                    disponibilidadeProximoMes: true,
+                    disponibilidadeMensal: true,
                   },
                 },
               },
@@ -386,13 +357,13 @@ module.exports = {
           ({ month, year } = getNextMonthAndYear());
         }
 
-        const programacaoMensal = buscarInfoEquipe?.Programacao?.map(
+        const programacaoMensal = buscarInfoEquipe?.Programacoes?.map(
           (programacao) => ({
             id: programacao.id,
             culto: programacao.culto,
             dia: programacao.dia,
             horario: programacao.horario,
-            tags: programacao.RlTagsProgramacao?.map((tagRelation) => ({
+            tags: programacao.RlTagsProgramacoes?.map((tagRelation) => ({
               id: tagRelation.tags.id,
               nome: tagRelation.tags.nome,
             })),
@@ -407,54 +378,28 @@ module.exports = {
         );
 
         const usuariosAtivos =
-          buscarInfoEquipe?.UsuarioDefault?.filter(
-            (usuario) => usuario.ativo
+          buscarInfoEquipe?.Usuarios?.filter(
+            (usuario) => usuario.statusUsuario
           )?.map((usuario) => {
             return {
               id: usuario.id,
               nome: usuario.nome,
-              ativo: usuario.ativo,
-              tags: usuario.RlTagsUsuarioDefault?.map((tagRelation) => ({
+              statusUsuario: usuario.statusUsuario,
+              tags: usuario.RlTagsUsuarios?.map((tagRelation) => ({
                 id: tagRelation.tags.id,
                 nome: tagRelation.tags.nome,
               })),
-              EscalaUsuarioDefault: {
-                id: usuario.EscalaUsuarioDefault[0]?.id,
+              EscalaUsuarios: {
+                id: usuario.EscalaUsuarios[0]?.id,
                 disponibilidade:
                   JSON?.parse(
                     proximoMes
-                      ? usuario.EscalaUsuarioDefault[0]?.disponibilidade
-                      : usuario.EscalaUsuarioDefault[0]?.backupDisponibilidade
+                      ? usuario.EscalaUsuarios[0]?.disponibilidadeProximoMes
+                      : usuario.EscalaUsuarios[0]?.disponibilidadeMensal
                   ) || {},
               },
             };
           }) || [];
-
-        if (buscarInfoEquipe?.usuarioHost?.ativo) {
-          const usuarioHost = {
-            id: buscarInfoEquipe?.usuarioHost?.id,
-            nome: buscarInfoEquipe?.usuarioHost?.nome,
-            ativo: buscarInfoEquipe?.usuarioHost?.ativo,
-            tags: buscarInfoEquipe?.usuarioHost?.RlTagsUsuarioHost?.map(
-              (tagRelation) => ({
-                id: tagRelation.tags.id,
-                nome: tagRelation.tags.nome,
-              })
-            ),
-            EscalaUsuarioHost: {
-              id: buscarInfoEquipe?.usuarioHost?.EscalaUsuarioHost[0]?.id,
-              disponibilidade:
-                JSON?.parse(
-                  proximoMes
-                    ? buscarInfoEquipe?.usuarioHost?.EscalaUsuarioHost[0]
-                        ?.disponibilidade
-                    : buscarInfoEquipe?.usuarioHost?.EscalaUsuarioHost[0]
-                        ?.backupDisponibilidade
-                ) || {},
-            },
-          };
-          usuariosAtivos?.push(usuarioHost);
-        }
 
         let escalaMensalFormada = [];
 

@@ -26,7 +26,7 @@ module.exports = {
             },
           });
 
-          const createUsuarioDefault = await client.usuarioDefault.create({
+          const createUsuarioDefault = await client.usuarios.create({
             data: {
               nome: updatePerfil.nome,
               foto: updatePerfil.foto,
@@ -34,9 +34,9 @@ module.exports = {
             },
           });
 
-          await client.escalaUsuarioDefault.create({
+          await client.escalaUsuarios.create({
             data: {
-              usuarioDefaultId: createUsuarioDefault.id,
+              usuarioId: createUsuarioDefault.id,
             },
           });
 
@@ -47,6 +47,7 @@ module.exports = {
             select: {
               id: true,
               nome: true,
+              foto: true,
               email: true,
               dataNascimento: true,
               termos: true,
@@ -55,18 +56,20 @@ module.exports = {
           });
 
           return {
-            usuarioDefaultId: createUsuarioDefault.id,
+            usuarioId: createUsuarioDefault.id,
+            autorizacao: createUsuarioDefault.autorizacao,
+            equipeId: createUsuarioDefault.equipeId,
             nome: perfilDefaultUser.nome,
+            foto: perfilDefaultUser.foto,
             email: perfilDefaultUser.email,
             dataNascimento: perfilDefaultUser.dataNascimento,
             termos: perfilDefaultUser.termos,
             primeiroAcesso: perfilDefaultUser.primeiroAcesso,
-            equipeId: "sem equipe",
           };
         } else {
           throw {
             status: 400,
-            message: "Perfil já possui um Usuário Default cadastrado!",
+            message: "Perfil já possui um usuário cadastrado!",
           };
         }
       });

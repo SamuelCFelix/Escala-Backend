@@ -40,17 +40,10 @@ module.exports = {
         // Busca as fotos dos membros únicos
         let fotosUsuarios = await Promise.all(
           todosEscalados?.map(async (membroId) => {
-            let usuario = await client.usuarioDefault.findFirst({
+            let usuario = await client.usuarios.findFirst({
               where: { id: membroId },
               select: { id: true, foto: true },
             });
-
-            if (!usuario) {
-              usuario = await client.usuarioHost.findFirst({
-                where: { id: membroId },
-                select: { id: true, foto: true },
-              });
-            }
 
             return { membroId: usuario.id, membroFoto: usuario.foto };
           })

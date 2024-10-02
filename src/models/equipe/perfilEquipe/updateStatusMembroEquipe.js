@@ -3,57 +3,31 @@ const logger = require("../../../custom/logger");
 const client = new PrismaClient();
 
 module.exports = {
-  async execute(usuarioId, acao, host) {
+  async execute(usuarioId, acao) {
     try {
       const response = await client.$transaction(async (client) => {
-        if (host) {
-          if (acao === "ativar") {
-            const buscarMembro = await client.usuarioHost.update({
-              where: {
-                id: usuarioId,
-              },
-              data: {
-                ativo: true,
-                updateAt: new Date(),
-              },
-            });
-            return buscarMembro;
-          } else if (acao === "desativar") {
-            const buscarMembro = await client.usuarioHost.update({
-              where: {
-                id: usuarioId,
-              },
-              data: {
-                ativo: false,
-                updateAt: new Date(),
-              },
-            });
-            return buscarMembro;
-          }
-        } else {
-          if (acao === "ativar") {
-            const buscarMembro = await client.usuarioDefault.update({
-              where: {
-                id: usuarioId,
-              },
-              data: {
-                ativo: true,
-                updateAt: new Date(),
-              },
-            });
-            return buscarMembro;
-          } else if (acao === "desativar") {
-            const buscarMembro = await client.usuarioDefault.update({
-              where: {
-                id: usuarioId,
-              },
-              data: {
-                ativo: false,
-                updateAt: new Date(),
-              },
-            });
-            return buscarMembro;
-          }
+        if (acao === "ativar") {
+          const buscarMembro = await client.usuarios.update({
+            where: {
+              id: usuarioId,
+            },
+            data: {
+              statusUsuario: true,
+              updateAt: new Date(),
+            },
+          });
+          return buscarMembro;
+        } else if (acao === "desativar") {
+          const buscarMembro = await client.usuarios.update({
+            where: {
+              id: usuarioId,
+            },
+            data: {
+              statusUsuario: false,
+              updateAt: new Date(),
+            },
+          });
+          return buscarMembro;
         }
       });
 

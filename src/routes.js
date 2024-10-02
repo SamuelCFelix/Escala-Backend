@@ -7,7 +7,6 @@ const createUserHostController = require("./controllers/usuarios/usuarioHost/cre
 const createEquipeController = require("./controllers/equipe/createEquipeController");
 const createUserDefaultController = require("./controllers/usuarios/usuarioDefault/createUserDefaultController");
 const findManyEquipesController = require("./controllers/equipe/findManyEquipesController");
-const requestEquipeController = require("./controllers/equipe/requestEquipeController");
 const findConfigHomeController = require("./controllers/home/findConfigHomeController");
 const findManyRequestEquipeController = require("./controllers/equipe/tabelaSolicitacaoEntrada/findManyRequestEquipeController");
 const acceptMembroEquipeController = require("./controllers/equipe/tabelaSolicitacaoEntrada/acceptMembroEquipeController");
@@ -27,22 +26,14 @@ const findEscalaMensalController = require("./controllers/equipe/tabelaEscalaMen
 const findProximaEscalaController = require("./controllers/geral/tabelaProximaEscala/findProximaEscalaController");
 const findEscalacoesUsuarioController = require("./controllers/geral/tabelaInformacoes/findEscalacoesUsuarioController");
 const findUsuariosDisponiveisEscalaDataController = require("./controllers/equipe/tabelaEscalaMensal/findUsuariosDisponiveisEscalaDataController");
-const gerarEscalaManualController = require("./controllers/manualmente/gerarEscalaManualController");
 const updateEscalaDataController = require("./controllers/equipe/tabelaEscalaMensal/updateEscalaDataController");
 const findProximaEscalaMensalController = require("./controllers/equipe/tabelaEscalaMensal/findProximaEscalaMensalController");
 const updateProximaEscalaDataController = require("./controllers/equipe/tabelaEscalaMensal/updateProximaEscalaDataController");
 const deleteEscalaDataController = require("./controllers/equipe/tabelaEscalaMensal/deleteEscalaDataController");
 const deleteProximaEscalaDataController = require("./controllers/equipe/tabelaEscalaMensal/deleteProximaEscalaDataController");
+const sendRequestEquipeController = require("./controllers/equipe/sendRequestEquipeController");
 
 const routes = Router();
-
-//Gerar Escala Manualmente
-
-routes.post(
-  "/gerarEscalaManual",
-  tokenAuthentication.handle,
-  gerarEscalaManualController.handle
-);
 
 //Login e Perfil
 
@@ -63,7 +54,7 @@ routes.post(
 //Equipes
 routes.post("/criarEquipe", createEquipeController.handle);
 routes.get("/buscarEquipes", findManyEquipesController.handle);
-routes.post("/solicitacaoEquipe", requestEquipeController.handle);
+routes.post("/enviarSolicitacaoEquipe", sendRequestEquipeController.handle);
 
 //Home
 routes.post(

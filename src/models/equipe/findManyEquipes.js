@@ -11,18 +11,13 @@ module.exports = {
             id: true,
             nome: true,
             descricao: true,
-            usuarioHost: {
-              select: {
-                nome: true,
-                foto: true,
-              },
-            },
-            Programacao: {
+            usuarioHostId: true,
+            Programacoes: {
               select: {
                 createAt: true,
               },
             },
-            UsuarioDefault: {
+            Usuarios: {
               select: {
                 createAt: true,
               },
@@ -30,7 +25,37 @@ module.exports = {
           },
         });
 
-        return equipes;
+        const userHostEquipe = await client.usuario.findMany({
+          where: {
+            id: {
+              in: equipes?.map((equipe) => equipe.usuarioHostId),
+            },
+          },
+          select: {
+            id: true,
+            nome: true,
+            foto: true,
+          },
+        });
+
+        const equipesComUsuarioHost = equipes?.map((equipe) => {
+          const usuarioHost = userHostEquipe.find(
+            (host) => host.id === equipe.usuarioHostId
+          );
+
+          return {
+            ...equipe,
+            usuarioHost: usuarioHost
+              ? {
+                  id: usuarioHost.id,
+                  nome: usuarioHost.nome,
+                  foto: usuarioHost.foto,
+                }
+              : null,
+          };
+        });
+
+        return equipesComUsuarioHost;
       });
       return response;
     } catch (error) {

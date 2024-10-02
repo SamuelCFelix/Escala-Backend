@@ -17,7 +17,7 @@ module.exports = {
             },
           });
 
-          const createUsuarioHost = await client.usuarioHost.create({
+          const createUsuarioHost = await client.usuarios.create({
             data: {
               nome: updatePerfil.nome,
               foto: updatePerfil.foto,
@@ -26,9 +26,9 @@ module.exports = {
             },
           });
 
-          await client.escalaUsuarioHost.create({
+          await client.escalaUsuarios.create({
             data: {
-              usuarioHostId: createUsuarioHost.id,
+              usuarioId: createUsuarioHost.id,
             },
           });
 
@@ -39,6 +39,7 @@ module.exports = {
             select: {
               id: true,
               nome: true,
+              foto: true,
               email: true,
               dataNascimento: true,
               termos: true,
@@ -47,13 +48,15 @@ module.exports = {
           });
 
           return {
-            usuarioHostId: createUsuarioHost.id,
+            usuarioId: createUsuarioHost.id,
+            autorizacao: createUsuarioHost.autorizacao,
+            equipeId: createUsuarioHost.equipeId,
             nome: perfilHostUser.nome,
+            foto: perfilHostUser.foto,
             email: perfilHostUser.email,
             dataNascimento: perfilHostUser.dataNascimento,
             termos: perfilHostUser.termos,
             primeiroAcesso: perfilHostUser.primeiroAcesso,
-            equipe: ["sem equipe"],
           };
         } else {
           return "Senha autorizacao incorreta";

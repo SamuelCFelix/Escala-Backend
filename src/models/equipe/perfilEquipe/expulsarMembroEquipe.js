@@ -6,20 +6,20 @@ module.exports = {
   async execute(equipeId, usuarioId) {
     try {
       const response = await client.$transaction(async (client) => {
-        const buscarMembro = await client.usuarioDefault.update({
+        const buscarMembro = await client.usuarios.update({
           where: {
             id: usuarioId,
           },
           data: {
             equipeId: null,
-            ativo: true,
+            statusUsuario: true,
             updateAt: new Date(),
           },
         });
 
-        const tagsMembro = await client.rlTagsUsuarioDefault.findMany({
+        const tagsMembro = await client.rlTagsUsuarios.findMany({
           where: {
-            usuarioDefaultId: usuarioId,
+            usuarioId,
           },
           select: {
             id: true,
@@ -27,28 +27,27 @@ module.exports = {
         });
 
         if (tagsMembro?.length > 0) {
-          await client.rlTagsUsuarioDefault.deleteMany({
+          await client.rlTagsUsuarios.deleteMany({
             where: {
-              usuarioDefaultId: usuarioId,
+              usuarioId,
             },
           });
         }
 
-        const escalaUsuario = await client.escalaUsuarioDefault.findFirst({
+        const escalaUsuario = await client.escalaUsuarios.findFirst({
           where: {
-            usuarioDefaultId: usuarioId,
+            usuarioId,
           },
         });
 
         if (escalaUsuario?.id) {
-          await client.escalaUsuarioDefault.update({
+          await client.escalaUsuarios.update({
             where: {
               id: escalaUsuario?.id,
             },
             data: {
-              servicos: null,
-              disponibilidade: null,
-              backupDisponibilidade: null,
+              disponibilidadeProximoMes: null,
+              disponibilidadeMensal: null,
               updateAt: new Date(),
             },
           });

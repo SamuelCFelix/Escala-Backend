@@ -11,83 +11,52 @@ datasource db {
 }
 
 model Perfil {
-  id             String           @id @default(uuid())
+  id             String     @id @default(uuid())
   foto           String?
   nome           String
-  cpf            String           @unique
+  cpf            String     @unique
   dataNascimento String
-  email          String           @unique
+  email          String     @unique
   senha          String
   termos         Boolean
   primeiroAcesso Boolean //True="Usuário ainda não criado"  False="Usuário criado"
-  UsuarioHost    UsuarioHost[]
-  UsuarioDefault UsuarioDefault[]
-  createAt       DateTime         @default(now())
+  Usuarios       Usuarios[]
+  createAt       DateTime   @default(now())
   updateAt       DateTime?
 
   @@map("perfil")
 }
 
-model UsuarioHost {
-  id                String              @id @default(uuid())
-  nome              String
-  foto              String?
-  autorizacao       String
-  perfilId          String
-  perfil            Perfil              @relation(fields: [perfilId], references: [id], onDelete: Cascade)
-  ativo             Boolean?            @default(true)
-  Equipe            Equipe[]
-  RlTagsUsuarioHost RlTagsUsuarioHost[]
-  EscalaUsuarioHost EscalaUsuarioHost[]
-  createAt          DateTime            @default(now())
-  updateAt          DateTime?
+model Usuarios {
+  id                        String           @id @default(uuid())
+  nome                      String
+  foto                      String?
+  autorizacao               String?
+  incluirUsuarioGerarEscala Boolean?         @default(true)
+  statusUsuario             Boolean?         @default(true)
+  perfilId                  String
+  perfil                    Perfil           @relation(fields: [perfilId], references: [id], onDelete: Cascade)
+  equipeId                  String?
+  equipe                    Equipe?          @relation(fields: [equipeId], references: [id], onDelete: Cascade)
+  RlTagsUsuarios            RlTagsUsuarios[]
+  EscalaUsuarios            EscalaUsuarios[]
+  RlSolicitacoes            RlSolicitacoes[]
+  createAt                  DateTime         @default(now())
+  updateAt                  DateTime?
 
-  @@map("usuarioHost")
+  @@map("usuarios")
 }
 
-model UsuarioDefault {
-  id                   String                 @id @default(uuid())
-  nome                 String
-  foto                 String?
-  autorizacao          String?
-  equipeId             String?
-  equipe               Equipe?                @relation(fields: [equipeId], references: [id], onDelete: Cascade)
-  perfilId             String
-  perfil               Perfil                 @relation(fields: [perfilId], references: [id], onDelete: Cascade)
-  ativo                Boolean?               @default(true)
-  RlTagsUsuarioDefault RlTagsUsuarioDefault[]
-  EscalaUsuarioDefault EscalaUsuarioDefault[]
-  RlSolicitacao        RlSolicitacao[]
-  createAt             DateTime               @default(now())
-  updateAt             DateTime?
+model EscalaUsuarios {
+  id                        String    @id @default(uuid())
+  disponibilidadeProximoMes Json?
+  disponibilidadeMensal     Json?
+  usuarioId                 String
+  usuarios                  Usuarios  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  createAt                  DateTime  @default(now())
+  updateAt                  DateTime?
 
-  @@map("usuarioDefault")
-}
-
-model EscalaUsuarioHost {
-  id                    String      @id @default(uuid())
-  servicos              Json?
-  disponibilidade       Json?
-  backupDisponibilidade Json?
-  usuarioHostId         String
-  usuarioHost           UsuarioHost @relation(fields: [usuarioHostId], references: [id], onDelete: Cascade)
-  createAt              DateTime    @default(now())
-  updateAt              DateTime?
-
-  @@map("escalaUsuarioHost")
-}
-
-model EscalaUsuarioDefault {
-  id                    String         @id @default(uuid())
-  servicos              Json?
-  disponibilidade       Json?
-  backupDisponibilidade Json?
-  usuarioDefaultId      String
-  usuarioDefault        UsuarioDefault @relation(fields: [usuarioDefaultId], references: [id], onDelete: Cascade)
-  createAt              DateTime       @default(now())
-  updateAt              DateTime?
-
-  @@map("escalaUsuarioDefault")
+  @@map("escalaUsuarios")
 }
 
 model Equipe {
@@ -97,11 +66,10 @@ model Equipe {
   usuarioHostId       String
   escalaMensal        Json?
   proximaEscalaMensal Json?
-  usuarioHost         UsuarioHost      @relation(fields: [usuarioHostId], references: [id], onDelete: Cascade)
   Tags                Tags[]
-  Programacao         Programacao[]
-  UsuarioDefault      UsuarioDefault[]
-  RlSolicitacao       RlSolicitacao[]
+  Programacoes        Programacoes[]
+  Usuarios            Usuarios[]
+  RlSolicitacoes      RlSolicitacoes[]
   createAt            DateTime         @default(now())
   updateAt            DateTime?
 
@@ -109,78 +77,65 @@ model Equipe {
 }
 
 model Tags {
-  id                   String                 @id @default(uuid())
-  nome                 String
-  equipeId             String
-  equipe               Equipe                 @relation(fields: [equipeId], references: [id], onDelete: Cascade)
-  RlTagsUsuarioHost    RlTagsUsuarioHost[]
-  RlTagsUsuarioDefault RlTagsUsuarioDefault[]
-  RlTagsProgramacao    RlTagsProgramacao[]
-  createAt             DateTime               @default(now())
-  updateAt             DateTime?
+  id                 String               @id @default(uuid())
+  nome               String
+  equipeId           String
+  equipe             Equipe               @relation(fields: [equipeId], references: [id], onDelete: Cascade)
+  RlTagsUsuarios     RlTagsUsuarios[]
+  RlTagsProgramacoes RlTagsProgramacoes[]
+  createAt           DateTime             @default(now())
+  updateAt           DateTime?
 
   @@map("tags")
 }
 
-model Programacao {
-  id                String              @id @default(uuid())
-  culto             String
-  dia               String
-  horario           String
-  servindo          Int
-  equipeId          String
-  equipe            Equipe              @relation(fields: [equipeId], references: [id], onDelete: Cascade)
-  RlTagsProgramacao RlTagsProgramacao[]
-  createAt          DateTime            @default(now())
-  updateAt          DateTime?
+model Programacoes {
+  id                 String               @id @default(uuid())
+  culto              String
+  dia                String
+  horario            String
+  servindo           Int
+  equipeId           String
+  equipe             Equipe               @relation(fields: [equipeId], references: [id], onDelete: Cascade)
+  RlTagsProgramacoes RlTagsProgramacoes[]
+  createAt           DateTime             @default(now())
+  updateAt           DateTime?
 
-  @@map("programacao")
+  @@map("programacoes")
 }
 
-model RlTagsProgramacao {
-  id            String      @id @default(uuid())
+model RlTagsProgramacoes {
+  id            String       @id @default(uuid())
   programacaoId String
-  Programacao   Programacao @relation(fields: [programacaoId], references: [id], onDelete: Cascade)
+  Programacoes  Programacoes @relation(fields: [programacaoId], references: [id], onDelete: Cascade)
   tagId         String
-  tags          Tags        @relation(fields: [tagId], references: [id], onDelete: Cascade)
-  createAt      DateTime    @default(now())
+  tags          Tags         @relation(fields: [tagId], references: [id], onDelete: Cascade)
+  createAt      DateTime     @default(now())
   updateAt      DateTime?
 
-  @@map("rlTagsProgramacao")
+  @@map("rlTagsProgramacoes")
 }
 
-model RlTagsUsuarioHost {
-  id            String      @id @default(uuid())
-  usuarioHostId String
-  usuarioHost   UsuarioHost @relation(fields: [usuarioHostId], references: [id], onDelete: Cascade)
-  tagId         String
-  tags          Tags        @relation(fields: [tagId], references: [id], onDelete: Cascade)
-  createAt      DateTime    @default(now())
-  updateAt      DateTime?
+model RlTagsUsuarios {
+  id        String    @id @default(uuid())
+  usuarioId String
+  usuarios  Usuarios  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  tagId     String
+  tags      Tags      @relation(fields: [tagId], references: [id], onDelete: Cascade)
+  createAt  DateTime  @default(now())
+  updateAt  DateTime?
 
-  @@map("rlTagsUsuarioHost")
+  @@map("rlTagsUsuarios")
 }
 
-model RlTagsUsuarioDefault {
-  id               String         @id @default(uuid())
-  usuarioDefaultId String
-  usuarioDefault   UsuarioDefault @relation(fields: [usuarioDefaultId], references: [id], onDelete: Cascade)
-  tagId            String
-  tags             Tags           @relation(fields: [tagId], references: [id], onDelete: Cascade)
-  createAt         DateTime       @default(now())
-  updateAt         DateTime?
+model RlSolicitacoes {
+  id        String    @id @default(uuid())
+  usuarioId String
+  usuarios  Usuarios  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  equipeId  String
+  equipe    Equipe    @relation(fields: [equipeId], references: [id], onDelete: Cascade)
+  createAt  DateTime  @default(now())
+  updateAt  DateTime?
 
-  @@map("rlTagsUsuarioDefault")
-}
-
-model RlSolicitacao {
-  id               String         @id @default(uuid())
-  usuarioDefaultId String
-  usuarioDefault   UsuarioDefault @relation(fields: [usuarioDefaultId], references: [id], onDelete: Cascade)
-  equipeId         String
-  equipe           Equipe         @relation(fields: [equipeId], references: [id], onDelete: Cascade)
-  createAt         DateTime       @default(now())
-  updateAt         DateTime?
-
-  @@map("rlSolicitacao")
+  @@map("rlSolicitacoes")
 }

@@ -14,24 +14,13 @@ module.exports = {
         },
         select: {
           proximaEscalaMensal: true,
-          usuarioHost: {
+          Usuarios: {
             select: {
-              EscalaUsuarioHost: {
+              EscalaUsuarios: {
                 select: {
                   id: true,
-                  disponibilidade: true,
-                  backupDisponibilidade: true,
-                },
-              },
-            },
-          },
-          UsuarioDefault: {
-            select: {
-              EscalaUsuarioDefault: {
-                select: {
-                  id: true,
-                  disponibilidade: true,
-                  backupDisponibilidade: true,
+                  disponibilidadeProximoMes: true,
+                  disponibilidadeMensal: true,
                 },
               },
             },
@@ -56,52 +45,28 @@ module.exports = {
 
       // Atualizar disponibilidade dos usuários padrão
       await Promise.all(
-        buscarEquipe?.UsuarioDefault?.map(async (usuario) => {
-          const escalaUsuarioDefault = usuario.EscalaUsuarioDefault[0];
-          if (!escalaUsuarioDefault) return; // Se não houver escala, sair
+        buscarEquipe?.Usuarios?.map(async (usuario) => {
+          const escalaUsuario = usuario.EscalaUsuarios[0];
+          if (!escalaUsuario) return; // Se não houver escala, sair
 
           const disponibilidadeModificada =
-            escalaUsuarioDefault.disponibilidade?.map((culto) => ({
+            escalaUsuario.disponibilidadeProximoMes?.map((culto) => ({
               ...culto,
               indisponibilidade: [], // Zera o array de indisponibilidades
             }));
 
-          await client.escalaUsuarioDefault.update({
+          await client.escalaUsuarios.update({
             where: {
-              id: escalaUsuarioDefault.id,
+              id: escalaUsuario.id,
             },
             data: {
-              backupDisponibilidade: escalaUsuarioDefault.disponibilidade,
-              disponibilidade: disponibilidadeModificada,
+              disponibilidadeMensal: escalaUsuario.disponibilidadeProximoMes,
+              disponibilidadeProximoMes: disponibilidadeModificada,
               updateAt: new Date(),
             },
           });
         })
       );
-
-      // Atualizar disponibilidade do usuário host, se existir
-      const usuarioHostBackupEscala = buscarEquipe?.usuarioHost;
-      if (usuarioHostBackupEscala) {
-        const escalaUsuarioHost = usuarioHostBackupEscala?.EscalaUsuarioHost[0];
-        if (escalaUsuarioHost) {
-          const disponibilidadeModificadaHost =
-            escalaUsuarioHost.disponibilidade?.map((culto) => ({
-              ...culto,
-              indisponibilidade: [], // Zera o array de indisponibilidades
-            }));
-
-          await client.escalaUsuarioHost.update({
-            where: {
-              id: escalaUsuarioHost.id,
-            },
-            data: {
-              backupDisponibilidade: escalaUsuarioHost.disponibilidade,
-              disponibilidade: disponibilidadeModificadaHost,
-              updateAt: new Date(),
-            },
-          });
-        }
-      }
 
       logger.debug("Informações da escala mensal da equipe organizadas");
     } catch (error) {

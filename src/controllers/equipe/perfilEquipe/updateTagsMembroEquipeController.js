@@ -4,13 +4,12 @@ const logger = require("../../../custom/logger");
 module.exports = {
   async handle(req, res) {
     try {
-      const { usuarioId, tagId, acao, host } = req.body;
+      const { usuarioId, tagId, acao } = req.body;
 
       let response = await updateTagsMembroEquipe.execute(
         usuarioId,
         tagId,
-        acao,
-        host
+        acao
       );
 
       return res.status(200).json(response);

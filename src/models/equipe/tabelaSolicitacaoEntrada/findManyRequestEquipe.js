@@ -7,13 +7,13 @@ const client = new PrismaClient();
 module.exports = {
   async execute(equipeId) {
     try {
-      const solicitacoesEquipe = await client.rlSolicitacao.findMany({
+      const solicitacoesEquipe = await client.rlSolicitacoes.findMany({
         where: {
           equipeId,
         },
         select: {
-          usuarioDefaultId: true,
-          usuarioDefault: {
+          usuarioId: true,
+          usuarios: {
             select: {
               perfil: {
                 select: {
@@ -37,10 +37,10 @@ module.exports = {
           );
 
           return {
-            usuarioDefaultId: solicitacao.usuarioDefaultId,
-            nome: solicitacao.usuarioDefault.perfil.nome,
-            foto: solicitacao.usuarioDefault.perfil.foto,
-            email: solicitacao.usuarioDefault.perfil.email,
+            usuarioId: solicitacao.usuarioId,
+            nome: solicitacao.usuarios.perfil.nome,
+            foto: solicitacao.usuarios.perfil.foto,
+            email: solicitacao.usuarios.perfil.email,
             createAt: formattedDate,
           };
         }

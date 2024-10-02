@@ -3,106 +3,57 @@ const logger = require("../../../custom/logger");
 const client = new PrismaClient();
 
 module.exports = {
-  async execute(usuarioId, tagId, acao, host) {
+  async execute(usuarioId, tagId, acao) {
     try {
       const response = await client.$transaction(async (client) => {
         let buscarRlTag = [];
 
-        if (host) {
-          buscarRlTag = await client.rlTagsUsuarioHost.findFirst({
-            where: {
-              usuarioHostId: usuarioId,
-              tagId,
-            },
-          });
+        buscarRlTag = await client.rlTagsUsuarios.findFirst({
+          where: {
+            usuarioId,
+            tagId,
+          },
+        });
 
-          if (acao === "adicionar") {
-            if (!buscarRlTag) {
-              buscarRlTag = await client.rlTagsUsuarioHost.create({
-                data: {
-                  usuarioHostId: usuarioId,
-                  tagId,
-                },
-              });
-            }
-          } else if (acao === "remover") {
-            if (buscarRlTag) {
-              await client.rlTagsUsuarioHost.delete({
-                where: {
-                  id: buscarRlTag.id,
-                },
-              });
-            }
-          }
-
-          let tagsUsuarioHost = await client.rlTagsUsuarioHost.findMany({
-            where: {
-              usuarioHostId: usuarioId,
-            },
-            select: {
-              tags: {
-                select: {
-                  id: true,
-                  nome: true,
-                },
+        if (acao === "adicionar") {
+          if (!buscarRlTag) {
+            buscarRlTag = await client.rlTagsUsuarios.create({
+              data: {
+                usuarioId,
+                tagId,
               },
-            },
-          });
-
-          tagsUsuarioHost = tagsUsuarioHost?.map((tagRelation) => ({
-            id: tagRelation.tags.id,
-            nome: tagRelation.tags.nome,
-          }));
-
-          return tagsUsuarioHost;
-        } else {
-          buscarRlTag = await client.rlTagsUsuarioDefault.findFirst({
-            where: {
-              usuarioDefaultId: usuarioId,
-              tagId,
-            },
-          });
-
-          if (acao === "adicionar") {
-            if (!buscarRlTag) {
-              buscarRlTag = await client.rlTagsUsuarioDefault.create({
-                data: {
-                  usuarioDefaultId: usuarioId,
-                  tagId,
-                },
-              });
-            }
-          } else if (acao === "remover") {
-            if (buscarRlTag) {
-              await client.rlTagsUsuarioDefault.delete({
-                where: {
-                  id: buscarRlTag.id,
-                },
-              });
-            }
+            });
           }
-
-          let tagsUsuarioDefault = await client.rlTagsUsuarioDefault.findMany({
-            where: {
-              usuarioDefaultId: usuarioId,
-            },
-            select: {
-              tags: {
-                select: {
-                  id: true,
-                  nome: true,
-                },
+        } else if (acao === "remover") {
+          if (buscarRlTag) {
+            await client.rlTagsUsuarios.delete({
+              where: {
+                id: buscarRlTag.id,
               },
-            },
-          });
-
-          tagsUsuarioDefault = tagsUsuarioDefault?.map((tagRelation) => ({
-            id: tagRelation.tags.id,
-            nome: tagRelation.tags.nome,
-          }));
-
-          return tagsUsuarioDefault;
+            });
+          }
         }
+
+        let tagsUsuario = await client.rlTagsUsuarios.findMany({
+          where: {
+            usuarioId,
+          },
+          select: {
+            tags: {
+              select: {
+                id: true,
+                nome: true,
+              },
+            },
+          },
+        });
+
+        tagsUsuario = tagsUsuario?.map((tagRelation) => ({
+          id: tagRelation.tags.id,
+          nome: tagRelation.tags.nome,
+        }));
+
+        return tagsUsuario;
       });
 
       return response;

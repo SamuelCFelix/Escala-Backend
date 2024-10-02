@@ -6,22 +6,22 @@ module.exports = {
   async execute(usuarioId, equipeId) {
     try {
       const response = await client.$transaction(async (client) => {
-        const solicitaçãoUsuario = await client.rlSolicitacao.findMany({
+        const solicitacaoUsuario = await client.rlSolicitacoes.findMany({
           where: {
-            usuarioDefaultId: usuarioId,
-            equipeId: equipeId,
+            usuarioId,
+            equipeId,
           },
         });
 
-        if (solicitaçãoUsuario) {
-          await client.rlSolicitacao.delete({
+        if (solicitacaoUsuario) {
+          await client.rlSolicitacoes.delete({
             where: {
-              id: solicitaçãoUsuario[0].id,
+              id: solicitacaoUsuario[0].id,
             },
           });
         }
 
-        return solicitaçãoUsuario;
+        return solicitacaoUsuario;
       });
       return response;
     } catch (error) {

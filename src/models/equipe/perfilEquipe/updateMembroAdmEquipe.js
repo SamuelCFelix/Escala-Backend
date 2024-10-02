@@ -7,7 +7,7 @@ module.exports = {
     try {
       const response = await client.$transaction(async (client) => {
         if (acao === "remover") {
-          const buscarMembro = await client.usuarioDefault.update({
+          const buscarMembro = await client.usuarios.update({
             where: {
               id: usuarioId,
             },
@@ -18,7 +18,7 @@ module.exports = {
           });
           return buscarMembro;
         } else if (acao === "adicionar") {
-          const buscarMembro = await client.usuarioDefault.update({
+          const buscarMembro = await client.usuarios.update({
             where: {
               id: usuarioId,
             },

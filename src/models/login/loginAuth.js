@@ -30,12 +30,7 @@ module.exports = {
             termos: true,
             primeiroAcesso: true,
             senha: true,
-            UsuarioHost: {
-              select: {
-                id: true,
-              },
-            },
-            UsuarioDefault: {
+            Usuarios: {
               select: {
                 id: true,
               },
@@ -54,112 +49,62 @@ module.exports = {
             if (loginEmailExist?.primeiroAcesso === true) {
               return {
                 usuarioPerfilId: loginEmailExist.id,
+                autorizacao: null,
+                equipeId: null,
+                primeiroAcesso: loginEmailExist.primeiroAcesso,
                 token: token,
                 nome: loginEmailExist.nome,
                 foto: loginEmailExist.foto,
                 email: loginEmailExist.email,
                 dataNascimento: loginEmailExist.dataNascimento,
                 termos: loginEmailExist.termos,
-                primeiroAcesso: loginEmailExist.primeiroAcesso,
-                equipeId: null,
               };
-            } else if (loginEmailExist.UsuarioHost.length > 0) {
-              const usuarioHost = await client.usuarioHost.findFirst({
-                where: {
-                  perfilId: loginEmailExist.id,
-                },
-                select: {
-                  id: true,
-                  Equipe: {
-                    select: {
-                      id: true,
-                      nome: true,
-                    },
-                  },
-                },
-              });
-
-              if (!usuarioHost.Equipe.length > 0) {
-                return {
-                  usuarioHostId: usuarioHost.id,
-                  token: token,
-                  nome: loginEmailExist.nome,
-                  foto: loginEmailExist.foto,
-                  email: loginEmailExist.email,
-                  dataNascimento: loginEmailExist.dataNascimento,
-                  termos: loginEmailExist.termos,
-                  primeiroAcesso: loginEmailExist.primeiroAcesso,
-                  equipe: ["sem equipe"],
-                };
-              } else {
-                return {
-                  usuarioHostId: usuarioHost.id,
-                  token: token,
-                  nome: loginEmailExist.nome,
-                  foto: loginEmailExist.foto,
-                  email: loginEmailExist.email,
-                  dataNascimento: loginEmailExist.dataNascimento,
-                  termos: loginEmailExist.termos,
-                  primeiroAcesso: loginEmailExist.primeiroAcesso,
-                  equipe: usuarioHost.Equipe,
-                };
-              }
-            } else if (loginEmailExist.UsuarioDefault.length > 0) {
-              const usuarioDefault = await client.usuarioDefault.findFirst({
+            } else {
+              const usuarioLogin = await client.usuarios.findFirst({
                 where: {
                   perfilId: loginEmailExist.id,
                 },
                 select: {
                   id: true,
                   equipeId: true,
+                  autorizacao: true,
                 },
               });
 
-              if (!usuarioDefault.equipeId) {
-                const verificarEquipe = await client.rlSolicitacao.findFirst({
-                  where: {
-                    usuarioDefaultId: usuarioDefault.id,
-                  },
-                });
-
-                if (verificarEquipe) {
-                  return {
-                    usuarioDefaultId: usuarioDefault.id,
-                    token: token,
-                    nome: loginEmailExist.nome,
-                    foto: loginEmailExist.foto,
-                    email: loginEmailExist.email,
-                    dataNascimento: loginEmailExist.dataNascimento,
-                    termos: loginEmailExist.termos,
-                    primeiroAcesso: loginEmailExist.primeiroAcesso,
-                    equipeId: "solicitacao enviada",
-                  };
-                } else {
-                  return {
-                    usuarioDefaultId: usuarioDefault.id,
-                    token: token,
-                    nome: loginEmailExist.nome,
-                    foto: loginEmailExist.foto,
-                    email: loginEmailExist.email,
-                    dataNascimento: loginEmailExist.dataNascimento,
-                    termos: loginEmailExist.termos,
-                    primeiroAcesso: loginEmailExist.primeiroAcesso,
-                    equipeId: "sem equipe",
-                  };
-                }
-              }
-
-              return {
-                usuarioDefaultId: usuarioDefault.id,
+              const infoUsuarioReturn = {
+                usuarioId: usuarioLogin.id,
+                autorizacao: usuarioLogin.autorizacao,
+                equipeId: usuarioLogin.equipeId,
+                primeiroAcesso: loginEmailExist.primeiroAcesso,
                 token: token,
                 nome: loginEmailExist.nome,
                 foto: loginEmailExist.foto,
                 email: loginEmailExist.email,
                 dataNascimento: loginEmailExist.dataNascimento,
                 termos: loginEmailExist.termos,
-                primeiroAcesso: loginEmailExist.primeiroAcesso,
-                equipeId: usuarioDefault.equipeId,
               };
+
+              if (
+                !usuarioLogin.equipeId &&
+                usuarioLogin.autorizacao !== "adm001"
+              ) {
+                const solicitacaoEquipe = await client.rlSolicitacoes.findMany({
+                  where: {
+                    usuarioId: usuarioLogin.id,
+                  },
+                });
+
+                if (solicitacaoEquipe?.length > 0) {
+                  return {
+                    ...infoUsuarioReturn,
+                    equipeId: "solicitacao enviada",
+                  };
+                } else {
+                  return infoUsuarioReturn;
+                }
+              } else {
+                return infoUsuarioReturn;
+              }
             }
           } else {
             return "Credenciais inválidas";

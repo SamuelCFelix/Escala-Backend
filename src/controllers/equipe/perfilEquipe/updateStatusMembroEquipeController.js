@@ -4,13 +4,9 @@ const logger = require("../../../custom/logger");
 module.exports = {
   async handle(req, res) {
     try {
-      const { usuarioId, acao, host } = req.body;
+      const { usuarioId, acao } = req.body;
 
-      let response = await updateStatusMembroEquipe.execute(
-        usuarioId,
-        acao,
-        host
-      );
+      let response = await updateStatusMembroEquipe.execute(usuarioId, acao);
 
       return res.status(200).json(response);
     } catch (error) {

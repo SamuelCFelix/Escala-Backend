@@ -35,7 +35,7 @@ module.exports = {
         await Promise.all(
           programacoes?.map(
             async ({ culto, dia, horario, servindo, tagsCulto }) => {
-              const createProgramacao = await client.programacao.create({
+              const createProgramacao = await client.programacoes.create({
                 data: {
                   culto,
                   dia,
@@ -56,7 +56,7 @@ module.exports = {
                     },
                   });
 
-                  await client.rlTagsProgramacao.create({
+                  await client.rlTagsProgramacoes.create({
                     data: {
                       programacaoId: createProgramacao.id,
                       tagId: findTag.id,

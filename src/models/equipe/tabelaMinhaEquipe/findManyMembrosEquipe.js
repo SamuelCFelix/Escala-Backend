@@ -5,58 +5,25 @@ const client = new PrismaClient();
 module.exports = {
   async execute(equipeId) {
     try {
-      const usuarioHostEquipe = await client.equipe.findFirst({
-        where: {
-          id: equipeId,
-        },
-        select: {
-          usuarioHost: {
-            select: {
-              id: true,
-              nome: true,
-              foto: true,
-              autorizacao: true,
-              ativo: true,
-              perfil: {
-                select: {
-                  email: true,
-                  dataNascimento: true,
-                },
-              },
-              RlTagsUsuarioHost: {
-                select: {
-                  tags: {
-                    select: {
-                      id: true,
-                      nome: true,
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-      });
-
       const membrosEquipe = await client.equipe.findFirst({
         where: {
           id: equipeId,
         },
         select: {
-          UsuarioDefault: {
+          Usuarios: {
             select: {
               id: true,
               nome: true,
               foto: true,
               autorizacao: true,
-              ativo: true,
+              statusUsuario: true,
               perfil: {
                 select: {
                   email: true,
                   dataNascimento: true,
                 },
               },
-              RlTagsUsuarioDefault: {
+              RlTagsUsuarios: {
                 select: {
                   tags: {
                     select: {
@@ -71,41 +38,21 @@ module.exports = {
         },
       });
 
-      const membrosEquipeFormatted = membrosEquipe?.UsuarioDefault?.map(
-        (membro) => {
-          return {
-            usuarioDefaultId: membro?.id,
-            nome: membro?.nome,
-            foto: membro?.foto,
-            autorizacao: membro?.autorizacao,
-            email: membro?.perfil?.email,
-            dataNascimento: membro?.perfil?.dataNascimento,
-            ativo: membro?.ativo,
-            tags: membro?.RlTagsUsuarioDefault?.map((tagRelation) => ({
-              id: tagRelation.tags.id,
-              nome: tagRelation.tags.nome,
-            })),
-          };
-        }
-      );
-
-      const hostFormatted = {
-        usuarioHostId: usuarioHostEquipe?.usuarioHost?.id,
-        nome: usuarioHostEquipe?.usuarioHost?.nome,
-        foto: usuarioHostEquipe?.usuarioHost?.foto,
-        autorizacao: usuarioHostEquipe?.usuarioHost?.autorizacao,
-        email: usuarioHostEquipe?.usuarioHost?.perfil?.email,
-        dataNascimento: usuarioHostEquipe?.usuarioHost?.perfil?.dataNascimento,
-        ativo: usuarioHostEquipe?.usuarioHost?.ativo,
-        tags: usuarioHostEquipe?.usuarioHost?.RlTagsUsuarioHost?.map(
-          (tagRelation) => ({
+      const membrosEquipeFormatted = membrosEquipe?.Usuarios?.map((membro) => {
+        return {
+          usuarioId: membro?.id,
+          nome: membro?.nome,
+          foto: membro?.foto,
+          autorizacao: membro?.autorizacao,
+          email: membro?.perfil?.email,
+          dataNascimento: membro?.perfil?.dataNascimento,
+          statusUsuario: membro?.statusUsuario,
+          tags: membro?.RlTagsUsuarios?.map((tagRelation) => ({
             id: tagRelation.tags.id,
             nome: tagRelation.tags.nome,
-          })
-        ),
-      };
-
-      membrosEquipeFormatted.push(hostFormatted);
+          })),
+        };
+      });
 
       return membrosEquipeFormatted;
     } catch (error) {

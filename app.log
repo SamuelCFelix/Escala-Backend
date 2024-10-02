@@ -2569,3 +2569,530 @@ Transaction API error: Transaction not found. Transaction ID is invalid, refers 
 14/09/2024 17:51:59.199 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
 14/09/2024 18:03:06.180 [[35mDEBUG[0m] Gerando escala mensal da equipe
 14/09/2024 18:03:06.374 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+18/09/2024 17:48:43.953 [[35mDEBUG[0m] Iniciando criação de equipe
+18/09/2024 17:48:43.995 [[35mDEBUG[0m] Processo finalizado
+18/09/2024 17:53:51.698 [[35mDEBUG[0m] Gerando escala mensal da equipe
+18/09/2024 17:53:51.779 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+18/09/2024 17:57:20.285 [[35mDEBUG[0m] Gerando escala mensal da equipe
+18/09/2024 17:57:20.379 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+18/09/2024 18:03:14.107 [[35mDEBUG[0m] Gerando escala mensal da equipe
+18/09/2024 18:03:14.196 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+18/09/2024 18:58:00.234 [[35mDEBUG[0m] Gerando escala mensal da equipe
+18/09/2024 18:58:00.311 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+18/09/2024 18:58:05.113 [[35mDEBUG[0m] Gerando escala mensal da equipe
+18/09/2024 18:58:05.188 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+20/09/2024 14:28:17.488 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/09/2024 14:28:17.496 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/09/2024 14:29:51.700 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/09/2024 14:31:16.753 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/09/2024 14:32:23.628 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/09/2024 14:32:35.901 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/09/2024 14:32:35.902 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/09/2024 14:33:04.393 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+20/09/2024 16:00:25.318 [[35mDEBUG[0m] Gerando escala mensal da equipe
+20/09/2024 16:00:25.405 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+23/09/2024 12:18:54.689 [[31mERROR[0m] (Unknown location) Erro ao buscar disponibilidade de membro da equipe model: 
+Invalid `client.escalaUsuarioHost.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findDisponibilidadeMembro.js:10:64
+
+   7 try {
+   8   const response = await client.$transaction(async (client) => {
+   9     if (host) {
+→ 10       const escalaUsuario = await client.escalaUsuarioHost.findFirst(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+23/09/2024 12:20:08.351 [[31mERROR[0m] (Unknown location) Erro ao buscar disponibilidade de membro da equipe model: 
+Invalid `client.escalaUsuarioHost.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findDisponibilidadeMembro.js:10:64
+
+   7 try {
+   8   const response = await client.$transaction(async (client) => {
+   9     if (host) {
+→ 10       const escalaUsuario = await client.escalaUsuarioHost.findFirst(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+23/09/2024 12:20:15.676 [[31mERROR[0m] (Unknown location) Erro ao buscar disponibilidade de membro da equipe model: 
+Invalid `client.escalaUsuarioHost.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findDisponibilidadeMembro.js:10:64
+
+   7 try {
+   8   const response = await client.$transaction(async (client) => {
+   9     if (host) {
+→ 10       const escalaUsuario = await client.escalaUsuarioHost.findFirst(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+23/09/2024 23:58:59.709 [[35mDEBUG[0m] Gerando escala mensal da equipe
+23/09/2024 23:58:59.800 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+23/09/2024 23:59:14.519 [[35mDEBUG[0m] Gerando escala mensal da equipe
+23/09/2024 23:59:14.598 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+23/09/2024 23:59:18.910 [[35mDEBUG[0m] Gerando escala mensal da equipe
+23/09/2024 23:59:18.987 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+24/09/2024 12:48:35.640 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 12:50:32.380 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 12:51:28.885 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 12:53:10.086 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 12:53:27.166 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 12:53:45.823 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 12:55:42.241 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 12:56:56.425 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 12:57:17.810 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 12:57:24.777 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 12:58:27.816 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:18:00.470 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:18:00.574 [[31mERROR[0m] (qr.transaction (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\@prisma\client\runtime\library.js:115) Erro ao criar equipe: Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:18:00.677 [[31mERROR[0m] (qr.transaction (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\@prisma\client\runtime\library.js:115) Erro ao criar equipe: Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:18:43.264 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:23:40.658 [[31mERROR[0m] (qr.transaction (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\node_modules\@prisma\client\runtime\library.js:115) Erro ao criar equipe: Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:24:37.338 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:25:47.988 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:26:58.191 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:27:40.159 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:28:33.983 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:30:08.571 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:32:32.306 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:42:52.699 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:43:07.100 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:43:24.942 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:44:38.844 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:54:56.107 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:54:58.189 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:55:00.348 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:55:02.941 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:55:07.258 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 14:55:39.748 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 15:00:30.597 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 15:00:32.965 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 15:00:36.771 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 15:00:39.098 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 15:00:55.657 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 15:01:11.200 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 15:03:22.060 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 15:03:58.895 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 15:04:25.339 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 15:04:59.603 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 15:05:27.857 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 15:06:13.158 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 15:07:00.283 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 15:07:36.226 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+24/09/2024 15:07:43.306 [[31mERROR[0m] (Unknown location) Erro ao criar equipe: 
+Invalid `client.equipe.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:9:45
+
+  6 async execute() {
+  7   try {
+  8     const response = await client.$transaction(async (client) => {
+→ 9       const equipes = await client.equipe.findMany(
+Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.

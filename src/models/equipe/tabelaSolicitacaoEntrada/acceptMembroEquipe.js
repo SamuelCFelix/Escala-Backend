@@ -6,25 +6,25 @@ module.exports = {
   async execute(usuarioId, equipeId) {
     try {
       const response = await client.$transaction(async (client) => {
-        const aceitarMembroEquipe = await client.usuarioDefault.update({
+        const aceitarMembroEquipe = await client.usuarios.update({
           where: {
             id: usuarioId,
           },
           data: {
-            equipeId: equipeId,
+            equipeId,
             updateAt: new Date(),
           },
         });
 
-        const solicitaçãoUsuario = await client.rlSolicitacao.findMany({
+        const solicitaçãoUsuario = await client.rlSolicitacoes.findMany({
           where: {
-            usuarioDefaultId: usuarioId,
-            equipeId: equipeId,
+            usuarioId,
+            equipeId,
           },
         });
 
         if (solicitaçãoUsuario) {
-          await client.rlSolicitacao.delete({
+          await client.rlSolicitacoes.delete({
             where: {
               id: solicitaçãoUsuario[0].id,
             },

@@ -3,54 +3,25 @@ const logger = require("../../custom/logger");
 const client = new PrismaClient();
 
 module.exports = {
-  async execute(usuarioId, isHost) {
+  async execute(usuarioId) {
     try {
-      let infoUsuario;
+      let infoUsuario = await client.usuarios.findFirst({
+        where: {
+          id: usuarioId,
+        },
+        select: {
+          id: true,
+          foto: true,
+          nome: true,
+          statusUsuario: true,
+          equipeId: true,
+          autorizacao: true,
+        },
+      });
 
-      if (isHost) {
-        infoUsuario = await client.usuarioHost.findFirst({
-          where: {
-            id: usuarioId,
-          },
-          select: {
-            id: true,
-            nome: true,
-            foto: true,
-            ativo: true,
-            Equipe: {
-              select: {
-                id: true,
-              },
-            },
-            autorizacao: true,
-          },
-        });
-
-        if (infoUsuario) {
-          infoUsuario.usuarioHostId = infoUsuario.id;
-          infoUsuario.equipeId = infoUsuario.Equipe[0]?.id;
-          delete infoUsuario.id;
-          delete infoUsuario.Equipe;
-        }
-      } else {
-        infoUsuario = await client.usuarioDefault.findFirst({
-          where: {
-            id: usuarioId,
-          },
-          select: {
-            id: true,
-            foto: true,
-            nome: true,
-            ativo: true,
-            equipeId: true,
-            autorizacao: true,
-          },
-        });
-
-        if (infoUsuario) {
-          infoUsuario.usuarioDefaultId = infoUsuario.id;
-          delete infoUsuario.id;
-        }
+      if (infoUsuario) {
+        infoUsuario.usuarioId = infoUsuario.id;
+        delete infoUsuario.id;
       }
 
       return infoUsuario;

@@ -4,9 +4,9 @@ const logger = require("../../custom/logger");
 module.exports = {
   async handle(req, res) {
     try {
-      const { usuarioId, isHost } = req.body;
+      const { usuarioId } = req.body;
 
-      let response = await findConfigHome.execute(usuarioId, isHost);
+      let response = await findConfigHome.execute(usuarioId);
 
       return res.status(200).json(response);
     } catch (error) {
