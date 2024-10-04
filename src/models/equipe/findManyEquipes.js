@@ -25,21 +25,25 @@ module.exports = {
           },
         });
 
-        const userHostEquipe = await client.usuario.findMany({
-          where: {
-            id: {
-              in: equipes?.map((equipe) => equipe.usuarioHostId),
-            },
-          },
-          select: {
-            id: true,
-            nome: true,
-            foto: true,
-          },
-        });
+        const usersHostEquipes = await Promise.all(
+          equipes?.map(async (equipe) => {
+            let userHost = await client.usuarios.findFirst({
+              where: {
+                id: equipe.usuarioHostId,
+              },
+              select: {
+                id: true,
+                nome: true,
+                foto: true,
+              },
+            });
+
+            return userHost;
+          })
+        );
 
         const equipesComUsuarioHost = equipes?.map((equipe) => {
-          const usuarioHost = userHostEquipe.find(
+          const usuarioHost = usersHostEquipes.find(
             (host) => host.id === equipe.usuarioHostId
           );
 

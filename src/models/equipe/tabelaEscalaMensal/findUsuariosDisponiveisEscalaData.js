@@ -106,18 +106,18 @@ module.exports = {
           }
         })
         ?.map((usuario) => {
-          const disponibilidade = Array.isArray(
-            usuario.EscalaUsuarios?.disponibilidade
-          );
+          const disponibilidade = usuario.EscalaUsuarios?.disponibilidade || [];
 
-          const possuiDisponibilidade = [...disponibilidade].some(
-            (dispoUsuario) =>
-              dispoUsuario.programacaoId === escalaData?.programacaoId &&
-              dispoUsuario.disponibilidade === true &&
-              !(dispoUsuario.indisponibilidade || []).some(
-                (dataIndispo) => dataIndispo.data === escalaData?.data
-              )
-          );
+          const possuiDisponibilidade =
+            Array.isArray(disponibilidade) &&
+            disponibilidade.some(
+              (dispoUsuario) =>
+                dispoUsuario.programacaoId === escalaData?.programacaoId &&
+                dispoUsuario.disponibilidade === true &&
+                !(dispoUsuario.indisponibilidade || []).some(
+                  (dataIndispo) => dataIndispo.data === escalaData?.data
+                )
+            );
 
           return {
             usuarioId: usuario.id,

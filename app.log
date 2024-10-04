@@ -3096,3 +3096,1788 @@ C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\esc
   8     const response = await client.$transaction(async (client) => {
 → 9       const equipes = await client.equipe.findMany(
 Transaction API error: Transaction not found. Transaction ID is invalid, refers to an old closed transaction Prisma doesn't have information about anymore, or was obtained before disconnecting.
+02/10/2024 17:11:07.368 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:28) Erro ao criar equipe: Cannot read properties of undefined (reading 'findMany')
+02/10/2024 17:11:15.066 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:28) Erro ao criar equipe: Cannot read properties of undefined (reading 'findMany')
+02/10/2024 17:13:06.691 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:28) Erro ao criar equipe: Cannot read properties of undefined (reading 'findMany')
+02/10/2024 17:23:04.534 [[35mDEBUG[0m] Iniciando criação de equipe
+02/10/2024 17:23:04.581 [[35mDEBUG[0m] Processo finalizado
+03/10/2024 12:13:58.842 [[35mDEBUG[0m] Iniciando criação de equipe
+03/10/2024 12:13:58.897 [[35mDEBUG[0m] Processo finalizado
+03/10/2024 12:30:46.073 [[35mDEBUG[0m] Gerando escala mensal da equipe
+03/10/2024 12:30:46.166 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+03/10/2024 12:31:15.768 [[35mDEBUG[0m] Gerando escala mensal da equipe
+03/10/2024 12:31:15.849 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+04/10/2024 02:12:42.585 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findUsuariosDisponiveisEscalaData.js:113) Erro ao buscar usuários disponíveis para preencher a escala da equipe model: disponibilidade is not iterable
+04/10/2024 02:12:48.690 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findUsuariosDisponiveisEscalaData.js:113) Erro ao buscar usuários disponíveis para preencher a escala da equipe model: disponibilidade is not iterable
+04/10/2024 02:12:54.382 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findUsuariosDisponiveisEscalaData.js:113) Erro ao buscar usuários disponíveis para preencher a escala da equipe model: disponibilidade is not iterable
+04/10/2024 02:12:57.161 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findUsuariosDisponiveisEscalaData.js:113) Erro ao buscar usuários disponíveis para preencher a escala da equipe model: disponibilidade is not iterable
+04/10/2024 02:13:02.830 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findUsuariosDisponiveisEscalaData.js:113) Erro ao buscar usuários disponíveis para preencher a escala da equipe model: disponibilidade is not iterable
+04/10/2024 02:14:52.340 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findUsuariosDisponiveisEscalaData.js:113) Erro ao buscar usuários disponíveis para preencher a escala da equipe model: disponibilidade is not iterable
+04/10/2024 02:22:33.854 [[35mDEBUG[0m] Gerando escala mensal da equipe
+04/10/2024 02:22:33.934 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+04/10/2024 02:25:19.880 [[35mDEBUG[0m] Gerando escala mensal da equipe
+04/10/2024 02:25:19.954 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+04/10/2024 02:27:05.560 [[35mDEBUG[0m] Gerando escala mensal da equipe
+04/10/2024 02:27:05.628 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+04/10/2024 02:32:52.118 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:28) Erro ao criar equipe: Cannot read properties of undefined (reading 'findMany')
+04/10/2024 02:32:52.212 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:28) Erro ao criar equipe: Cannot read properties of undefined (reading 'findMany')
+04/10/2024 02:34:48.351 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:28) Erro ao criar equipe: Cannot read properties of undefined (reading 'findMany')
+04/10/2024 02:35:04.311 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:28) Erro ao criar equipe: Cannot read properties of undefined (reading 'findMany')
+04/10/2024 02:40:45.043 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:30) Erro ao criar equipe: Cannot read properties of undefined (reading 'findMany')
+04/10/2024 02:41:30.802 [[31mERROR[0m] (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\findManyEquipes.js:30) Erro ao criar equipe: Cannot read properties of undefined (reading 'findMany')
+04/10/2024 02:54:50.028 [[31mERROR[0m] (Unknown location) Erro ao criar perfil: 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:26:50
+
+  23 async execute(nome, foto, cpf, dataNascimento, email, senha, termos) {
+  24   try {
+  25     const response = await client.$transaction(async (client) => {
+→ 26       const createPerfil = await client.perfil.create(
+Unique constraint failed on the fields: (`cpf`)
+04/10/2024 02:54:50.051 [[31mERROR[0m] (Unknown location) Erro ao criar perfil controller:: 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:26:50
+
+  23 async execute(nome, foto, cpf, dataNascimento, email, senha, termos) {
+  24   try {
+  25     const response = await client.$transaction(async (client) => {
+→ 26       const createPerfil = await client.perfil.create(
+Unique constraint failed on the fields: (`cpf`)
+04/10/2024 02:55:03.429 [[31mERROR[0m] (Unknown location) Erro ao criar perfil: 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:26:50
+
+  23 async execute(nome, foto, cpf, dataNascimento, email, senha, termos) {
+  24   try {
+  25     const response = await client.$transaction(async (client) => {
+→ 26       const createPerfil = await client.perfil.create(
+Unique constraint failed on the fields: (`cpf`)
+04/10/2024 02:55:03.442 [[31mERROR[0m] (Unknown location) Erro ao criar perfil controller:: 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:26:50
+
+  23 async execute(nome, foto, cpf, dataNascimento, email, senha, termos) {
+  24   try {
+  25     const response = await client.$transaction(async (client) => {
+→ 26       const createPerfil = await client.perfil.create(
+Unique constraint failed on the fields: (`cpf`)
+04/10/2024 02:56:33.538 [[31mERROR[0m] (Unknown location) Erro ao criar perfil: 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:26:50
+
+  23 async execute(nome, foto, cpf, dataNascimento, email, senha, termos) {
+  24   try {
+  25     const response = await client.$transaction(async (client) => {
+→ 26       const createPerfil = await client.perfil.create(
+Unique constraint failed on the fields: (`cpf`)
+04/10/2024 02:56:33.551 [[31mERROR[0m] (Unknown location) Erro ao criar perfil controller:: 
+Invalid `client.perfil.create()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\perfil\createPerfil.js:26:50
+
+  23 async execute(nome, foto, cpf, dataNascimento, email, senha, termos) {
+  24   try {
+  25     const response = await client.$transaction(async (client) => {
+→ 26       const createPerfil = await client.perfil.create(
+Unique constraint failed on the fields: (`cpf`)
+04/10/2024 03:06:16.137 [[35mDEBUG[0m] Gerando escala mensal da equipe
+04/10/2024 03:06:16.207 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+04/10/2024 03:17:00.078 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:00.087 [[31mERROR[0m] (Unknown location) Erro ao buscar escala do membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId, usuarioId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:00.139 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:00.170 [[31mERROR[0m] (Unknown location) Erro ao buscar escala do membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId, usuarioId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:06.725 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:06.742 [[31mERROR[0m] (Unknown location) Erro ao buscar escala do membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId, usuarioId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:06.814 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:06.826 [[31mERROR[0m] (Unknown location) Erro ao buscar escala do membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId, usuarioId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:37.839 [[31mERROR[0m] (Unknown location) Erro ao buscar solicitações da equipe model: 
+Invalid `client.rlSolicitacoes.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaSolicitacaoEntrada\findManyRequestEquipe.js:10:62
+
+   7 module.exports = {
+   8   async execute(equipeId) {
+   9     try {
+→ 10       const solicitacoesEquipe = await client.rlSolicitacoes.findMany({
+             where: {
+           +   equipeId: {
+           +     equals: String | StringFieldRefInput,
+           +     in: String[] | ListStringFieldRefInput,
+           +     notIn: String[] | ListStringFieldRefInput,
+           +     lt: String | StringFieldRefInput,
+           +     lte: String | StringFieldRefInput,
+           +     gt: String | StringFieldRefInput,
+           +     gte: String | StringFieldRefInput,
+           +     contains: String | StringFieldRefInput,
+           +     startsWith: String | StringFieldRefInput,
+           +     endsWith: String | StringFieldRefInput,
+           +     mode: QueryMode,
+           +     not: String | NestedStringFilter
+           +   }
+             },
+             select: {
+               usuarioId: true,
+               usuarios: {
+                 select: {
+                   perfil: {
+                     select: {
+                       nome: true,
+                       foto: true,
+                       email: true
+                     }
+                   }
+                 }
+               },
+               createAt: true
+             }
+           })
+
+Argument `equipeId` must not be null.
+04/10/2024 03:17:37.846 [[31mERROR[0m] (Unknown location) Erro ao buscar membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaMinhaEquipe\findManyMembrosEquipe.js:8:49
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const membrosEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              Usuarios: {
+                select: {
+                  id: true,
+                  nome: true,
+                  foto: true,
+                  autorizacao: true,
+                  statusUsuario: true,
+                  perfil: {
+                    select: {
+                      email: true,
+                      dataNascimento: true
+                    }
+                  },
+                  RlTagsUsuarios: {
+                    select: {
+                      tags: {
+                        select: {
+                          id: true,
+                          nome: true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:37.853 [[31mERROR[0m] (Unknown location) Erro ao buscar membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaMinhaEquipe\findManyTagsEquipe.js:8:46
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const tagsEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              Tags: {
+                select: {
+                  id: true,
+                  nome: true
+                }
+              }
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:37.860 [[31mERROR[0m] (Unknown location) Erro ao buscar escala mensal da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findEscalaMensal.js:9:54
+
+  6 async execute(equipeId) {
+  7   try {
+  8     // Busca a programação mensal da equipe
+→ 9     const buscarEscalaEquipe = await client.equipe.findFirst({
+          where: {
+        +   id: {
+        +     equals: String | StringFieldRefInput,
+        +     in: String[] | ListStringFieldRefInput,
+        +     notIn: String[] | ListStringFieldRefInput,
+        +     lt: String | StringFieldRefInput,
+        +     lte: String | StringFieldRefInput,
+        +     gt: String | StringFieldRefInput,
+        +     gte: String | StringFieldRefInput,
+        +     contains: String | StringFieldRefInput,
+        +     startsWith: String | StringFieldRefInput,
+        +     endsWith: String | StringFieldRefInput,
+        +     mode: QueryMode,
+        +     not: String | NestedStringFilter
+        +   }
+          },
+          select: {
+            escalaMensal: true
+          }
+        })
+
+Argument `id` must not be null.
+04/10/2024 03:17:37.944 [[31mERROR[0m] (Unknown location) Erro ao buscar solicitações da equipe model: 
+Invalid `client.rlSolicitacoes.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaSolicitacaoEntrada\findManyRequestEquipe.js:10:62
+
+   7 module.exports = {
+   8   async execute(equipeId) {
+   9     try {
+→ 10       const solicitacoesEquipe = await client.rlSolicitacoes.findMany({
+             where: {
+           +   equipeId: {
+           +     equals: String | StringFieldRefInput,
+           +     in: String[] | ListStringFieldRefInput,
+           +     notIn: String[] | ListStringFieldRefInput,
+           +     lt: String | StringFieldRefInput,
+           +     lte: String | StringFieldRefInput,
+           +     gt: String | StringFieldRefInput,
+           +     gte: String | StringFieldRefInput,
+           +     contains: String | StringFieldRefInput,
+           +     startsWith: String | StringFieldRefInput,
+           +     endsWith: String | StringFieldRefInput,
+           +     mode: QueryMode,
+           +     not: String | NestedStringFilter
+           +   }
+             },
+             select: {
+               usuarioId: true,
+               usuarios: {
+                 select: {
+                   perfil: {
+                     select: {
+                       nome: true,
+                       foto: true,
+                       email: true
+                     }
+                   }
+                 }
+               },
+               createAt: true
+             }
+           })
+
+Argument `equipeId` must not be null.
+04/10/2024 03:17:37.961 [[31mERROR[0m] (Unknown location) Erro ao buscar membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaMinhaEquipe\findManyMembrosEquipe.js:8:49
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const membrosEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              Usuarios: {
+                select: {
+                  id: true,
+                  nome: true,
+                  foto: true,
+                  autorizacao: true,
+                  statusUsuario: true,
+                  perfil: {
+                    select: {
+                      email: true,
+                      dataNascimento: true
+                    }
+                  },
+                  RlTagsUsuarios: {
+                    select: {
+                      tags: {
+                        select: {
+                          id: true,
+                          nome: true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:37.968 [[31mERROR[0m] (Unknown location) Erro ao buscar membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaMinhaEquipe\findManyTagsEquipe.js:8:46
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const tagsEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              Tags: {
+                select: {
+                  id: true,
+                  nome: true
+                }
+              }
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:37.973 [[31mERROR[0m] (Unknown location) Erro ao buscar escala mensal da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findEscalaMensal.js:9:54
+
+  6 async execute(equipeId) {
+  7   try {
+  8     // Busca a programação mensal da equipe
+→ 9     const buscarEscalaEquipe = await client.equipe.findFirst({
+          where: {
+        +   id: {
+        +     equals: String | StringFieldRefInput,
+        +     in: String[] | ListStringFieldRefInput,
+        +     notIn: String[] | ListStringFieldRefInput,
+        +     lt: String | StringFieldRefInput,
+        +     lte: String | StringFieldRefInput,
+        +     gt: String | StringFieldRefInput,
+        +     gte: String | StringFieldRefInput,
+        +     contains: String | StringFieldRefInput,
+        +     startsWith: String | StringFieldRefInput,
+        +     endsWith: String | StringFieldRefInput,
+        +     mode: QueryMode,
+        +     not: String | NestedStringFilter
+        +   }
+          },
+          select: {
+            escalaMensal: true
+          }
+        })
+
+Argument `id` must not be null.
+04/10/2024 03:17:39.161 [[31mERROR[0m] (Unknown location) Erro ao buscar escala do membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId, usuarioId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:39.218 [[31mERROR[0m] (Unknown location) Erro ao buscar escala do membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId, usuarioId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:39.258 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:39.327 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:42.154 [[31mERROR[0m] (Unknown location) Erro ao buscar membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaMinhaEquipe\findManyMembrosEquipe.js:8:49
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const membrosEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              Usuarios: {
+                select: {
+                  id: true,
+                  nome: true,
+                  foto: true,
+                  autorizacao: true,
+                  statusUsuario: true,
+                  perfil: {
+                    select: {
+                      email: true,
+                      dataNascimento: true
+                    }
+                  },
+                  RlTagsUsuarios: {
+                    select: {
+                      tags: {
+                        select: {
+                          id: true,
+                          nome: true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:42.174 [[31mERROR[0m] (Unknown location) Erro ao buscar solicitações da equipe model: 
+Invalid `client.rlSolicitacoes.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaSolicitacaoEntrada\findManyRequestEquipe.js:10:62
+
+   7 module.exports = {
+   8   async execute(equipeId) {
+   9     try {
+→ 10       const solicitacoesEquipe = await client.rlSolicitacoes.findMany({
+             where: {
+           +   equipeId: {
+           +     equals: String | StringFieldRefInput,
+           +     in: String[] | ListStringFieldRefInput,
+           +     notIn: String[] | ListStringFieldRefInput,
+           +     lt: String | StringFieldRefInput,
+           +     lte: String | StringFieldRefInput,
+           +     gt: String | StringFieldRefInput,
+           +     gte: String | StringFieldRefInput,
+           +     contains: String | StringFieldRefInput,
+           +     startsWith: String | StringFieldRefInput,
+           +     endsWith: String | StringFieldRefInput,
+           +     mode: QueryMode,
+           +     not: String | NestedStringFilter
+           +   }
+             },
+             select: {
+               usuarioId: true,
+               usuarios: {
+                 select: {
+                   perfil: {
+                     select: {
+                       nome: true,
+                       foto: true,
+                       email: true
+                     }
+                   }
+                 }
+               },
+               createAt: true
+             }
+           })
+
+Argument `equipeId` must not be null.
+04/10/2024 03:17:42.181 [[31mERROR[0m] (Unknown location) Erro ao buscar membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaMinhaEquipe\findManyTagsEquipe.js:8:46
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const tagsEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              Tags: {
+                select: {
+                  id: true,
+                  nome: true
+                }
+              }
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:42.198 [[31mERROR[0m] (Unknown location) Erro ao buscar escala mensal da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findEscalaMensal.js:9:54
+
+  6 async execute(equipeId) {
+  7   try {
+  8     // Busca a programação mensal da equipe
+→ 9     const buscarEscalaEquipe = await client.equipe.findFirst({
+          where: {
+        +   id: {
+        +     equals: String | StringFieldRefInput,
+        +     in: String[] | ListStringFieldRefInput,
+        +     notIn: String[] | ListStringFieldRefInput,
+        +     lt: String | StringFieldRefInput,
+        +     lte: String | StringFieldRefInput,
+        +     gt: String | StringFieldRefInput,
+        +     gte: String | StringFieldRefInput,
+        +     contains: String | StringFieldRefInput,
+        +     startsWith: String | StringFieldRefInput,
+        +     endsWith: String | StringFieldRefInput,
+        +     mode: QueryMode,
+        +     not: String | NestedStringFilter
+        +   }
+          },
+          select: {
+            escalaMensal: true
+          }
+        })
+
+Argument `id` must not be null.
+04/10/2024 03:17:42.273 [[31mERROR[0m] (Unknown location) Erro ao buscar solicitações da equipe model: 
+Invalid `client.rlSolicitacoes.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaSolicitacaoEntrada\findManyRequestEquipe.js:10:62
+
+   7 module.exports = {
+   8   async execute(equipeId) {
+   9     try {
+→ 10       const solicitacoesEquipe = await client.rlSolicitacoes.findMany({
+             where: {
+           +   equipeId: {
+           +     equals: String | StringFieldRefInput,
+           +     in: String[] | ListStringFieldRefInput,
+           +     notIn: String[] | ListStringFieldRefInput,
+           +     lt: String | StringFieldRefInput,
+           +     lte: String | StringFieldRefInput,
+           +     gt: String | StringFieldRefInput,
+           +     gte: String | StringFieldRefInput,
+           +     contains: String | StringFieldRefInput,
+           +     startsWith: String | StringFieldRefInput,
+           +     endsWith: String | StringFieldRefInput,
+           +     mode: QueryMode,
+           +     not: String | NestedStringFilter
+           +   }
+             },
+             select: {
+               usuarioId: true,
+               usuarios: {
+                 select: {
+                   perfil: {
+                     select: {
+                       nome: true,
+                       foto: true,
+                       email: true
+                     }
+                   }
+                 }
+               },
+               createAt: true
+             }
+           })
+
+Argument `equipeId` must not be null.
+04/10/2024 03:17:42.286 [[31mERROR[0m] (Unknown location) Erro ao buscar membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaMinhaEquipe\findManyTagsEquipe.js:8:46
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const tagsEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              Tags: {
+                select: {
+                  id: true,
+                  nome: true
+                }
+              }
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:42.292 [[31mERROR[0m] (Unknown location) Erro ao buscar escala mensal da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findEscalaMensal.js:9:54
+
+  6 async execute(equipeId) {
+  7   try {
+  8     // Busca a programação mensal da equipe
+→ 9     const buscarEscalaEquipe = await client.equipe.findFirst({
+          where: {
+        +   id: {
+        +     equals: String | StringFieldRefInput,
+        +     in: String[] | ListStringFieldRefInput,
+        +     notIn: String[] | ListStringFieldRefInput,
+        +     lt: String | StringFieldRefInput,
+        +     lte: String | StringFieldRefInput,
+        +     gt: String | StringFieldRefInput,
+        +     gte: String | StringFieldRefInput,
+        +     contains: String | StringFieldRefInput,
+        +     startsWith: String | StringFieldRefInput,
+        +     endsWith: String | StringFieldRefInput,
+        +     mode: QueryMode,
+        +     not: String | NestedStringFilter
+        +   }
+          },
+          select: {
+            escalaMensal: true
+          }
+        })
+
+Argument `id` must not be null.
+04/10/2024 03:17:42.365 [[31mERROR[0m] (Unknown location) Erro ao buscar membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaMinhaEquipe\findManyMembrosEquipe.js:8:49
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const membrosEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              Usuarios: {
+                select: {
+                  id: true,
+                  nome: true,
+                  foto: true,
+                  autorizacao: true,
+                  statusUsuario: true,
+                  perfil: {
+                    select: {
+                      email: true,
+                      dataNascimento: true
+                    }
+                  },
+                  RlTagsUsuarios: {
+                    select: {
+                      tags: {
+                        select: {
+                          id: true,
+                          nome: true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:43.540 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:43.544 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:43.551 [[31mERROR[0m] (Unknown location) Erro ao buscar escala do membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId, usuarioId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 03:17:43.701 [[31mERROR[0m] (Unknown location) Erro ao buscar escala do membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId, usuarioId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 04:20:32.372 [[35mDEBUG[0m] Gerando escala mensal da equipe
+04/10/2024 04:20:32.452 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+04/10/2024 05:34:25.285 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:18) Erro ao buscar escala do membro da equipe model: Equipe não encontrada
+04/10/2024 05:34:25.343 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:18) Erro ao buscar escala do membro da equipe model: Equipe não encontrada
+04/10/2024 05:34:29.077 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findEscalaMensal.js:19) Erro ao buscar escala mensal da equipe model: Equipe não encontrada
+04/10/2024 05:34:29.153 [[31mERROR[0m] (Object.execute (C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findEscalaMensal.js:19) Erro ao buscar escala mensal da equipe model: Equipe não encontrada
+04/10/2024 05:44:01.340 [[35mDEBUG[0m] Iniciando criação de equipe
+04/10/2024 05:44:01.418 [[35mDEBUG[0m] Processo finalizado
+04/10/2024 05:46:07.740 [[35mDEBUG[0m] Gerando escala mensal da equipe
+04/10/2024 05:46:07.828 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso
+04/10/2024 05:53:28.295 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 05:53:28.302 [[31mERROR[0m] (Unknown location) Erro ao buscar escala do membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId, usuarioId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 05:53:28.350 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 05:53:28.364 [[31mERROR[0m] (Unknown location) Erro ao buscar escala do membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId, usuarioId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 05:53:30.560 [[31mERROR[0m] (Unknown location) Erro ao buscar solicitações da equipe model: 
+Invalid `client.rlSolicitacoes.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaSolicitacaoEntrada\findManyRequestEquipe.js:10:62
+
+   7 module.exports = {
+   8   async execute(equipeId) {
+   9     try {
+→ 10       const solicitacoesEquipe = await client.rlSolicitacoes.findMany({
+             where: {
+           +   equipeId: {
+           +     equals: String | StringFieldRefInput,
+           +     in: String[] | ListStringFieldRefInput,
+           +     notIn: String[] | ListStringFieldRefInput,
+           +     lt: String | StringFieldRefInput,
+           +     lte: String | StringFieldRefInput,
+           +     gt: String | StringFieldRefInput,
+           +     gte: String | StringFieldRefInput,
+           +     contains: String | StringFieldRefInput,
+           +     startsWith: String | StringFieldRefInput,
+           +     endsWith: String | StringFieldRefInput,
+           +     mode: QueryMode,
+           +     not: String | NestedStringFilter
+           +   }
+             },
+             select: {
+               usuarioId: true,
+               usuarios: {
+                 select: {
+                   perfil: {
+                     select: {
+                       nome: true,
+                       foto: true,
+                       email: true
+                     }
+                   }
+                 }
+               },
+               createAt: true
+             }
+           })
+
+Argument `equipeId` must not be null.
+04/10/2024 05:53:30.569 [[31mERROR[0m] (Unknown location) Erro ao buscar membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaMinhaEquipe\findManyMembrosEquipe.js:8:49
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const membrosEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              Usuarios: {
+                select: {
+                  id: true,
+                  nome: true,
+                  foto: true,
+                  autorizacao: true,
+                  statusUsuario: true,
+                  perfil: {
+                    select: {
+                      email: true,
+                      dataNascimento: true
+                    }
+                  },
+                  RlTagsUsuarios: {
+                    select: {
+                      tags: {
+                        select: {
+                          id: true,
+                          nome: true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 05:53:30.577 [[31mERROR[0m] (Unknown location) Erro ao buscar membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaMinhaEquipe\findManyTagsEquipe.js:8:46
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const tagsEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              Tags: {
+                select: {
+                  id: true,
+                  nome: true
+                }
+              }
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 05:53:30.583 [[31mERROR[0m] (Unknown location) Erro ao buscar escala mensal da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findEscalaMensal.js:9:54
+
+  6 async execute(equipeId) {
+  7   try {
+  8     // Busca a programação mensal da equipe
+→ 9     const buscarEscalaEquipe = await client.equipe.findFirst({
+          where: {
+        +   id: {
+        +     equals: String | StringFieldRefInput,
+        +     in: String[] | ListStringFieldRefInput,
+        +     notIn: String[] | ListStringFieldRefInput,
+        +     lt: String | StringFieldRefInput,
+        +     lte: String | StringFieldRefInput,
+        +     gt: String | StringFieldRefInput,
+        +     gte: String | StringFieldRefInput,
+        +     contains: String | StringFieldRefInput,
+        +     startsWith: String | StringFieldRefInput,
+        +     endsWith: String | StringFieldRefInput,
+        +     mode: QueryMode,
+        +     not: String | NestedStringFilter
+        +   }
+          },
+          select: {
+            escalaMensal: true
+          }
+        })
+
+Argument `id` must not be null.
+04/10/2024 05:53:30.673 [[31mERROR[0m] (Unknown location) Erro ao buscar membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaMinhaEquipe\findManyMembrosEquipe.js:8:49
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const membrosEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              Usuarios: {
+                select: {
+                  id: true,
+                  nome: true,
+                  foto: true,
+                  autorizacao: true,
+                  statusUsuario: true,
+                  perfil: {
+                    select: {
+                      email: true,
+                      dataNascimento: true
+                    }
+                  },
+                  RlTagsUsuarios: {
+                    select: {
+                      tags: {
+                        select: {
+                          id: true,
+                          nome: true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 05:53:30.683 [[31mERROR[0m] (Unknown location) Erro ao buscar membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaMinhaEquipe\findManyTagsEquipe.js:8:46
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const tagsEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              Tags: {
+                select: {
+                  id: true,
+                  nome: true
+                }
+              }
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 05:53:30.689 [[31mERROR[0m] (Unknown location) Erro ao buscar escala mensal da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaEscalaMensal\findEscalaMensal.js:9:54
+
+  6 async execute(equipeId) {
+  7   try {
+  8     // Busca a programação mensal da equipe
+→ 9     const buscarEscalaEquipe = await client.equipe.findFirst({
+          where: {
+        +   id: {
+        +     equals: String | StringFieldRefInput,
+        +     in: String[] | ListStringFieldRefInput,
+        +     notIn: String[] | ListStringFieldRefInput,
+        +     lt: String | StringFieldRefInput,
+        +     lte: String | StringFieldRefInput,
+        +     gt: String | StringFieldRefInput,
+        +     gte: String | StringFieldRefInput,
+        +     contains: String | StringFieldRefInput,
+        +     startsWith: String | StringFieldRefInput,
+        +     endsWith: String | StringFieldRefInput,
+        +     mode: QueryMode,
+        +     not: String | NestedStringFilter
+        +   }
+          },
+          select: {
+            escalaMensal: true
+          }
+        })
+
+Argument `id` must not be null.
+04/10/2024 05:53:30.752 [[31mERROR[0m] (Unknown location) Erro ao buscar solicitações da equipe model: 
+Invalid `client.rlSolicitacoes.findMany()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\equipe\tabelaSolicitacaoEntrada\findManyRequestEquipe.js:10:62
+
+   7 module.exports = {
+   8   async execute(equipeId) {
+   9     try {
+→ 10       const solicitacoesEquipe = await client.rlSolicitacoes.findMany({
+             where: {
+           +   equipeId: {
+           +     equals: String | StringFieldRefInput,
+           +     in: String[] | ListStringFieldRefInput,
+           +     notIn: String[] | ListStringFieldRefInput,
+           +     lt: String | StringFieldRefInput,
+           +     lte: String | StringFieldRefInput,
+           +     gt: String | StringFieldRefInput,
+           +     gte: String | StringFieldRefInput,
+           +     contains: String | StringFieldRefInput,
+           +     startsWith: String | StringFieldRefInput,
+           +     endsWith: String | StringFieldRefInput,
+           +     mode: QueryMode,
+           +     not: String | NestedStringFilter
+           +   }
+             },
+             select: {
+               usuarioId: true,
+               usuarios: {
+                 select: {
+                   perfil: {
+                     select: {
+                       nome: true,
+                       foto: true,
+                       email: true
+                     }
+                   }
+                 }
+               },
+               createAt: true
+             }
+           })
+
+Argument `equipeId` must not be null.
+04/10/2024 05:53:31.640 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 05:53:31.658 [[31mERROR[0m] (Unknown location) Erro ao buscar escala do membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId, usuarioId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 05:53:31.757 [[31mERROR[0m] (Unknown location) Erro ao buscar próxima escala da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaProximaEscala\findProximaEscala.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 05:53:31.763 [[31mERROR[0m] (Unknown location) Erro ao buscar escala do membro da equipe model: 
+Invalid `client.equipe.findFirst()` invocation in
+C:\Users\samue\Documents\Programação\Projetos\2023\ProjetoEscalaAutomatica\escala-backend\src\models\geral\tabelaInformacoes\findEscalacoesUsuario.js:8:48
+
+  5 module.exports = {
+  6   async execute(equipeId, usuarioId) {
+  7     try {
+→ 8       const escalaEquipe = await client.equipe.findFirst({
+            where: {
+          +   id: {
+          +     equals: String | StringFieldRefInput,
+          +     in: String[] | ListStringFieldRefInput,
+          +     notIn: String[] | ListStringFieldRefInput,
+          +     lt: String | StringFieldRefInput,
+          +     lte: String | StringFieldRefInput,
+          +     gt: String | StringFieldRefInput,
+          +     gte: String | StringFieldRefInput,
+          +     contains: String | StringFieldRefInput,
+          +     startsWith: String | StringFieldRefInput,
+          +     endsWith: String | StringFieldRefInput,
+          +     mode: QueryMode,
+          +     not: String | NestedStringFilter
+          +   }
+            },
+            select: {
+              escalaMensal: true
+            }
+          })
+
+Argument `id` must not be null.
+04/10/2024 19:28:49.585 [[35mDEBUG[0m] Iniciando criação de equipe
+04/10/2024 19:28:49.655 [[35mDEBUG[0m] Processo finalizado
+04/10/2024 19:30:16.409 [[35mDEBUG[0m] Gerando escala mensal da equipe
+04/10/2024 19:30:16.597 [[32mINFO[0m] Escala mensal da equipe gerada com sucesso

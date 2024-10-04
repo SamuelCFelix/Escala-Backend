@@ -13,6 +13,7 @@ module.exports = {
           data: {
             equipeId: null,
             statusUsuario: true,
+            incluirUsuarioGerarEscala: true,
             updateAt: new Date(),
           },
         });

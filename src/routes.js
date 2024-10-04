@@ -32,6 +32,7 @@ const updateProximaEscalaDataController = require("./controllers/equipe/tabelaEs
 const deleteEscalaDataController = require("./controllers/equipe/tabelaEscalaMensal/deleteEscalaDataController");
 const deleteProximaEscalaDataController = require("./controllers/equipe/tabelaEscalaMensal/deleteProximaEscalaDataController");
 const sendRequestEquipeController = require("./controllers/equipe/sendRequestEquipeController");
+const deleteEquipeController = require("./controllers/equipe/tabelaMinhaEquipe/deleteEquipeController");
 
 const routes = Router();
 
@@ -43,18 +44,35 @@ routes.post("/loginAuth", loginAuthController.handle);
 //Usuarios: Host e Default
 
 //Usuarios Host
-routes.post("/usuario/createUsuarioHost", createUserHostController.handle);
+routes.post(
+  "/usuario/createUsuarioHost",
+  tokenAuthentication.handle,
+  createUserHostController.handle
+);
 
 //Usuarios Default
 routes.post(
   "/usuario/createUsuarioDefault",
+  tokenAuthentication.handle,
   createUserDefaultController.handle
 );
 
 //Equipes
-routes.post("/criarEquipe", createEquipeController.handle);
-routes.get("/buscarEquipes", findManyEquipesController.handle);
-routes.post("/enviarSolicitacaoEquipe", sendRequestEquipeController.handle);
+routes.post(
+  "/criarEquipe",
+  tokenAuthentication.handle,
+  createEquipeController.handle
+);
+routes.get(
+  "/buscarEquipes",
+  tokenAuthentication.handle,
+  findManyEquipesController.handle
+);
+routes.post(
+  "/enviarSolicitacaoEquipe",
+  tokenAuthentication.handle,
+  sendRequestEquipeController.handle
+);
 
 //Home
 routes.post(
@@ -185,6 +203,12 @@ routes.post(
   "/buscarTagsEquipe",
   tokenAuthentication.handle,
   findManyTagsEquipeController.handle
+);
+
+routes.post(
+  "/deleteEquipe",
+  tokenAuthentication.handle,
+  deleteEquipeController.handle
 );
 
 //Perfil

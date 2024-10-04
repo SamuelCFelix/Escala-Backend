@@ -17,7 +17,7 @@ module.exports = {
           data: {
             nome: nomeEquipe,
             descricao: descricaoEquipe,
-            usuarioHostId: usuarioHostId,
+            usuarioHostId,
           },
         });
 
@@ -67,8 +67,43 @@ module.exports = {
             }
           )
         );
+
+        const userHost = await client.usuarios.update({
+          where: {
+            id: usuarioHostId,
+          },
+          data: {
+            equipeId: createEquipe.id,
+          },
+        });
+
+        const perfilHostUser = await client.perfil.findFirst({
+          where: {
+            id: userHost.perfilId,
+          },
+          select: {
+            nome: true,
+            foto: true,
+            email: true,
+            dataNascimento: true,
+            termos: true,
+            primeiroAcesso: true,
+          },
+        });
+
         logger.debug("Processo finalizado");
-        return "Equipe criada";
+
+        return {
+          usuarioId: userHost.id,
+          autorizacao: userHost.autorizacao,
+          equipeId: userHost.equipeId,
+          nome: perfilHostUser.nome,
+          foto: perfilHostUser.foto,
+          email: perfilHostUser.email,
+          dataNascimento: perfilHostUser.dataNascimento,
+          termos: perfilHostUser.termos,
+          primeiroAcesso: perfilHostUser.primeiroAcesso,
+        };
       });
       return response;
     } catch (error) {

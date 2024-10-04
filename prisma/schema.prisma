@@ -37,7 +37,7 @@ model Usuarios {
   perfilId                  String
   perfil                    Perfil           @relation(fields: [perfilId], references: [id], onDelete: Cascade)
   equipeId                  String?
-  equipe                    Equipe?          @relation(fields: [equipeId], references: [id], onDelete: Cascade)
+  equipe                    Equipe?          @relation(fields: [equipeId], references: [id])
   RlTagsUsuarios            RlTagsUsuarios[]
   EscalaUsuarios            EscalaUsuarios[]
   RlSolicitacoes            RlSolicitacoes[]
