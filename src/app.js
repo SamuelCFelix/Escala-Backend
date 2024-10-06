@@ -6,8 +6,7 @@ const cors = require("cors");
 const app = express();
 
 const corsOptions = {
-  /* origin: "https://meusite.com", */
-  origin: "*", //TEMPORÁRIO
+  origin: process.env.ORIGIN_DOMAIN,
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
