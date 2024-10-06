@@ -38,45 +38,45 @@ const routes = Router();
 
 //Login e Perfil
 
-routes.post("/createPerfil", createPerfilController.handle);
-routes.post("/loginAuth", loginAuthController.handle);
+routes.post("/api/createPerfil", createPerfilController.handle);
+routes.post("/api/loginAuth", loginAuthController.handle);
 
 //Usuarios: Host e Default
 
 //Usuarios Host
 routes.post(
-  "/usuario/createUsuarioHost",
+  "/api/usuario/createUsuarioHost",
   tokenAuthentication.handle,
   createUserHostController.handle
 );
 
 //Usuarios Default
 routes.post(
-  "/usuario/createUsuarioDefault",
+  "/api/usuario/createUsuarioDefault",
   tokenAuthentication.handle,
   createUserDefaultController.handle
 );
 
 //Equipes
 routes.post(
-  "/criarEquipe",
+  "/api/criarEquipe",
   tokenAuthentication.handle,
   createEquipeController.handle
 );
 routes.get(
-  "/buscarEquipes",
+  "/api/buscarEquipes",
   tokenAuthentication.handle,
   findManyEquipesController.handle
 );
 routes.post(
-  "/enviarSolicitacaoEquipe",
+  "/api/enviarSolicitacaoEquipe",
   tokenAuthentication.handle,
   sendRequestEquipeController.handle
 );
 
 //Home
 routes.post(
-  "/informacoesHome",
+  "/api/informacoesHome",
   tokenAuthentication.handle,
   findConfigHomeController.handle
 );
@@ -85,37 +85,37 @@ routes.post(
 
 //Tabela Próxima Escala
 routes.post(
-  "/buscarProximaEscala",
+  "/api/buscarProximaEscala",
   tokenAuthentication.handle,
   findProximaEscalaController.handle
 );
 
 routes.post(
-  "/buscarUsuariosDisponiveisEscalaData",
+  "/api/buscarUsuariosDisponiveisEscalaData",
   tokenAuthentication.handle,
   findUsuariosDisponiveisEscalaDataController.handle
 );
 
 routes.post(
-  "/updateEscalaData",
+  "/api/updateEscalaData",
   tokenAuthentication.handle,
   updateEscalaDataController.handle
 );
 
 routes.post(
-  "/deleteEscalaData",
+  "/api/deleteEscalaData",
   tokenAuthentication.handle,
   deleteEscalaDataController.handle
 );
 
 routes.post(
-  "/updateProximaEscalaData",
+  "/api/updateProximaEscalaData",
   tokenAuthentication.handle,
   updateProximaEscalaDataController.handle
 );
 
 routes.post(
-  "/deleteProximaEscalaData",
+  "/api/deleteProximaEscalaData",
   tokenAuthentication.handle,
   deleteProximaEscalaDataController.handle
 );
@@ -123,31 +123,31 @@ routes.post(
 //Tabela Informações
 
 routes.post(
-  "/buscarTagsMembroEquipe",
+  "/api/buscarTagsMembroEquipe",
   tokenAuthentication.handle,
   findManyTagsMembroEquipeController.handle
 );
 
 routes.post(
-  "/buscarProgramacoesEquipe",
+  "/api/buscarProgramacoesEquipe",
   tokenAuthentication.handle,
   findManyProgramacoesController.handle
 );
 
 routes.put(
-  "/salvarDisponibilidadeMembro",
+  "/api/salvarDisponibilidadeMembro",
   tokenAuthentication.handle,
   saveDisponibilidadeController.handle
 );
 
 routes.post(
-  "/buscarDisponibilidadeMembro",
+  "/api/buscarDisponibilidadeMembro",
   tokenAuthentication.handle,
   findDisponibilidadeMembroController.handle
 );
 
 routes.post(
-  "/buscarEscalacoesUsuario",
+  "/api/buscarEscalacoesUsuario",
   tokenAuthentication.handle,
   findEscalacoesUsuarioController.handle
 );
@@ -156,82 +156,82 @@ routes.post(
 
 //Tabela Escala Mensal
 routes.post(
-  "/gerarEscalaMensal",
+  "/api/gerarEscalaMensal",
   tokenAuthentication.handle,
   gerarEscalaMensalController.handle
 );
 
 routes.post(
-  "/buscarEscalaMensal",
+  "/api/buscarEscalaMensal",
   tokenAuthentication.handle,
   findEscalaMensalController.handle
 );
 
 routes.post(
-  "/buscarProximaEscalaMensal",
+  "/api/buscarProximaEscalaMensal",
   tokenAuthentication.handle,
   findProximaEscalaMensalController.handle
 );
 
 //Tabela Solicitações
 routes.post(
-  "/solicitacoesDeEntrada",
+  "/api/solicitacoesDeEntrada",
   tokenAuthentication.handle,
   findManyRequestEquipeController.handle
 );
 
 routes.put(
-  "/aceitarMembroEquipe",
+  "/api/aceitarMembroEquipe",
   tokenAuthentication.handle,
   acceptMembroEquipeController.handle
 );
 
 routes.put(
-  "/recusarMembroEquipe",
+  "/api/recusarMembroEquipe",
   tokenAuthentication.handle,
   recuseMembroEquipeController.handle
 );
 
 //Tabela Minha Equipe
 routes.post(
-  "/buscarMembrosEquipe",
+  "/api/buscarMembrosEquipe",
   tokenAuthentication.handle,
   findManyMembrosEquipeController.handle
 );
 
 routes.post(
-  "/buscarTagsEquipe",
+  "/api/buscarTagsEquipe",
   tokenAuthentication.handle,
   findManyTagsEquipeController.handle
 );
 
 routes.post(
-  "/deleteEquipe",
+  "/api/deleteEquipe",
   tokenAuthentication.handle,
   deleteEquipeController.handle
 );
 
 //Perfil
 routes.put(
-  "/expulsarMembroEquipe",
+  "/api/expulsarMembroEquipe",
   tokenAuthentication.handle,
   expulsarMembroEquipeController.handle
 );
 
 routes.put(
-  "/updateAdmMembroEquipe",
+  "/api/updateAdmMembroEquipe",
   tokenAuthentication.handle,
   updateMembroAdmEquipeController.handle
 );
 
 routes.put(
-  "/updateStatusMembroEquipe",
+  "/api/updateStatusMembroEquipe",
   tokenAuthentication.handle,
   updateStatusMembroEquipeController.handle
 );
 
 routes.put(
-  "/updateTagsMembroEquipe",
+  "/api/updateTagsMembroEquipe",
   tokenAuthentication.handle,
   updateTagsMembroEquipeController.handle
 );
