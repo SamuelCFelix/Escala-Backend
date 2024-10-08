@@ -11,18 +11,25 @@ const corsOptions = {
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
   preflightContinue: false,
-  optionsSuccessStatus: 204,
+  optionsSuccessStatus: 204, // Sucesso silencioso para preflight
 };
 
+// Middleware de CORS
 app.use(cors(corsOptions));
+
+// Middleware para lidar com OPTIONS antes de outras rotas
+app.options("*", cors(corsOptions));
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(routes);
 
-app.get("/", (req, res) => {
+// Rota simples para teste
+app.get("/api/", (req, res) => {
   res.send("Hello World!");
 });
 
+// Inicia o servidor
 app.listen(3000, "0.0.0.0", () => {
   console.log("Listening on port 3000");
 });
