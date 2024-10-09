@@ -23,7 +23,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Middleware para lidar com OPTIONS antes de outras rotas
-app.options("*", cors(corsOptions));
+app.options("*", (req, res) => {
+  res.status(200).json({ message: "Preflight request successful." });
+});
 
 app.use(express.json());
 app.use(cookieParser());
