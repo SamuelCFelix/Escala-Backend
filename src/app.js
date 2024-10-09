@@ -8,10 +8,15 @@ const app = express();
 const corsOptions = {
   origin: process.env.ORIGIN_DOMAIN,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
+  allowedHeaders: [
+    "Content-Type",
+    "Authorization",
+    "Accept",
+    "X-Requested-With",
+  ],
   credentials: true,
   preflightContinue: false,
-  optionsSuccessStatus: 204, // Sucesso silencioso para preflight
+  optionsSuccessStatus: 204,
 };
 
 // Middleware de CORS
