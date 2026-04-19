@@ -31,9 +31,15 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(routes);
 
-// Rota simples para teste
-app.get("/api/", (req, res) => {
-  res.send("Hello World!");
+// health
+app.get("/api", (req, res) => res.send("Hello World!"));
+
+// error handler (deve vir por último)
+app.use((err, req, res, next) => {
+  console.error(err);
+  res
+    .status(err.status || 500)
+    .json({ error: err.message || "Internal Server Error" });
 });
 
 // Inicia o servidor
